@@ -1,6 +1,6 @@
 <template>
-    <section class="app-header sticky">
-        <header class="main-header ">
+    <section class="app-header sticky main-layout">
+        <header class="main-header">
             <div class="logo"><a>Onerr<span>.</span></a> </div>
             <nav class="main-nav">
                 <ul class="main-container clean-list">
