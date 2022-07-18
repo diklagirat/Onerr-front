@@ -1,7 +1,7 @@
 <template>
     <div class="trusted-by-container">
         <div class="trusted-by main-layout">
-            <span class="trusted-by-title">Trusted by:</span>
+            <!-- <span class="trusted-by-title">Trusted by:</span> -->
             <ul class="trusted-by-list clean-list">
                 <li>
                     <img src="@/assets/images/facebook.png" />
