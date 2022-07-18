@@ -2,13 +2,15 @@
     <section class="home-page">
         <div class="main-content">
             <div class="hero">
-                <h1>Find the perfect <i>freelance</i> services for your business</h1>
-                <input type="search" placeholder="Try &quot;building mobile app" />
+                <div class="hero-container">
+                    <h1>Find the perfect <i>freelance</i> services for your business</h1>
+                    <input type="search" placeholder="Try &quot;building mobile app" />
+                </div>
             </div>
 
-            <div class="trusted-by">
+            <div class="trusted-by-container">
                 <span class="trusted-by-title">Trusted by:</span>
-                <ul class="trusted-by">
+                <ul class="trusted-by-list">
                     <li>
                         <picture> Facebook</picture>
                     </li>
