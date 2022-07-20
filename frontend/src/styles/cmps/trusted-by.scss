@@ -1,0 +1,32 @@
+.trusted-by-container {
+    background-color: $background-four;
+}
+
+.trusted-by {
+    display: flex;
+    justify-content: space-around;
+
+    .trusted-by-title {
+        color: #b5b6ba;
+        font-weight: 600;
+        padding-top: 1.25em;
+        line-height: 5em;
+    }
+
+    .trusted-by-list {
+        display: flex;
+        //TODO: why helper dont work??
+        justify-content: center;
+        align-items: center;
+        width: 660px;
+
+        >*:not(:last-child) {
+            margin-inline-end: 15px;
+        }
+
+        img {
+            height: 60px;
+            padding: 0 24px;
+        }
+    }
+}

@@ -14,17 +14,17 @@
         }
     }
 
-    &.sticky {
-        position: fixed;
-        width: 100%;
-        z-index: 9999;
-    }
+    // &.sticky {
+    //     position: fixed;
+    //     width: 100%;
+    //     z-index: 9999;
+    // }
 
     .main-header {
         display: flex;
         height: 80px;
-        padding: 1em 2rem;
-        margin: 0 1.25rem;
+        padding: 1em 0;
+        // margin: 1.25rem 0;
 
         .main-container {
             // font-family: 'Macan,Helvetica Neue, Helvetica,Arial,sans-serif';

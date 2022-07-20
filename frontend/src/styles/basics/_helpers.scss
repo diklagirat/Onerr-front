@@ -11,19 +11,19 @@
     flex-direction: column-reverse;
   }
 
-  &.justify-space-evenly {
+  &.space-evenly {
     justify-content: space-evenly;
   }
 
-  &.justify-center {
+  &.center {
     justify-content: center;
   }
 
-  &.justify-space-around {
+  &.space-around {
     justify-content: space-around;
   }
 
-  &.justify-space-between {
+  &.space-between {
     justify-content: space-between;
   }
 
@@ -31,7 +31,7 @@
     justify-content: flex-start;
   }
 
-  &.justify-end {
+  &.end {
     justify-content: flex-end;
   }
 
@@ -82,7 +82,7 @@
 }
 
 .clean-list {
-  list-style: none;
+  list-style-type: none;
   padding: 0;
   margin: 0;
 }
