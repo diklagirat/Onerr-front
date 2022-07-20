@@ -5,6 +5,7 @@
             <trusted-by />
             <div class="popular-list main-layout">Popular professional services List</div>
             <gig-info />
+            <signup />
         </div>
     </section>
 </template>
@@ -19,7 +20,7 @@ export default {
     components: {
         hero,
         gigInfo,
-        trustedBy
+        trustedBy,
         signup
     },
     data() {
