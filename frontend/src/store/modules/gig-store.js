@@ -25,5 +25,10 @@ export const gigStore = {
                 throw err
             }
         },
+        // async setFilterBy({ commit }, { filterBy }) {
+        //     gigService.query(filterBy).then((gigs) => {
+        //       commit({ type: 'setGigs', gigs })
+        //     })
+        //   },
     }
 }

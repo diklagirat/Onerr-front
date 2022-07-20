@@ -21,7 +21,7 @@ export default {
     methods: {
     setFilter() {
         console.log('filterBy.txt',this.filterBy.txt)
-    //   this.$emit('setFilter', this.filterBy)
+      this.$emit('setFilter', this.filterBy)
     },
   },
 
