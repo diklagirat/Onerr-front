@@ -18,7 +18,7 @@ export const gigStore = {
     actions: {
         async loadGigs(context) {
             try {
-                const gigs = await gigService.query()
+                const gigs = await gigService.query().then(gigs => gigs)
                 context.commit({ type: 'setGigs', gigs })
             } catch (err) {
                 console.log('gigsStore: Error in loadGigs', err)
