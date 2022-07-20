@@ -5,7 +5,7 @@
             <!-- <logo :logoName="logoName" />  -->
             <div class="logo"><a>Onerr<span>.</span></a> </div>
 
-            <!-- <search-input :value="value"/> value render on placeHolder -->
+            <!-- <search-input :inputValue="inputValue"/> value render on placeHolder -->
 
             <nav class="main-nav">
                 <ul class="main-container clean-list">

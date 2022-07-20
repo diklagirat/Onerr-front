@@ -15,6 +15,7 @@ import signup from '../components/signup.vue'
 import hero from '../components/hero.vue'
 import gigInfo from '../components/gig-info.vue'
 import trustedBy from '../components/trusted-by.vue'
+
 export default {
     name: 'home-page',
     components: {
@@ -28,6 +29,8 @@ export default {
 
         }
     },
+    created() {
+    }
 }
 
 </script>
