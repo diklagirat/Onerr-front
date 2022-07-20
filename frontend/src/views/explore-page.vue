@@ -1,7 +1,7 @@
 <template>
-  <section class="explor-page">
-    <div class="explor-container">
-      <h1>explor page</h1>
+  <section class="explore-page">
+    <div class="explore-container">
+      <h1>Explore page</h1>
       <gig-list />
     </div>
   </section>
@@ -10,7 +10,7 @@
 <script>
 import gigList from "../components/gig-list.vue";
 export default {
-  name: "explor-page",
+  name: "explore-page",
   components: {
     gigList,
   },
