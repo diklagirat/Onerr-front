@@ -1,5 +1,5 @@
 import { storageService } from "./async-storage.service.js"
-// import gigs from "./ json"
+import gigsJson from '../data/gigs.json' assert {type: 'json'}
 const KEY = 'gig_DB'
 
 export const gigService = {
@@ -39,9 +39,10 @@ function getEmptyGig() {
 function _createGigs() {
     var gigs = JSON.parse(localStorage.getItem(KEY))
     if (!gigs || !gigs.length) {
-        // TODO: gigs = gigs
-        localStorage.setItem(KEY, JSON.stringify(toys))
+        gigs = gigsJson
+        localStorage.setItem(KEY, JSON.stringify(gigs))
     }
-    return toys
+    console.log('gigs',gigs)
+    return gigs
 }
 
