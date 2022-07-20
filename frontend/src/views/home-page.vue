@@ -64,18 +64,22 @@
                     </li>
                 </ul>
             </div>
-
-            <div class="signup-image">
-                <h2>Find the <i>talent</i> needed to get your business <i>growing.</i></h2>
-                <a href="#">Get Started</a>
-            </div>
+            
+            <signup />
+            
 
         </div>
     </section>
 </template>
  
 <script>
-export default {
+import signup from '../components/signup.vue'
 
+export default {
+    name: 'home-page',
+    components: {
+        signup
+    }
 }
+
 </script>
