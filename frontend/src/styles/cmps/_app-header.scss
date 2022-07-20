@@ -2,6 +2,13 @@
     background-color: $background-primary;
     border-bottom: $border-bottom-line;
 
+    //TODO: show and hide stick navbar
+    // position: fixed;
+    // top: 0;
+    // left: 0;
+    // right: 0;
+    // transition: all 0.3s ease-in-out;
+
     .app-logo {
         a {
             font-family: Poppins;
@@ -14,17 +21,11 @@
         }
     }
 
-    // &.sticky {
-    //     position: fixed;
-    //     width: 100%;
-    //     z-index: 9999;
-    // }
-
     .main-header {
         display: flex;
-        height: 80px;
+        align-items: center; //TODO: TALLLLLLLLL!! helper d'ont work
+        height: 5rem;
         padding: 1em 0;
-        // margin: 1.25rem 0;
 
         .main-container {
             // font-family: 'Macan,Helvetica Neue, Helvetica,Arial,sans-serif';

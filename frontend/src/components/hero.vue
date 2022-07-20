@@ -1,6 +1,6 @@
 <template>
     <div class="hero-container">
-        <div class="hero">
+        <div class="hero center">
             <!-- <h1>Find the perfect <i>freelance</i> services for your business</h1>
             <input type="search" placeholder="Try &quot;building mobile app" /> -->
         </div>

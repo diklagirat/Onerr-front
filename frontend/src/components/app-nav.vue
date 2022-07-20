@@ -7,20 +7,25 @@
                 </a>
             </li>
             <li>
-                Become a Seller
+                <a href="/">
+                    Become a Seller
+                </a>
             </li>
             <li>
-                Sign In
+                <a href="/">
+                    Sign In
+                </a>
             </li>
             <li>
-                <button>Join</button>
+                <a href="/">Join</a>
             </li>
         </ul>
     </nav>
 </template>
 
 <script>
-
+//TODO: add <router-link> with link-to='/explore'
+//TODO: add <router-link> with link-to='/' for the logo
 export default {
     name: 'app-nav'
 }

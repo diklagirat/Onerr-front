@@ -1,0 +1,15 @@
+.main-nav {
+    .main-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    a {
+        color: $text-secondary;
+        font-weight: 600;
+        text-decoration: none;
+        padding: 0.435rem 0.937rem;
+        transition: all 0.3s ease-in-out;
+    }
+}

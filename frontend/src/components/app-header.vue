@@ -1,6 +1,6 @@
 <template>
-    <section class="app-header sticky main-layout">
-        <header class="main-header">
+    <section class="app-header">
+        <header class="main-header  main-layout">
             <app-logo />
             <gig-filter @setFilter="setFilter" />
             <app-nav />
@@ -23,7 +23,7 @@ export default {
     },
     methods: {
         setFilter(filterBy) {
-            console.log('filter inside header',filterBy)
+            console.log('filter inside header', filterBy)
             this.$emit('setFilter', filterBy)
         },
     }
