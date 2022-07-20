@@ -1,7 +1,7 @@
 <template>
   <div>
     <el-container>
-      <app-header />
+      <app-header @setFilter="setFilter" />
       <RouterView />
       <app-footer />
     </el-container>
@@ -22,6 +22,13 @@ export default {
   created() {
     this.$store.dispatch({ type: "loadGigs" })
   },
+  methods: {
+    setFilter(filter) {
+      console.log('filter inside app.vue')
+      filter = JSON.parse(JSON.stringify(filter))
+      this.$store.dispatch({ type: "setFilterBy", filterBy: filter })
+    },
+  }
 }
 </script>
 

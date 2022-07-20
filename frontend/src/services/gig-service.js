@@ -39,10 +39,8 @@ function getEmptyGig() {
 function _createGigs() {
     var gigs = JSON.parse(localStorage.getItem(KEY))
     if (!gigs || !gigs.length) {
-        // gigs = gigsJson
-        // console.log('gigs',gigs)
+        gigs = gigsJson
         localStorage.setItem(KEY, JSON.stringify(gigs))
     }
-    console.log('gigs', gigsJson)
     return gigs
 }
