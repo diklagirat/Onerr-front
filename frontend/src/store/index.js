@@ -1,4 +1,5 @@
 import { createStore } from 'vuex'
+import { gigStore } from './modules/gig-store'
 
 const store = createStore({
     strict: true,
@@ -18,7 +19,7 @@ const store = createStore({
     },
     modules: {
         //TODO: orderStore,
-        //TODO: gigStore,
+         gigStore,
         //TODO: userStore,
     },
 })

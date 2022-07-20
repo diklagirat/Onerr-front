@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import homePage from '../views/home-page.vue'
-import explorPage from '../views/explor-page.vue'
+import explorePage from '../views/explore-page.vue'
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
@@ -10,9 +10,9 @@ const router = createRouter({
       component: homePage
     },
     {
-      path: '/explor',
-      name: 'explor',
-      component: explorPage
+      path: '/explore',
+      name: 'explore',
+      component: explorePage
     }
   ]
 })
