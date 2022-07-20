@@ -2,6 +2,7 @@
 export const utilService = {
     delay,
     getRandomInt,
+    makeId
 }
 
 function delay(ms = 1500) {
@@ -15,3 +16,13 @@ function getRandomInt(min, max) {
     max = Math.floor(max)
     return Math.floor(Math.random() * (max - min) + min) //The maximum is exclusive and the minimum is inclusive
 }
+
+function makeId(length = 8) {
+    var txt = "";
+    var possible =
+      "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789"
+    for (var i = 0; i < length; i++) {
+      txt += possible.charAt(Math.floor(Math.random() * possible.length))
+    }
+    return txt
+  }

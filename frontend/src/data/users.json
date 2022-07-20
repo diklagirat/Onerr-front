@@ -1,5 +1,42 @@
 [
     {
-        "_id": "o1225"
+        "_id": "u101",
+        "fullname": "User 1",
+        "imgUrl": "https://robohash.org/user1",
+        "username": "user1",
+        "password": "secret",
+        "level": "basic/premium",
+        "reviews": [
+            {
+                "id": "r101",
+                "txt": "Very kind and works fast",
+                "rate": 4,
+                "by": {
+                    "_id": "u102",
+                    "fullname": "User 2",
+                    "imgUrl": "https://robohash.org/user2"
+                }
+            }
+        ]
+    },
+    {
+        "_id": "u102",
+        "fullname": "User 2",
+        "imgUrl": "https://robohash.org/user2",
+        "username": "user2",
+        "password": "secret2",
+        "level": "basic/premium",
+        "reviews": [
+            {
+                "id": "r102",
+                "txt": "Great service and very fast",
+                "rate": 5,
+                "by": {
+                    "_id": "u101",
+                    "fullname": "User 1",
+                    "imgUrl": "https://robohash.org/user1"
+                }
+            }
+        ]
     }
 ]

@@ -1,22 +1,25 @@
 <template>
     <section class="app-header sticky main-layout">
         <header class="main-header">
-
-            <!-- <logo :logoName="logoName" />  -->
-            <div class="logo"><a>Onerr<span>.</span></a> </div>
-
-            <!-- <search-input :value="value"/> value render on placeHolder -->
-
-            <nav class="main-nav">
-                <ul class="main-container clean-list">
-                </ul>
-            </nav>
+            <app-logo />
+            <gig-filter />
+            <app-nav />
         </header>
     </section>
 </template>
 
 <script>
-export default {
 
+import appLogo from './app-logo.vue'
+import gigFilter from './gig-filter.vue'
+import appNav from './app-nav.vue'
+
+export default {
+    name: 'app-header',
+    components: {
+        appLogo,
+        gigFilter,
+        appNav
+    }
 }
 </script>
