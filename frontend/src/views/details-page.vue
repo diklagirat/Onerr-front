@@ -1,7 +1,7 @@
 <template>
   <section class="details-page">
     <h1>hello details page</h1>
-    <pre>{{gig}}</pre>
+    <pre>{{ gig }}</pre>
   </section>
 </template>
 
@@ -13,7 +13,7 @@ export default {
   data() {
     return {
       gig: null,
-    };
+    }
   },
   created() {
     const { gigId } = this.$route.params
@@ -21,7 +21,5 @@ export default {
       this.gig = currgig
     })
   },
-};
+}
 </script>
-
-<style></style>
