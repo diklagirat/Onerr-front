@@ -1,25 +1,30 @@
 <template>
   <section class="details-page" v-if="gig">
     <div>
+      <gig-header :gig="gig" />
       <gig-package :gig="this.gig" />
-      <pre>{{ gig }}</pre>
+      <gig-about :gig="gig" />
     </div>
   </section>
 </template>
 
 <script>
-import { gigService } from "../services/gig-service.js";
-import gigPackage from "../components/gig-package.vue";
+import { gigService } from "../services/gig-service.js"
+import gigPackage from "../components/gig-package.vue"
+import gigHeader from '../components/gig-header.vue'
+import gigAbout from '../components/gig-about.vue'
 
 export default {
+  name: "gig-details",
   components: {
     gigPackage,
+     gigHeader,
+    gigAbout
   },
-  name: "gig-details",
   data() {
     return {
       gig: null,
-    };
+    }
   },
   created() {
     const { gigId } = this.$route.params;
@@ -27,7 +32,5 @@ export default {
       this.gig = currgig;
     });
   },
-};
+}
 </script>
-
-<style></style>

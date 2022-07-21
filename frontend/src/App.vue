@@ -5,7 +5,6 @@
       <RouterView />
       <app-footer />
     </el-container>
-
   </div>
 </template>
 

@@ -11,8 +11,19 @@ export const gigService = {
 }
 _createGigs()
 
-function query() {
-    return storageService.query(KEY)
+function query(filterBy) {
+    return filterBy ? _filter(filterBy) : storageService.query(KEY)
+    // return storageService.query(KEY)
+}
+
+function _filter(filterBy) {
+    var gigs = storageService.query(KEY)
+    const { txt } = filterBy
+    // txt
+    const regex = new RegExp(txt, 'i')
+    var filteredGigs = gigs.filter((gig) =>   console.log('gigs',gig))
+  
+    return Promise.resolve(filteredGigs)
 }
 
 function getById(id) {

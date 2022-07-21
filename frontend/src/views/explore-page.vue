@@ -1,7 +1,7 @@
 <template>
   <section class="explore-page">
     <div class="explore-container">
-      <gig-list :gigs="gigs"/>
+      <gig-list :gigs="gigs" />
     </div>
   </section>
 </template>

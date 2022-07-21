@@ -1,16 +1,27 @@
 <template>
   <section class="gig-preview">
     <div class="gig-preview-container">
-      <el-card :body-style="{ padding: '0px' }">
-        <img :src="gig.imgUrl" class="image" />
-        <div style="padding: 14px">
-          user-preview-cmp
-          <span>{{ gig.title }}</span>
-          <div class="bottom">
-            <el-button text class="button">Operating</el-button>
+      <div class="gig-preview-header">
+        <img :src="gig.imgUrl" class="gig-image" />
+      </div>
+
+      <div class="gig-preview-content">
+        <div class="gig-preview-owner">
+          <img :src="gig.owner.imgUrl" class="owner-image" />
+          <div class="owner-info">
+            <strong>nauman_khalid99 </strong>
+            <strong>Level 2 Seller
+            </strong>
           </div>
+          <!-- <div> TODO: ADD heart</div> -->
         </div>
-      </el-card>
+        <h3 class="gig-preview-title">I will draw architectural house plan using cad for city submission</h3>
+        <!-- <p>TODO: add rate</p> -->
+
+      </div>
+
+
+
     </div>
   </section>
 </template>
@@ -33,3 +44,13 @@ export default {
   }
 }
 </script>
+   <!-- <el-card :body-style="{ padding: '0px' }">
+        <img :src="gig.imgUrl" class="image" />
+        <div style="padding: 14px">
+          user-preview-cmp
+          <span>{{ gig.title }}</span>
+          <div class="bottom">
+            <el-button text class="button">Operating</el-button>
+          </div>
+        </div>
+      </el-card> -->

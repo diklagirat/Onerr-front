@@ -4,11 +4,15 @@ export const gigStore = {
     strict: true,
     state: {
         gigs: [],
+        filterBy: null
     },
     getters: {
         gigs({ gigs }) {
             return gigs
         },
+        gigsToDisplay({ gigs, filterBy }) {
+            console.log('gigs, filterBy', gigs, filterBy)
+        }
     },
     mutations: {
         setGigs(state, { gigs }) {
@@ -25,10 +29,11 @@ export const gigStore = {
                 throw err
             }
         },
-        // async setFilterBy({ commit }, { filterBy }) {
-        //     gigService.query(filterBy).then((gigs) => {
-        //       commit({ type: 'setGigs', gigs })
-        //     })
-        //   },
+        setFilterBy({ commit }, { filterBy }) {
+            console.log('commit,filterBy',commit,filterBy)
+            gigService.query(filterBy).then((gigs) => {
+              commit({ type: 'setGigs', gigs })
+            })
+          },
     }
 }

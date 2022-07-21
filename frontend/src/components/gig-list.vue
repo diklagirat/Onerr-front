@@ -1,10 +1,9 @@
 <template>
-    <section class="gig-list">
-        <ul class="clean-list">
-            <li v-for="gig in gigs" :key="gig._id" class="gig-list-container">
+    <section class="gig-list main-layout">
+        <ul class="gig-list-container clean-list ">
+            <li v-for="gig in gigs" :key="gig._id">
                 <gig-preview :gig="gig" />
             </li>
-
         </ul>
     </section>
 </template>
