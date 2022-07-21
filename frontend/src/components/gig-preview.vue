@@ -1,7 +1,7 @@
 <template>
   <section class="gig-preview">
     <div class="gig-preview-container">
-      <!-- <el-card :body-style="{ padding: '0px' }">
+      <el-card :body-style="{ padding: '0px' }">
         <img :src="gig.imgUrl" class="image" />
         <div style="padding: 14px">
           user-preview-cmp
@@ -10,7 +10,7 @@
             <el-button text class="button">Operating</el-button>
           </div>
         </div>
-      </el-card> -->
+      </el-card>
     </div>
   </section>
 </template>
