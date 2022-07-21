@@ -1,15 +1,24 @@
 <template>
-  <section class="details-page">
+  <section v-if="gig" class="details-page">
     <h1>hello details page</h1>
-    <pre>{{gig}}</pre>
+    <gig-header :gig="gig" />
+    <gig-about :gig="gig" />
+    <pre>{{ gig }}</pre>
   </section>
 </template>
 
 <script>
+
 import { gigService } from '../services/gig-service.js'
+import gigHeader from '../components/gig-header.vue'
+import gigAbout from '../components/gig-about.vue'
 
 export default {
-  name: "gig-details",
+  name: 'gig-details',
+  components: {
+    gigHeader,
+    gigAbout
+  },
   data() {
     return {
       gig: null,
@@ -24,4 +33,5 @@ export default {
 };
 </script>
 
-<style></style>
+<style>
+</style>
