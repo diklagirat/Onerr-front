@@ -22,7 +22,7 @@ export default {
   data() {
     return {
       gig: null,
-    };
+    }
   },
   created() {
     const { gigId } = this.$route.params
@@ -30,8 +30,5 @@ export default {
       this.gig = currgig
     })
   },
-};
+}
 </script>
-
-<style>
-</style>

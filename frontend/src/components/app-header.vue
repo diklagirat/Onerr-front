@@ -1,6 +1,6 @@
 <template>
-    <section class="app-header main-layout">
-        <header class="main-header">
+    <section class="app-header">
+        <header class="main-header main-layout">
             <app-logo />
             <gig-filter @setFilter="setFilter" />
             <app-nav />
