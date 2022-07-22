@@ -1,12 +1,18 @@
 <template>
     <div class="app-logo">
-        <a>Onerr<span>.</span></a>
+        <a @click="moveToHomepage">Onerr<span>.</span></a>
     </div>
 </template>
 
 <script>
 
 export default {
-    name: 'app-logo'
+    name: 'app-logo',
+    methods: {
+        moveToHomepage(){
+            console.log('moving to homepage')
+            this.$router.push('/')
+        }
+    }
 }
 </script>

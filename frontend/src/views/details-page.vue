@@ -18,6 +18,8 @@ import { userService } from "../services/user-service.js"
 
 import gigPackage from "../components/gig-package.vue"
 import gigHeader from '../components/gig-header.vue'
+import gigAbout from "../components/gig-about.vue"
+import ownerAbout from "../components/owner-about.vue"
 import ownerRate from "../components/owner-rate.vue"
 import ownerReviewList from "../components/owner-review-list.vue"
 
