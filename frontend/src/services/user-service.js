@@ -1,6 +1,8 @@
 import { storageService } from './async-storage.service.js'
 const STORAGE_KEY_LOGGEDIN_USER = 'loggedinUser'
 var gWatchedUser = null
+import usersJson from '../data/users.json'
+const KEY = 'user_DB'
 
 export const userService = {
     login,
@@ -13,6 +15,8 @@ export const userService = {
     update,
 }
 
+_createUsers()
+
 // TODO:_createUsers() - read json file from data 
 
 // Debug technique
@@ -22,11 +26,10 @@ function getUsers() {
     return storageService.query('user')
 }
 
-async function getById(userId) {
-    const user = await storageService.get('user', userId)
-    gWatchedUser = user
-    return user
+function getById(id) {
+    return storageService.get(KEY, id)
 }
+
 function remove(userId) {
     return storageService.remove('user', userId)
 }
@@ -53,5 +56,14 @@ function _saveLocalUser(user) {
 
 function getLoggedinUser() {
     return JSON.parse(sessionStorage.getItem(STORAGE_KEY_LOGGEDIN_USER) || 'null')
+}
+
+function _createUsers() {
+    var users = JSON.parse(localStorage.getItem(KEY))
+    if (!users || !users.length) {
+        users = usersJson
+        localStorage.setItem(KEY, JSON.stringify(users))
+    }
+    return users
 }
 

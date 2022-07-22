@@ -1,8 +1,8 @@
 <template>
   <div>
-      <app-header @setFilter="setFilter" />
-      <RouterView />
-      <app-footer />
+    <app-header @setFilter="setFilter" />
+    <RouterView />
+    <app-footer />
   </div>
 </template>
 
@@ -18,6 +18,7 @@ export default {
   },
   created() {
     this.$store.dispatch({ type: "loadGigs" })
+    this.$store.dispatch({ type: "loadUsers" })
   },
   methods: {
     setFilter(filter) {

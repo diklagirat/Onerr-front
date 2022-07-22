@@ -250,40 +250,5 @@
     "likedByUsers": [
       "mini-user"
     ]
-  },
-  {
-    "_id": "i104",
-    "title": "I will write sociology,psychology and social sciences articles",
-    "price": 33.68,
-    "owner": {
-      "_id": "u104",
-      "fullname": "winny_writer",
-      "imgUrl": "https://fiverr-res.cloudinary.com/t_profile_original,q_auto,f_auto/attachments/profile/photo/e34531bf0bbed9d144dba7384f6473b6-1621577835789/60307055-cde9-4dc2-9e9e-4daa421991d3.jpg",
-      "level": "basic/premium",
-      "rate": 4
-    },
-    "packageDetails":{
-      "title": "I can build a professional 2-3 pages website OR fix a small bug",
-      "price": 33.68,
-      "daysToMake": 3,
-      "features": [
-        "3 Initial Concepts Included",
-        "Source File",
-        "Logo Transparency",
-        "High Resolution",
-        "Vector File"
-      ]
-    },
-    "daysToMake": 3,
-    "description": "Hello, welcome to my Gig, I write sociology psychology and all social sciences content\nI am an expert writer who can help you with writing essays, research projects, and articles on criminology, sociology, and psychology. I gained so much experience over the time. i can handle papers from undergraduate all the way to PHD in criminology and sociology and psychology.\nI always strive to provide best quality to my clients and provide plagiarism-free work. I am also familiar with the following reference formats: APA, MLA, HARVARD, CHICAGO\nPlease contact me before placing an order, thank you.",
-    "imgUrl": [
-      "https://fiverr-res.cloudinary.com/t_gig_cards_web,q_auto,f_auto/gigs/207813409/original/9557f50a12d8fccb5c52fb65b35f91cc036f99c6.jpg"
-    ],
-    "tags": [
-      "technical writing"
-    ],
-    "likedByUsers": [
-      "mini-user"
-    ]
   }
 ]
