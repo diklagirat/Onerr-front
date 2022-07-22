@@ -1,7 +1,7 @@
 <template>
     <section class="app-footer">
-        <footer class="main-footer">Footer
-            <div class="logo"><a>Onerr<span>.</span></a> </div>
+        <footer class="main-footer  main-layout">
+            <app-logo />
             <p>
                 <span>© Onerr International Ltd. 2022</span>
             </p>
@@ -44,7 +44,11 @@
 </template>
 
 <script>
+import appLogo from "./app-logo.vue"
 export default {
-
+    name: 'footer-header',
+    components: {
+        appLogo,
+    },
 }
 </script>

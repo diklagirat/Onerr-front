@@ -1,8 +1,8 @@
 <template>
   <div>
-      <app-header @setFilter="setFilter" />
-      <RouterView />
-      <app-footer />
+    <app-header @setFilter="setFilter" />
+    <RouterView />
+    <app-footer />
   </div>
 </template>
 
