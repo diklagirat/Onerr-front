@@ -1,10 +1,8 @@
 <template>
   <div>
-    <el-container>
       <app-header @setFilter="setFilter" />
       <RouterView />
       <app-footer />
-    </el-container>
   </div>
 </template>
 

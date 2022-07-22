@@ -10,30 +10,27 @@ export const gigStore = {
         gigs({ gigs }) {
             return gigs
         },
-        gigsToDisplay({ gigs, filterBy }) {
-            console.log('gigs, filterBy', gigs, filterBy)
-        }
     },
     mutations: {
         setGigs(state, { gigs }) {
             state.gigs = gigs
-        }
+        },
+        setFilterBy(state, { filterBy }) {
+            state.filterBy = filterBy
+        },
     },
     actions: {
         async loadGigs(context) {
             try {
-                const gigs = await gigService.query().then(gigs => gigs)
+                var filterBy = context.state.filterBy ? context.state.filterBy : ''
+                // const gigs = await gigService.query().then(gigs => gigs)
+                const gigs = await gigService.query(filterBy)
                 context.commit({ type: 'setGigs', gigs })
+                return gigs
             } catch (err) {
                 console.log('gigsStore: Error in loadGigs', err)
                 throw err
             }
         },
-        setFilterBy({ commit }, { filterBy }) {
-            console.log('commit,filterBy',commit,filterBy)
-            gigService.query(filterBy).then((gigs) => {
-              commit({ type: 'setGigs', gigs })
-            })
-          },
     }
 }

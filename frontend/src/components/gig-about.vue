@@ -1,7 +1,7 @@
 <template>
     <section class="about-gig">
         <div class="about-gig-container">
-            <p> About This Gig </p>
+            <h1> About This Gig </h1>
             <p>{{ gig.description }}</p>
         </div>
     </section>

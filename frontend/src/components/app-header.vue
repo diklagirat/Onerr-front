@@ -2,6 +2,7 @@
     <section class="app-header">
         <header class="main-header main-layout">
             <app-logo />
+            <!--@click="moveToHomepage" -->
             <gig-filter @setFilter="setFilter" />
             <app-nav />
         </header>
@@ -26,6 +27,9 @@ export default {
             console.log('filter inside header', filterBy)
             this.$emit('setFilter', filterBy)
         },
+        // moveToHomepage() {
+        //     this.router.push('/')
+        // }
     }
 }
 </script>

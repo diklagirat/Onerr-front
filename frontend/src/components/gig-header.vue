@@ -2,7 +2,8 @@
     <section class="gig-header">
         <div class="gig-header-container">
             <p> {{ gig.title }} </p>
-            <p style="background-color: yellow;"> Here come's user-preview comonent </p>
+<!-- TODO: add user-preview component -->
+            <h1 style="background-color: yellow;"> Here come's user-preview component </h1> 
         </div>
     </section>
 </template>
