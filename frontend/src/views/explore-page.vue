@@ -19,7 +19,7 @@ export default {
   },
   computed: {
     gigs() {
-      return this.$store.getters.gigs
+      return this.$store.getters.gigsToDisplay
     },
   },
 }

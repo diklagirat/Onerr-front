@@ -1,8 +1,10 @@
 <template>
+    <!-- placeholder="What service are you looking for today?" -->
     <section class="app-search">
-        <input @input="setFilter" v-model="filterBy.txt" type="search"
-            placeholder="What service are you looking for today?" />
+        <input @input="setFilter" v-model="txt" type="search" />
         <button>Search</button>
+
+        <p>{{ ggg }}+hhhh</p>
     </section>
 </template>
 
@@ -13,18 +15,23 @@ export default {
 
     data() {
         return {
-            filterBy: {
-                txt: '',
-                tag: ''
-            }
+            txt: ''
         }
     },
     methods: {
         setFilter() {
-            console.log('filterBy.txt', this.filterBy.txt)
-            this.$emit('setFilter', this.filterBy)
+            var filterBy = {
+                txt: ''
+            }
+            filterBy.txt = this.txt
+            this.$store.commit({ type: 'setFilterBy', filterBy })
         },
     },
+    computed: {
+        ggg() {
+            return this.$store.getfilterBy
+        }
+    }
 
 }
 </script>

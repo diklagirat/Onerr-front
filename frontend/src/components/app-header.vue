@@ -2,7 +2,7 @@
     <section class="app-header">
         <header class="main-header main-layout">
             <app-logo />
-            <gig-filter @setFilter="setFilter" />
+            <gig-filter />
             <app-nav />
         </header>
     </section>
@@ -22,10 +22,6 @@ export default {
         appNav
     },
     methods: {
-        setFilter(filterBy) {
-            console.log('filter inside header', filterBy)
-            this.$emit('setFilter', filterBy)
-        },
     }
 }
 </script>

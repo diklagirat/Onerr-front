@@ -16,11 +16,10 @@ export const userStore = {
         }
     },
     actions: {
-        async loadUsers(context) {
-            console.log('hi')
+        async loadUsers({ commit, state }) {
             try {
                 const users = await userService.getUsers().then(users => users)
-                context.commit({ type: 'setUsers', users })
+                commit({ type: 'setUsers', users })
             } catch (err) {
                 console.log('usersStore: Error in loadUsers', err)
                 throw err
