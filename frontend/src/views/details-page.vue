@@ -1,21 +1,23 @@
 <template>
-  <section v-if="gig" class="details-page">
-    <h1>hello details page</h1>
-    <gig-header :gig="gig" />
-    <gig-about :gig="gig" />
-    <pre>{{ gig }}</pre>
+  <section class="details-page" v-if="gig">
+    <div>
+      <gig-header :gig="gig" />
+      <gig-package :gig="gig" />
+      <gig-about :gig="gig" />
+    </div>
   </section>
 </template>
 
 <script>
-
-import { gigService } from '../services/gig-service.js'
+import { gigService } from "../services/gig-service.js"
+import gigPackage from "../components/gig-package.vue"
 import gigHeader from '../components/gig-header.vue'
 import gigAbout from '../components/gig-about.vue'
 
 export default {
-  name: 'gig-details',
+  name: "gig-details",
   components: {
+    gigPackage,
     gigHeader,
     gigAbout
   },
@@ -26,8 +28,8 @@ export default {
   },
   created() {
     const { gigId } = this.$route.params
-    gigService.getById(gigId).then((currgig) => {
-      this.gig = currgig
+    gigService.getById(gigId).then((currGig) => {
+      this.gig = currGig
     })
   },
 }
