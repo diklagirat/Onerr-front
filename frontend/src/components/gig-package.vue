@@ -35,7 +35,8 @@
     </div>
     <ul class="clean-list">
       <li v-for="feature in gig.packageDetails.features" :key="feature">
-        <gig-feature :feature="feature" />
+        <i class="fas fa-check" aria-hidden="true"></i>
+        <h1>{{ feature }}</h1>
       </li>
     </ul>
     <br /><button>Continue ({{ gig.price }}$)</button>
@@ -43,23 +44,14 @@
 </template>
 
 <script>
-import gigFeature from "../components/gig-feature.vue"
-
 export default {
   name: "gig-package",
   props: {
     gig: Object,
   },
   data() {
-    return {
-    }
-  },
-  components: {
-    gigFeature,
-  },
-  //  created() {
-  //   this.features = gig.packageDetails.features
-  // },
+    return {};
+  } 
 };
 </script>
 

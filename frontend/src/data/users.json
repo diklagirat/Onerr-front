@@ -6,6 +6,11 @@
         "username": "user1",
         "password": "secret",
         "level": "basic/premium",
+        "state": "USA",
+        "created": "Feb 2021",
+        "responseTime": "1 hour",
+        "LastDelivery": "2Days",
+        "description": "I hold masters degree in engineering . I am a professional graphic designer and have designed many creative websites. So if you want a creative and professional website for your business, you are at the right place. Apart from web designing i offer different services like designing infographics, Photoshop, writing articles and blog posts. I always prefer customer's satisfaction.",
         "reviews": [
             {
                 "id": "r101",
