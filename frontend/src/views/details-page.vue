@@ -12,20 +12,22 @@
 </template>
 
 <script>
-import { gigService } from "../services/gig-service.js";
-import { userService } from "../services/user-service.js";
-import gigPackage from "../components/gig-package.vue";
-import gigHeader from "../components/gig-header.vue";
-import gigAbout from "../components/gig-about.vue";
-import ownerAbout from "../components/owner-about.vue";
+
+import { gigService } from "../services/gig-service.js"
+import { userService } from "../services/user-service.js"
+
+import gigPackage from "../components/gig-package.vue"
+import gigHeader from '../components/gig-header.vue'
+import gigAbout from "../components/gig-about.vue"
+import ownerAbout from "../components/owner-about.vue"
 import ownerRate from "../components/owner-rate.vue"
-import ownerReviewList from "../components/owner-review-list.vue";
+import ownerReviewList from "../components/owner-review-list.vue"
+
 
 export default {
   name: "gig-details",
   components: {
     gigPackage,
-    gigHeader,
     gigAbout,
     ownerAbout,
     ownerRate,
@@ -34,18 +36,17 @@ export default {
   data() {
     return {
       gig: null,
-      owner: null,
-    };
+      owner: null
+    }
   },
   created() {
-    const { gigId } = this.$route.params;
+    const { gigId } = this.$route.params
     gigService.getById(gigId).then((currGig) => {
-    this.gig = currGig;
-    const ownerId = this.gig.owner._id;
+    this.gig = currGig
     userService.getById(ownerId).then((currOwner) => {
-      this.owner = currOwner;
-    });
-    });
+      this.owner = currOwner
+    })
+    })
   },
-};
+}
 </script>

@@ -3,7 +3,7 @@
         <div class="main-content">
             <hero />
             <trusted-by />
-            <div class="popular-list main-layout">Popular professional services List</div>
+            <!-- <popular-categories-list :gigsCategories="gigsCategories" /> -->
             <gig-info />
             <signup />
         </div>
@@ -11,22 +11,31 @@
 </template>
  
 <script>
-import signup from '../components/signup.vue'
 import hero from '../components/hero.vue'
-import gigInfo from '../components/gig-info.vue'
 import trustedBy from '../components/trusted-by.vue'
+import popularCategoriesList from '../components/popular-categories-list.vue'
+import gigInfo from '../components/gig-info.vue'
+import signup from '../components/signup.vue'
 
 export default {
     name: 'home-page',
     components: {
         hero,
-        gigInfo,
         trustedBy,
-        signup
+        popularCategoriesList,
+        gigInfo,
+        signup,
     },
     data() {
         return {
-
+            gigsCategories: [
+                'logo-design',
+                'wordpress',
+                'voice-over',
+                'artisitic',
+                'proffesional',
+                'accessible',
+            ]
         }
     },
     created() {

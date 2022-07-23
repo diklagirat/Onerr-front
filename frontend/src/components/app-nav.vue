@@ -17,7 +17,7 @@
                 </a>
             </li>
             <li>
-                <a href="/">Join</a>
+                <el-button type="success">Join</el-button>
             </li>
         </ul>
     </nav>

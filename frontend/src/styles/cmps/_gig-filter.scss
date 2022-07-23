@@ -1,0 +1,17 @@
+.gig-filter {
+    input {
+        border-radius: 4px 0 0 4px;
+        padding: 10px 2px 10px 16px;
+        color: $text-primary;
+        border-color: $text-forth;
+        width: em(455px);
+    }
+
+    button {
+        background-color: $btn-secondary;
+        color: $background-primary;
+        border-radius: 0 4px 4px 0;
+        width: em(58px);
+
+    }
+}

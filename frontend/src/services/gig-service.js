@@ -11,17 +11,28 @@ export const gigService = {
 }
 _createGigs()
 
-function query(filterBy) {
+//TODO: async
+
+async function query(filterBy) {
+    // const criteria = _buildCriteria(filterBy)
+    // const collection = await dbService.getCollection('toy')
+    // var toys = await collection.find(criteria).toArray()
+    // return toys
+
+
     return filterBy ? _filter(filterBy) : storageService.query(KEY)
     // return storageService.query(KEY)
 }
 
-function _filter(filterBy) {
+function _filter(filterBy) { 
     var gigs = storageService.query(KEY)
+    console.log('gigs',gigs)
     const { txt } = filterBy
     // txt
     const regex = new RegExp(txt, 'i')
-    var filteredGigs = gigs.filter((gig) =>   console.log('gigs',gig))
+    var filteredGigs = gigs.filter((gig) =>   {
+        console.log('gigs',gig)
+    })
   
     return Promise.resolve(filteredGigs)
 }
