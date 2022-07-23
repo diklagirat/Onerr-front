@@ -5,14 +5,12 @@
 html {
     height: 100%;
     color: $text-primary;
-    //TODO:  line-height: 1.7142;
-    //TODO: font: 400 16px/24px Macan, Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-family: Macan-light;
 }
 
 body {
     margin: 0;
     padding: 0;
-    // TODO: font-size
     background-color: $background-primary;
 }
 

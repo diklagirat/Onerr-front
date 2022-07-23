@@ -1,10 +1,7 @@
 <template>
-    <!-- placeholder="What service are you looking for today?" -->
     <section class="app-search">
-        <input @input="setFilter" v-model="txt" type="search" />
+        <input @input="setFilter" v-model="txt" type="search" placeholder="What service are you looking for today?" />
         <button>Search</button>
-
-        <p>{{ ggg }}+hhhh</p>
     </section>
 </template>
 
@@ -21,7 +18,7 @@ export default {
     methods: {
         setFilter() {
             var filterBy = {
-                txt: ''
+                txt: '',
             }
             filterBy.txt = this.txt
             this.$store.commit({ type: 'setFilterBy', filterBy })

@@ -7,28 +7,40 @@
       "_id": "u101",
       "fullname": "frederickkessie",
       "imgUrl": "https://fiverr-res.cloudinary.com/t_profile_original,q_auto,f_auto/attachments/profile/photo/4abf6f5b58e4d78cfb7c410cf8d7a9ac-1626111679444/4a04b77c-22ee-4ce8-b4be-747fd059e9ff.jpg",
-      "level": "basic/premium",
-      "rate": 4
+      "level": "Level One",
+      "rate": 4,
+      "reviews": [
+        {
+          "id": "r101",
+          "txt": "Very kind and works fast",
+          "rate": 4,
+          "by": {
+            "_id": "u102",
+            "fullname": "User 2",
+            "imgUrl": "https://robohash.org/user2"
+          }
+        }
+      ]
     },
-    "packageDetails":{
+    "packageDetails": {
       "title": "I can build a professional 2-3 pages website OR fix a small bug",
       "price": 33.68,
       "daysToMake": 3,
       "features": [
-        "3 Initial Concepts Included",
+        "Architecture & Interior Design",
         "Source File",
         "Logo Transparency",
         "High Resolution",
         "Vector File"
       ]
     },
-    "daysToMake": 2,
-    "description": "Hello ! Much obliged for visiting my gig :)\nIn this gig I'm offering you an exceptionally 3 one of a kind, best and reasonable bundles.\nIn case you are thinking for giving somebody uncommon an extremely delightful, eye getting gift( hyper practical hand drawing pencil sketch picture)?\nKindly select the helpful bundle and submit your request at this moment and I'll give you an ideal picture sketch, hand drawing, practical drawing, pencil attracting high goal JPEG/PNG advanced document.\nI will give hand-drawn dark and White or hued reasonable pictures.\nSympathetically give me clear reference photograph however much as could be expected.\nThe material I utilized for Creating pencil representations are:\nDrawing materials: graphite pencil, charcoal, Bristol paper, mono eraser, brush, mixing stump, mechanical pencil, graphite powder and so on .\nYou can give me anything:\nPicture photographs\nFamily photographs\nCreature photographs\nAny item photographs\nScene photographs\nEngineering photographs\nAnything you envision\nKindly reach me prior to submitting your request! Much appreciated.\nI DO NOT DELIVER ORIGINAL PHYSICAL COPY BUT A HIGH RESOLUTION JPEG DIGITA",
+    "daysToMake": 3,
+    "description": "Hello !w Much obliged for visiting my gig :)\nIn this gig I'm offering you an exceptionally 3 one of a kind, best and reasonable bundles.\nIn case you are thinking for giving somebody uncommon an extremely delightful, eye getting gift( hyper practical hand drawing pencil sketch picture)?\nKindly select the helpful bundle and submit your request at this moment and I'll give you an ideal picture sketch, hand drawing, practical drawing, pencil attracting high goal JPEG/PNG advanced document.\nI will give hand-drawn dark and White or hued reasonable pictures.\nSympathetically give me clear reference photograph however much as could be expected.\nThe material I utilized for Creating pencil representations are:\nDrawing materials: graphite pencil, charcoal, Bristol paper, mono eraser, brush, mixing stump, mechanical pencil, graphite powder and so on .\nYou can give me anything:\nPicture photographs\nFamily photographs\nCreature photographs\nAny item photographs\nScene photographs\nEngineering photographs\nAnything you envision\nKindly reach me prior to submitting your request! Much appreciated.\nI DO NOT DELIVER ORIGINAL PHYSICAL COPY BUT A HIGH RESOLUTION JPEG DIGITA",
     "imgUrl": [
       "https://fiverr-res.cloudinary.com/t_gig_cards_web,q_auto,f_auto/gigs/103898087/original/05172967e39350e6411dd004e27b0b5f4911a8f2.jpg"
     ],
     "tags": [
-      "pencil drawing",
+      "Architecture & Interior Design",
       "realistic drawing",
       "hand drawing",
       "portrait drawing",
@@ -40,16 +52,16 @@
   },
   {
     "_id": "i102",
-    "title": "I will do hyper realistic pencil sketch portrait by hand drawing",
+    "title": "I will do hyper wrealistic pencil sketch portrait by hand drawing",
     "price": 67.37,
     "owner": {
       "_id": "u102",
       "fullname": "vividstore",
       "imgUrl": "https://fiverr-res.cloudinary.com/t_profile_original,q_auto,f_auto/attachments/profile/photo/83cc7c97f9873bdb052590a94d32f84c-1576419363871/ed47443e-0f9b-42ab-beaf-ec0a0acccfe8.jpeg",
-      "level": "basic/premium",
+      "level": "Top Rated Seller",
       "rate": 4
     },
-    "packageDetails":{
+    "packageDetails": {
       "title": "I can build a professional 2-3 pages website OR fix a small bug",
       "price": 33.68,
       "daysToMake": 3,
@@ -57,8 +69,7 @@
         "3 Initial Concepts Included",
         "Source File",
         "Logo Transparency",
-        "High Resolution",
-        "Vector File"
+        "Family & Genealogy"
       ]
     },
     "daysToMake": 3,
@@ -67,11 +78,8 @@
       "https://fiverr-res.cloudinary.com/t_gig_cards_web,q_auto,f_auto/gigs2/103898087/original/3a80737675335c6a9e1c638181ca6b0192cde264.jpg"
     ],
     "tags": [
-      "pencil drawing",
-      "realistic drawing",
-      "pencil portrait",
-      "sketch",
-      "pencil sketch"
+      "Architecture & Interior Design",
+      "Logo Animation"
     ],
     "likedByUsers": [
       "mini-user"
@@ -85,13 +93,13 @@
       "_id": "u103",
       "fullname": "andreacarvalho",
       "imgUrl": "https://fiverr-res.cloudinary.com/t_profile_original,q_auto,f_auto/attachments/profile/photo/5344c10fd4820db3626c4fc24968783d-1588608774469/1e4a3bd9-b71d-48ce-8ac0-0ff6d667caf4.jpeg",
-      "level": "basic/premium",
+      "level": "Top Rated Seller",
       "rate": 4
     },
-    "packageDetails":{
+    "packageDetails": {
       "title": "I can build a professional 2-3 pages website OR fix a small bug",
       "price": 33.68,
-      "daysToMake": 3,
+      "daysToMake": 1,
       "features": [
         "3 Initial Concepts Included",
         "Source File",
@@ -100,17 +108,15 @@
         "Vector File"
       ]
     },
-    "daysToMake": 3,
+    "daysToMake": 1,
     "description": "Desenho de lápis hiperrealista da sua foto, posso adicionar detalhes de fundo e personalizar o desenho do jeito que você quiser.",
     "imgUrl": [
       "https://fiverr-res.cloudinary.com/t_gig_cards_web,q_auto,f_auto/gigs/133437525/original/d94dd897e35bad14d30576f5fcccfc2e42bd71bf.jpg"
     ],
     "tags": [
-      "pencil",
-      "drawing",
-      "portrait",
-      "realistic",
-      "painting"
+      "Personal Stylists",
+      "LinkedIn Profiles",
+      "Architecture & Interior Design"
     ],
     "likedByUsers": [
       "mini-user"
@@ -124,20 +130,17 @@
       "_id": "u104",
       "fullname": "andreacarvalho",
       "imgUrl": "https://fiverr-res.cloudinary.com/t_profile_original,q_auto,f_auto/attachments/profile/photo/5344c10fd4820db3626c4fc24968783d-1588608774469/1e4a3bd9-b71d-48ce-8ac0-0ff6d667caf4.jpeg",
-      "level": "basic/premium",
+      "level": "Architecture & Interior Design",
       "rate": 4
     },
-    "daysToMake": 3,
+    "daysToMake": 1,
     "description": "Desenho de lápis hiperrealista da sua foto, posso adicionar detalhes de fundo e personalizar o desenho do jeito que você quiser.",
     "imgUrl": [
       "https://fiverr-res.cloudinary.com/t_gig_cards_web,q_auto,f_auto/attachments/delivery/asset/b0c5e95c997ea522c4dcc30be06f877f-1657556703/1%20pp.jpg"
     ],
     "tags": [
-      "pencil",
-      "drawing",
-      "portrait",
-      "realistic",
-      "painting"
+      "LinkedIn Profiles",
+      "Personal Stylists"
     ],
     "likedByUsers": [
       "mini-user"
@@ -151,16 +154,16 @@
       "_id": "u105",
       "fullname": "andreacarvalho",
       "imgUrl": "https://fiverr-res.cloudinary.com/t_profile_original,q_auto,f_auto/attachments/profile/photo/5344c10fd4820db3626c4fc24968783d-1588608774469/1e4a3bd9-b71d-48ce-8ac0-0ff6d667caf4.jpeg",
-      "level": "basic/premium",
+      "level": "Top Rated Seller",
       "rate": 4
     },
-    "daysToMake": 3,
+    "daysToMake": 1,
     "description": "Desenho de lápis hiperrealista da sua foto, posso adicionar detalhes de fundo e personalizar o desenho do jeito que você quiser.",
     "imgUrl": [
       "https://fiverr-res.cloudinary.com/t_gig_cards_web,q_auto,f_auto/gigs3/131359114/original/8e46a35036fc40172c39c489cd42653080f8e923.jpg"
     ],
     "tags": [
-      "pencil",
+      "Architecture & Interior Design",
       "drawing",
       "portrait",
       "realistic",
@@ -181,13 +184,13 @@
       "level": "basic/premium",
       "rate": 4
     },
-    "daysToMake": 3,
+    "daysToMake": 7,
     "description": "Desenho de lápis hiperrealista da sua foto, posso adicionar detalhes de fundo e personalizar o desenho do jeito que você quiser.",
     "imgUrl": [
       "https://fiverr-res.cloudinary.com/t_gig_cards_web,q_auto,f_auto/gigs2/242605365/original/af5d1cf1c076aed94d7b8e4a634bd3d0d619e1e5.jpg"
     ],
     "tags": [
-      "pencil",
+      "Architecture & Interior Design",
       "drawing",
       "portrait",
       "realistic",
@@ -205,16 +208,16 @@
       "_id": "u107",
       "fullname": "andreacarvalho",
       "imgUrl": "https://fiverr-res.cloudinary.com/t_profile_original,q_auto,f_auto/attachments/profile/photo/5344c10fd4820db3626c4fc24968783d-1588608774469/1e4a3bd9-b71d-48ce-8ac0-0ff6d667caf4.jpeg",
-      "level": "basic/premium",
+      "level": "Level One",
       "rate": 4
     },
-    "daysToMake": 3,
+    "daysToMake": 7,
     "description": "Desenho de lápis hiperrealista da sua foto, posso adicionar detalhes de fundo e personalizar o desenho do jeito que você quiser.",
     "imgUrl": [
       "https://fiverr-res.cloudinary.com/video/upload/so_4.158475,t_gig_cards_web/g3wjhpdxjzgvzfvvrkx9.png"
     ],
     "tags": [
-      "pencil",
+      "Architecture & Interior Design",
       "drawing",
       "portrait",
       "realistic",
@@ -232,11 +235,11 @@
       "_id": "u108",
       "fullname": "andreacarvalho",
       "imgUrl": "https://fiverr-res.cloudinary.com/t_profile_original,q_auto,f_auto/attachments/profile/photo/5344c10fd4820db3626c4fc24968783d-1588608774469/1e4a3bd9-b71d-48ce-8ac0-0ff6d667caf4.jpeg",
-      "level": "basic/premium",
+      "level": "Level Two",
       "rate": 4
     },
-    "daysToMake": 3,
-    "description": "Desenho de lápis hiperrealista da sua foto, posso adicionar detalhes de fundo e personalizar o desenho do jeito que você quiser.",
+    "daysToMake": 7,
+    "description": "Desenho w de lápis hiperrealista da sua foto, posso adicionar detalhes de fundo e personalizar o desenho do jeito que você quiser.",
     "imgUrl": [
       "https://fiverr-res.cloudinary.com/t_gig_cards_web,q_auto,f_auto/gigs/115665982/original/3e9973acc9f773944e0d9fccf724e251763fd293.jpg"
     ],
