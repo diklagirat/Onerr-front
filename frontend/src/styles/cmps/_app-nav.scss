@@ -9,7 +9,22 @@
         color: $text-secondary;
         font-weight: 600;
         text-decoration: none;
-        padding: 0.435rem 0.937rem;
+        padding: rem(7px) rem(15px);
         transition: all 0.3s ease-in-out;
+    }
+
+    button {
+        padding: em(7px) em(20px);
+    }
+}
+
+.el-button--success {
+    --el-button-text-color: $btn-primary;
+    --el-button-bg-color: transperant;
+
+    :hover {
+        --el-button-text-color: transperant;
+        --el-button-bg-color: $btn-primary;
+    
     }
 }

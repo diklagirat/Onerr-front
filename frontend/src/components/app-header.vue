@@ -1,9 +1,10 @@
 <template>
     <section class="app-header">
         <header class="main-header main-layout">
-            <app-logo />
-            <!--@click="moveToHomepage" -->
-            <gig-filter @setFilter="setFilter" />
+            <div class="logo-and-filter flex">
+                <app-logo />
+                <gig-filter @setFilter="setFilter" />
+            </div>
             <app-nav />
         </header>
     </section>
