@@ -1,6 +1,6 @@
 <template>
   <div>
-    <app-header @setFilter="setFilter" />
+    <app-header />
     <RouterView />
     <app-footer />
   </div>
@@ -21,11 +21,6 @@ export default {
     this.$store.dispatch({ type: "loadUsers" })
   },
   methods: {
-    setFilter(filter) {
-      console.log('filter inside app.vue')
-      filter = JSON.parse(JSON.stringify(filter))
-      this.$store.dispatch({ type: "setFilterBy", filterBy: filter })
-    },
   }
 }
 </script>

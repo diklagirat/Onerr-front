@@ -13,7 +13,8 @@
         a {
             font-family: Poppins;
             color: $text-third;
-            font-size: 1.9rem;
+            font-size: rem(32px); //TODO: check after import MACAN
+            letter-spacing: -rem(-2px);
 
             span {
                 color: $btn-primary;
@@ -24,8 +25,9 @@
     .main-header {
         display: flex;
         align-items: center; //TODO: TALLLLLLLLL!! helper d'ont work
-        height: 5rem;
+        height: rem(80px);
         padding: 1em 0;
+        justify-content: space-between;
 
         .main-container {
             // font-family: 'Macan,Helvetica Neue, Helvetica,Arial,sans-serif';
@@ -33,4 +35,8 @@
             font-size: 1rem;
         }
     }
+}
+
+.logo-and-filter {
+    justify-content: space-between;
 }
