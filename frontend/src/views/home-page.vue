@@ -4,7 +4,7 @@
             <hero />
             <trusted-by />
             <!-- <popular-categories-list :gigsCategories="gigsCategories" /> -->
-            <gig-info />
+            <!-- <gig-info /> -->
             <signup />
         </div>
     </section>

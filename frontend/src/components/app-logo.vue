@@ -22,7 +22,6 @@ export default {
         footerLogoDotIcon
     },
     created() {
-        console.log('isFooter', this.isFooter)
     }
 }
 </script>
