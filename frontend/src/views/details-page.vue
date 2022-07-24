@@ -48,9 +48,11 @@ export default {
     const { gigId } = this.$route.params
     gigService.getById(gigId).then((currGig) => {
       this.gig = currGig
+      console.log('gigService',this.gig)
       const ownerId = this.gig.owner._id
       userService.getById(ownerId).then((currOwner) => {
         this.owner = currOwner
+        console.log('this.owner',this.owner)
       })
     })
   },
