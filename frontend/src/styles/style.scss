@@ -11,16 +11,24 @@
 @import 'basics/layout';
 
 // COMPONENTS
-@import 'cmps/app-header';
-@import 'cmps/signup';
-@import 'cmps/app-footer';
-@import 'cmps/trusted-by';
-@import 'cmps/gig-info';
-@import 'cmps/app-nav';
-@import 'cmps/gig-preview';
-@import 'cmps/_gig-list';
 @import 'cmps/_gig-filter';
+@import 'cmps/app-footer';
+
+//Home page
+@import 'cmps/app-header';
+@import 'cmps/app-nav';
+@import 'cmps/trusted-by';
+@import 'cmps/signup';
+
+// Explore page
 @import 'cmps/_gig-list-header';
+@import 'cmps/_category-filter';
+@import 'cmps/_gig-list';
+@import 'cmps/gig-preview';
+@import 'cmps/_gig-list-filter';
+
+
+@import 'cmps/gig-info';
 
 // VIEWS
 @import 'views/home-page';
