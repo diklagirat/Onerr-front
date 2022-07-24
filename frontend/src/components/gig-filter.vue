@@ -29,9 +29,9 @@ export default {
         },
     },
     computed: {
-        ggg() {
-            return this.$store.getfilterBy
-        }
+        // ggg() {
+        //     return this.$store.getfilterBy
+        // }
     }
 
 }

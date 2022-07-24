@@ -29,10 +29,10 @@ export const gigStore = {
                 filteredGigs = filteredGigs.filter((gig) => gig.owner.level === ownerLevel)
                 console.log('gigsToDisplay-> ownerLevel', filteredGigs)
             }
-            // Delivery day -V TODO: up to 
+            // Delivery day -V TODO: up to 3 , up to 7 
             if (deliveryDay) {
                 console.log('deliveryDay:', deliveryDay)
-                filteredGigs = filteredGigs.filter((gig) => gig.daysToMake === deliveryDay)
+                filteredGigs = filteredGigs.filter((gig) => deliveryDay >= gig.daysToMake)
                 console.log('gigsToDisplay-> deliveryDay', filteredGigs)
             }
 
@@ -57,7 +57,7 @@ export const gigStore = {
 
             // 3. Delivery day : DONE: filterBy.daysToMake = gig.daysToMake only /1 /3 /7
             //  Options:
-            //          Express 24H
+            //          Express 24H == Up to 1 day
             //          Up to 3 days
             //          Up to 7 days
             //          Anytime
