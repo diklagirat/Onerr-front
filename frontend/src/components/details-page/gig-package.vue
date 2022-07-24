@@ -4,7 +4,7 @@
       <header>
         <div class="titel flex space-between">
           <h1>Packege Details</h1>
-          <h3>{{ gig.packageDetails.price }}$</h3>
+          <h3>${{ gig.packageDetails.price }}</h3>
         </div>
         <div class="second-titel">
         <h1>{{ gig.packageDetails.title }}</h1>

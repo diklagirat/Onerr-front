@@ -1,5 +1,8 @@
 .gig-preview {
     border: $border-bottom-line;
+    a {
+        text-decoration: none;
+    }
 }
 
 .gig-preview-container {

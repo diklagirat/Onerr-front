@@ -90,12 +90,24 @@
     "title": "I will provide interior design for a room in your home, complete with a...",
     "price": 202.11,
     "owner": {
-      "_id": "u103",
+      "_id": "u102",
       "fullname": "laurasteldesign",
       "imgUrl": "https://fiverr-res.cloudinary.com/t_profile_original,q_auto,f_auto/attachments/profile/photo/5344c10fd4820db3626c4fc24968783d-1588608774469/1e4a3bd9-b71d-48ce-8ac0-0ff6d667caf4.jpeg",
       "level": "Level 2 Seller",
       "rate": 5.0
     },
+    "reviews": [
+      {
+        "id": "r101",
+        "txt": "Very kind and works fast",
+        "rate": 4,
+        "by": {
+          "_id": "u102",
+          "fullname": "User 2",
+          "imgUrl": "https://robohash.org/user2"
+        }
+      }
+    ],
     "packageDetails": {
       "title": "I can build a professional 2-3 pages website OR fix a small bug",
       "price": 33.68,
@@ -127,11 +139,23 @@
     "title": "I will create exterior or interior 3d modeling and rendering",
     "price": 722.98,
     "owner": {
-      "_id": "u104",
+      "_id": "u102",
       "fullname": "petersaferna",
       "imgUrl": "https://fiverr-res.cloudinary.com/t_profile_original,q_auto,f_auto/attachments/profile/photo/5344c10fd4820db3626c4fc24968783d-1588608774469/1e4a3bd9-b71d-48ce-8ac0-0ff6d667caf4.jpeg",
       "level": "Top Rated Seller",
       "rate": 5.0
+    },
+    "packageDetails": {
+      "title": "I can build a professional 2-3 pages website OR fix a small bug",
+      "price": 33.68,
+      "daysToMake": 3,
+      "features": [
+        "Architecture & Interior Design",
+        "Source File",
+        "Logo Transparency",
+        "High Resolution",
+        "Vector File"
+      ]
     },
     "daysToMake": 3,
     "description": "Desenho de lápis hiperrealista da sua foto, posso adicionar detalhes de fundo e personalizar o desenho do jeito que você quiser.",
@@ -151,11 +175,23 @@
     "title": "I will create architectural drawings, 3d models and renderings",
     "price": 180.74,
     "owner": {
-      "_id": "u105",
+      "_id": "u102",
       "fullname": "architectumair6",
       "imgUrl": "https://fiverr-res.cloudinary.com/t_profile_original,q_auto,f_auto/attachments/profile/photo/5344c10fd4820db3626c4fc24968783d-1588608774469/1e4a3bd9-b71d-48ce-8ac0-0ff6d667caf4.jpeg",
       "level": "Level 2 Seller",
       "rate": 4.9
+    },
+    "packageDetails": {
+      "title": "I can build a professional 2-3 pages website OR fix a small bug",
+      "price": 33.68,
+      "daysToMake": 3,
+      "features": [
+        "Architecture & Interior Design",
+        "Source File",
+        "Logo Transparency",
+        "High Resolution",
+        "Vector File"
+      ]
     },
     "daysToMake": 5,
     "description": "Desenho de lápis hiperrealista da sua foto, posso adicionar detalhes de fundo e personalizar o desenho do jeito que você quiser.",
@@ -178,11 +214,23 @@
     "title": "I will render exterior building 3d architecture visualization",
     "price": 289.19,
     "owner": {
-      "_id": "u106",
+      "_id": "u102",
       "fullname": "cvizstudio2797",
       "imgUrl": "https://fiverr-res.cloudinary.com/t_profile_original,q_auto,f_auto/attachments/profile/photo/5344c10fd4820db3626c4fc24968783d-1588608774469/1e4a3bd9-b71d-48ce-8ac0-0ff6d667caf4.jpeg",
       "level": "Level 1 Seller",
       "rate": 4
+    },
+    "packageDetails": {
+      "title": "I can build a professional 2-3 pages website OR fix a small bug",
+      "price": 33.68,
+      "daysToMake": 3,
+      "features": [
+        "Architecture & Interior Design",
+        "Source File",
+        "Logo Transparency",
+        "High Resolution",
+        "Vector File"
+      ]
     },
     "daysToMake": 7,
     "description": "Desenho de lápis hiperrealista da sua foto, posso adicionar detalhes de fundo e personalizar o desenho do jeito que você quiser.",
@@ -205,11 +253,23 @@
     "title": "I will do super fast sketchup 3d models and render",
     "price": 202.11,
     "owner": {
-      "_id": "u107",
+      "_id": "u102",
       "fullname": "ahmad4236",
       "imgUrl": "https://fiverr-res.cloudinary.com/t_profile_original,q_auto,f_auto/attachments/profile/photo/5344c10fd4820db3626c4fc24968783d-1588608774469/1e4a3bd9-b71d-48ce-8ac0-0ff6d667caf4.jpeg",
       "level": "Top Rated Seller",
       "rate": 5
+    },
+    "packageDetails": {
+      "title": "I can build a professional 2-3 pages website OR fix a small bug",
+      "price": 33.68,
+      "daysToMake": 3,
+      "features": [
+        "Architecture & Interior Design",
+        "Source File",
+        "Logo Transparency",
+        "High Resolution",
+        "Vector File"
+      ]
     },
     "daysToMake": 6,
     "description": "Desenho de lápis hiperrealista da sua foto, posso adicionar detalhes de fundo e personalizar o desenho do jeito que você quiser.",
@@ -232,11 +292,23 @@
     "title": "I will make any 3d model in sketchup and render",
     "price": 72.30,
     "owner": {
-      "_id": "u108",
+      "_id": "u102",
       "fullname": "lofrender",
       "imgUrl": "https://fiverr-res.cloudinary.com/t_profile_original,q_auto,f_auto/attachments/profile/photo/5344c10fd4820db3626c4fc24968783d-1588608774469/1e4a3bd9-b71d-48ce-8ac0-0ff6d667caf4.jpeg",
       "level": "Top Rated Seller",
       "rate": 5
+    },
+    "packageDetails": {
+      "title": "I can build a professional 2-3 pages website OR fix a small bug",
+      "price": 33.68,
+      "daysToMake": 3,
+      "features": [
+        "Architecture & Interior Design",
+        "Source File",
+        "Logo Transparency",
+        "High Resolution",
+        "Vector File"
+      ]
     },
     "daysToMake": 7,
     "description": "Desenho w de lápis hiperrealista da sua foto, posso adicionar detalhes de fundo e personalizar o desenho do jeito que você quiser.",
