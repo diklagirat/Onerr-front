@@ -1,31 +1,24 @@
 .gig-preview {
-    // background-color: rgb(247, 179, 179);
-    // display: flex;
-    // align-items: center;
-    // justify-content: center;
-    // overflow: hidden;
-
-    // TODO: replace to grid
-    // min-height: 370px;
-    // width: 326px;
-    // grid-template-columns: repeat(4, 1fr);
-    // grid-gap: 32px;
-    height: 400px;
     border: $border-bottom-line;
 }
 
 .gig-preview-container {
     width: 324px;
-    border-bottom: $border-bottom-line;
 
     .gig-preview-content {
 
-        padding: 0 0.2rem 0.312rem;
-
         .gig-preview-title {
             line-height: 21px;
-            margin: 3px 0 0;
-            padding: 0 12px 5px;
+            cursor: pointer;
+            color: $btn-secondary;
+            font-weight: 400;
+            height: 43px;
+            overflow: hidden;
+            padding: 0 12px 3px;
+            margin-top: 7px;
+            word-wrap: break-word;
+            word-break: break-word;
+            text-decoration: none;
         }
     }
 
@@ -43,7 +36,7 @@
         display: flex;
         align-items: center;
         height: 3.375em;
-        padding: 12px 12px 8px;
+        padding: 13px 13px 8px;
 
         .owner-image {
             border-radius: 50%;
@@ -56,27 +49,75 @@
             display: flex;
             flex-direction: column;
             padding-inline-start: 5px;
-            // font: 400 16px/24px Helvetica, Helvetica, Arial, sans-serif;
-            // font-family: Helvetica, Arial, sans-serif;
+            font-size: 14px;
+
+            .name {
+                color: $btn-secondary;
+                line-height: 18px;
+                font-weight: 600;
+                font-family: Macan-Bold;
+            }
+
+            .level {
+                color: $text-secondary;
+                font-weight: 500;
+                line-height: 21px;
+            }
         }
 
     }
 
     .gig-rate-container {
-        color: #ffbe5b;
-        font-weight: 100;
+        font-weight: 400;
         padding: 12px 12px 8px;
+        font-size: 14px;
+        vertical-align: -0.16em;
 
-        span {
+        .owner-rate {
             width: 15px;
             height: 15px;
-            margin-right: 5px;
-            vertical-align: -0.16em;
+            margin-right: 3px;
+            color: $rate-color;
+            font-family: Macan-Bold;
+
+            svg {
+                padding-top: 2px;
+            }
         }
 
         .rate-sum {
+            color: $text-third;
             color: #b5b6ba;
+            font-weight: 400;
+            margin-left: 2px;
         }
+
+    }
+
+    .footer {
+        border-top: $border-bottom-line;
+        padding: 10px 12px;
+        height: 59px;
+        text-align: end;
+        color: $text-preview;
+        fill: $text-preview;
+
+        .price-line-brake {
+
+            small {
+                font-size: 10px;
+                font-family: Macan-Bold;
+                color: $text-secondary;
+                padding: 4px;
+            }
+
+            span {
+                padding-bottom: 4px;
+            }
+
+        }
+
+
     }
 
 }

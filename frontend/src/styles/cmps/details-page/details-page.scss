@@ -1,0 +1,19 @@
+.details-page {
+    height: 2000px;
+    .details {
+        position: relative;
+        padding: 2em 2em 0;
+        max-width: 1304px;
+        margin: 0 auto;
+        .details-main {
+            width: 57.42%;
+            margin-right: 9.15%;
+        }
+        .details-side-bar {
+            position: absolute;
+            top: 2em;
+            right: 2em;
+            height: 100vh;
+        }
+    }
+}
