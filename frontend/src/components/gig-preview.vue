@@ -38,7 +38,7 @@
         </div>
         <div class="price-line-brake flex column">
           <small>STARTING AT</small>
-          <span> ₪450 <sup>23</sup></span>
+          <span> $450 <sup>23</sup></span>
 
           <!-- TODO: 2 computed function 1. 90 2. 23  -->
         </div>
