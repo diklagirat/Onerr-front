@@ -17,7 +17,6 @@ export const userStore = {
     },
     actions: {
         async loadUsers(context) {
-            console.log('hi')
             try {
                 const users = await userService.getUsers().then(users => users)
                 context.commit({ type: 'setUsers', users })

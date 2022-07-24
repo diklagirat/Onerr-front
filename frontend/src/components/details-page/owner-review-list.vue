@@ -9,7 +9,7 @@
 </template>
 
 <script>
-import reviewPreview from '../components/review-preview.vue'
+import reviewPreview from '../details-page/review-preview.vue'
 
 export default {
     name: "owner-review",

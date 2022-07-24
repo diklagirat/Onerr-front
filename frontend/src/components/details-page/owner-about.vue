@@ -11,7 +11,7 @@
         </ul>
         <article>{{owner.description}}</article>
     </div>
-    <pre>{{ owner }}</pre>
+    <!-- <pre>{{ owner }}</pre> -->
   </section>
 </template>
 
