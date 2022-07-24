@@ -1,6 +1,6 @@
 <template>
     <section class="gig-list-header">
-        <category-filter />
+        <!-- <category-filter /> -->
         <gig-list-header-container :tag="tag" />
         <gig-list-filter />
         <div class="gig-list-sorting"></div>
@@ -9,7 +9,7 @@
 
 <script>
 import gigListHeaderContainer from './gig-list-header-container.vue'
-import categoryFilter from './category-filter.vue'
+// import categoryFilter from './category-filter.vue'
 import gigListFilter from './gig-list-filter.vue'
 export default {
     name: 'gig-list-header',
@@ -21,7 +21,7 @@ export default {
 
     components: {
         gigListHeaderContainer,
-        categoryFilter,
+        // categoryFilter,
         gigListFilter,
     },
     methods: {
