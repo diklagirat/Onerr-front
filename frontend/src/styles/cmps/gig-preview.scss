@@ -1,5 +1,6 @@
 .gig-preview {
     border: $border-bottom-line;
+
     a {
         text-decoration: none;
     }
@@ -114,7 +115,9 @@
                 padding: 4px;
             }
 
+
             span {
+                color: $text-third;
                 padding-bottom: 4px;
             }
 
