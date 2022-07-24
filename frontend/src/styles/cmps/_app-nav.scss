@@ -1,4 +1,7 @@
 .main-nav {
+
+    font-family: Macan-Bold;
+
     .main-container {
         display: flex;
         align-items: center;
@@ -6,7 +9,9 @@
     }
 
     a {
-        color: $text-secondary;
+        // color: $text-secondary;
+        // color: $background-primary;
+        color: $text-primary;
         font-weight: 600;
         text-decoration: none;
         padding: rem(7px) rem(15px);
@@ -15,16 +20,40 @@
 
     button {
         padding: em(7px) em(20px);
-    }
-}
+        font-family: Macan-Bold;
+        // border-color: $background-primary;
+        border-color: $btn-primary;
 
-.el-button--success {
-    --el-button-text-color: $btn-primary;
-    --el-button-bg-color: transperant;
+        span {
+            // color: $background-primary;
+            color: $btn-primary;
+        }
 
-    :hover {
-        --el-button-text-color: transperant;
-        --el-button-bg-color: $btn-primary;
-    
     }
+
+    .el-button {
+        height: rem(30px);
+        width: rem(71px);
+
+        &:hover {
+            background-color: $btn-primary;
+            
+            span {
+                color: $background-primary;
+                // color: $btn-primary;
+            }
+        }
+    }
+
+    .el-button--success {
+        // --el-button-text-color: $btn-primary;
+        --el-button-text-color: $background-primary;
+        --el-button-bg-color: transperant;
+        --el-button-width: em(71px);
+    }
+
+
+    // :hover {
+    //     --el-button-text-color: transperant;
+    // }
 }

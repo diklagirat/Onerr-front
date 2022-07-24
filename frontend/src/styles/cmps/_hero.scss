@@ -1,0 +1,47 @@
+.hero-wrapper {
+    position: relative;
+}
+
+.hero-background {
+    height: 42.5rem;
+    background-image: url(https://fiverr-res.cloudinary.com/image/upload/q_auto,f_auto/v1/attachments/generic_asset/asset/2413b8415dda9dbd7756d02cb87cd4b1-1599595203045/bg-hero-2-1792-x1.png);
+
+}
+
+.hero {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 2;
+}
+
+.hero-header {
+    max-width: em(650px);
+}
+
+.header {
+    color: $background-primary;
+    font-size: em(48px);
+    line-height: 56px;
+
+    i {
+        font-family: Domaine, Helvetica Neue, Helvetica, Arial, sans-serif;
+    }
+}
+
+// .hero-main-header {
+//     background-color: transparent;
+// }
+
+// .hero {
+//     height: 42.5rem;
+//     background-image: url(https://fiverr-res.cloudinary.com/image/upload/q_auto,f_auto/v1/attachments/generic_asset/asset/2413b8415dda9dbd7756d02cb87cd4b1-1599595203045/bg-hero-2-1792-x1.png);
+
+//     position: relative;
+//     display: flex;
+//     background-repeat: no-repeat;
+//     background-size: cover;
+//     background-position: center;
+// }

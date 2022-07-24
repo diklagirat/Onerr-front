@@ -1,0 +1,27 @@
+.app-logo {
+    letter-spacing: -rem(-2px);
+
+    a {
+        font-family: Poppins;
+        // color: $text-third;
+        // color: $background-primary;
+        color: #404145;
+        font-size: rem(32px); //TODO: check after import MACAN
+
+        span {
+            color: $btn-primary;
+        }
+    }
+}
+
+.footer-logo {
+    a {
+        color: $text-primary;
+        height: em(23px);
+        width: em(77px);
+        
+        span {
+            color: #b5b6ba;;
+        }
+    }
+}

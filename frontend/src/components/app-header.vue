@@ -1,12 +1,14 @@
 <template>
     <section class="app-header">
-        <header class="main-header main-layout">
-            <div class="logo-and-filter flex">
-                <app-logo />
-                <gig-filter @setFilter="setFilter" />
-            </div>
-            <app-nav />
-        </header>
+        <div class="main-header-container">
+            <header class="main-header main-layout flex">
+                <div class="logo-and-filter flex">
+                    <app-logo :isFooter="false" />
+                    <gig-filter @setFilter="setFilter" />
+                </div>
+                <app-nav />
+            </header>
+        </div>
     </section>
 </template>
 

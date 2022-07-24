@@ -2,9 +2,11 @@
     <nav class="main-nav">
         <ul class="main-container clean-list">
             <li>
-                <a href="/explore">
-                    Explore
-                </a>
+                <router-link to="/explore" class="clean-link">
+                    <a>
+                        Explore
+                    </a>
+                </router-link>
             </li>
             <li>
                 <a href="/">
@@ -27,6 +29,6 @@
 //TODO: add <router-link> with link-to='/explore'
 //TODO: add <router-link> with link-to='/' for the logo
 export default {
-    name: 'app-nav'
+    name: 'app-nav',
 }
 </script>
