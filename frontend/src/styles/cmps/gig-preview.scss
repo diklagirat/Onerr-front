@@ -23,6 +23,10 @@
             word-wrap: break-word;
             word-break: break-word;
             text-decoration: none;
+
+            &:hover {
+                color: $btn-primary;
+            }
         }
     }
 
@@ -54,6 +58,7 @@
             flex-direction: column;
             padding-inline-start: 5px;
             font-size: 14px;
+            margin-left: 5px;
 
             .name {
                 color: $btn-secondary;
@@ -66,7 +71,12 @@
                 color: $text-secondary;
                 font-weight: 500;
                 line-height: 21px;
+
+                &.topRated {
+                    color: $rate-color;
+                }
             }
+
         }
 
     }
