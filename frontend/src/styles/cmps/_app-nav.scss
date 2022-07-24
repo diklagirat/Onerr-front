@@ -1,4 +1,7 @@
 .main-nav {
+
+    font-family: Macan-Bold;
+
     .main-container {
         display: flex;
         align-items: center;
@@ -15,16 +18,29 @@
 
     button {
         padding: em(7px) em(20px);
-    }
-}
+        font-family: Macan-Bold;
 
-.el-button--success {
-    --el-button-text-color: $btn-primary;
-    --el-button-bg-color: transperant;
+    }
+
+    .el-button {
+        height: rem(30px);
+        width: rem(71px);
+
+        &:hover {
+            background-color: $btn-primary;
+        }
+    }
+
+    .el-button--success {
+        --el-button-text-color: $btn-primary;
+        --el-button-bg-color: transperant;
+        --el-button-width: em(71px);
+    }
+
 
     :hover {
         --el-button-text-color: transperant;
-        --el-button-bg-color: $btn-primary;
-    
+        --el-button-bg-color: red;
+
     }
 }

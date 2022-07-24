@@ -1,6 +1,8 @@
 .app-header {
-    background-color: $background-primary;
+    background-color: transparent;
     border-bottom: $border-bottom-line;
+    // position: absolute;
+    // z-index: 100;
 
     //TODO: show and hide stick navbar
     // position: fixed;
@@ -9,17 +11,8 @@
     // right: 0;
     // transition: all 0.3s ease-in-out;
 
-    .app-logo {
-        a {
-            font-family: Poppins;
-            color: $text-third;
-            font-size: rem(32px); //TODO: check after import MACAN
-            letter-spacing: -rem(-2px);
-
-            span {
-                color: $btn-primary;
-            }
-        }
+    .main-header-container {
+        display: block;
     }
 
     .main-header {

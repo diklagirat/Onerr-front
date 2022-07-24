@@ -1,4 +1,6 @@
-.app-footer {}
+.app-footer {
+    height: rem(55px);
+}
 
 .main-footer {
     display: flex;
@@ -8,21 +10,17 @@
 }
 
 .footer-social {
-    display: flex;
+    justify-content: space-between;
+    width: em(248px);
 
     .icon {
         fill: $text-secondary;
     }
 }
 
-.app-logo {
-    a {
-        font-family: Poppins;
-        color: $text-third;
-        font-size: 1.9rem;
-
-        span {
-            color: $btn-primary;
-        }
-    }
+.copy-right {
+    margin-left: em(24px);
+    color: #b5b6ba;
+    font-size: em(14px);
+    line-height: em(21px);
 }
