@@ -14,16 +14,25 @@
             </svg>
         </div>
         <div class="gig-list-title">
-            <h1>{{ tag }}</h1>
+            <h1>{{ category }}</h1>
         </div>
     </div>
 </template>
 
 <script>
+import { compileTemplate } from '@vue/compiler-sfc'
+
 export default {
-    name: 'gig-list-header-container',//TODO:
-    props: {
-        tag: String
+    name: 'gig-list-header-container',
+    data() {
+        return {
+            category: '',
+        }
+    },
+    created() {
+        console.log('route', this.$route)
+        const { category } = this.$route.query
+        this.category = category
     }
 
 }

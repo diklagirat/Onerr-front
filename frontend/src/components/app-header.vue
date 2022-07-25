@@ -10,12 +10,14 @@
             </header>
         </div>
     </section>
+    <category-filter />
 </template>
 
 <script>
 
 import appLogo from './app-logo.vue'
 import gigFilter from './gig-filter.vue'
+import categoryFilter from '../components/category-filter.vue'
 import appNav from './app-nav.vue'
 
 export default {
@@ -23,7 +25,8 @@ export default {
     components: {
         appLogo,
         gigFilter,
-        appNav
+        appNav,
+        categoryFilter
     },
 
     methods: {

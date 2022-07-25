@@ -19,6 +19,11 @@
             max-height: rem(386px);
         }
 
+        .el-input__wrapper {
+            max-width: 160px;
+            height: 38px;
+        }
+
         .el-option {}
 
         // .el-input__inner:read-only {

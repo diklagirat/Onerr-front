@@ -4,6 +4,7 @@ export const gigStore = {
     strict: true,
     state: {
         gigs: [],
+        allTags: [],
         filterBy: {
             txt: '',
             ownerLevel: '',
@@ -12,6 +13,12 @@ export const gigStore = {
         },
     },
     getters: {
+        getfilterBy({ filterBy }) {
+            return filterBy
+        },
+        getAllTags({ allTags }) {
+            return allTags
+        },
         gigsToDisplay({ gigs, filterBy }) {
             if (!gigs) return
 
@@ -40,10 +47,6 @@ export const gigStore = {
             if (byTag && byTag.length) {
                 console.log('byTag', byTag)
                 filteredGigs = filteredGigs.filter((gig) => gig.tags.includes(byTag))
-                //TODO:fix router
-                const queryStringParams = `?category=${byTag}`
-                const newUrl = window.location.protocol + '//' + window.location.host + window.location.pathname + queryStringParams
-                window.history.pushState({ path: newUrl }, '', newUrl)
             }
 
             return filteredGigs
@@ -82,6 +85,10 @@ export const gigStore = {
         }
     },
     mutations: {
+        setTags(state, { tags }) {
+            state.allTags = tags
+            // console.log('store--> ', tags)
+        },
         setGigs(state, { gigs }) {
             state.gigs = gigs
         },
@@ -99,5 +106,14 @@ export const gigStore = {
                 throw err
             }
         },
+        async loadTags({ commit, state }) {
+            try {
+                const tags = await gigService.getAllTags()
+                commit({ type: 'setTags', tags })
+            } catch (err) {
+                console.log('gigsStore: Error in loadTags', err)
+                throw err
+            }
+        }
     }
 }
