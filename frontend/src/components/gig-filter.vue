@@ -1,8 +1,11 @@
 <template>
-    <section class="gig-filter flex">
+    <section class="gig-filter flex" :class="{ 'gig-filter-hero': isHero }">
         <input @input="setFilter" v-model="txt" type="search" placeholder="What service are you looking for today?" />
-        <button>
-           <SearchIcon />
+        <button v-if="!isHero">
+            <SearchIcon />
+        </button>
+        <button v-else>
+            Search
         </button>
     </section>
 </template>
@@ -13,6 +16,9 @@ import SearchIcon from './icons/search-icon.vue'
 
 export default {
     name: "gig-filter",
+    props: {
+        isHero: Boolean
+    },
     component: {
         searchIcon
     },
@@ -20,6 +26,9 @@ export default {
         return {
             txt: ""
         };
+    },
+    created() {
+        console.log('this.isHero', this.isHero)
     },
     methods: {
         setFilter() {
@@ -31,9 +40,9 @@ export default {
         },
     },
     computed: {
-    // ggg() {
-    //     return this.$store.getfilterBy
-    // }
+        // ggg() {
+        //     return this.$store.getfilterBy
+        // }
     },
     components: { SearchIcon }
 }

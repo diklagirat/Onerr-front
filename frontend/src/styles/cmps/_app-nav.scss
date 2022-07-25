@@ -1,7 +1,5 @@
 .main-nav {
 
-    font-family: Macan-Bold;
-
     .main-container {
         display: flex;
         align-items: center;
@@ -12,7 +10,7 @@
         // color: $text-secondary;
         // color: $background-primary;
         color: $text-primary;
-        font-weight: 600;
+        font-family: Macan-bold;
         text-decoration: none;
         padding: rem(7px) rem(15px);
         transition: all 0.3s ease-in-out;

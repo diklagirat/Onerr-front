@@ -24,10 +24,24 @@
         height: rem(48px);
 
         svg {
-
             fill: $background-primary;
-            
         }
     }
+}
 
+.gig-filter-hero {
+
+    input {
+        margin-left: 0;
+        width: em(546px);
+    }
+
+    button {
+        background-color: $btn-primary;
+        border: 0 solid transparent;
+        padding: em(12px) em(24px);
+        font-size: 1em;
+        font-family: Macan-bold;
+        width: em(104px);
+    }
 }

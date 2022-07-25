@@ -3,15 +3,15 @@
         <div class="hero-background">
         </div>
         <div class="hero flex main-layout">
-            <div class="hero-header flex align-center">
+            <div class="hero-header flex column center align-start ">
                 <h1 class="header">
                     <span>Find the perfect <i>freelance</i> services for your business</span>
                 </h1>
                 <div class="search">
-
+                    <gig-filter :isHero="true" />
                 </div>
                 <div class="popular">
-
+                    <p> Popular: </p>
                 </div>
             </div>
         </div>
@@ -74,20 +74,15 @@
 </template>
 
 
-
-
-
-<!-- <template>
-    <div class="hero-container">
-        <div class="hero center"> -->
-            <!-- <h1>Find the perfect <i>freelance</i> services for your business</h1>
-            <input type="search" placeholder="Try &quot;building mobile app" /> -->
-        <!-- </div>
-    </div>
-</template> -->
-<!-- 
 <script>
+
+import gigFilter from "./gig-filter.vue";
+
 export default {
+    name: 'hero',
+    components: {
+        gigFilter
+    },
 
 }
-</script> -->
+</script>
