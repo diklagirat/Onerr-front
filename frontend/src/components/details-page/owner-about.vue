@@ -30,7 +30,7 @@ export default {
     owner: Object,
   },
   mounted() {
-    console.log('this.owner',this.owner)
+    // console.log('this.owner',this.owner)
     
   },
 }

@@ -1,6 +1,6 @@
 <template>
   <section class="owner-review">
-   <ul>
+   <ul class="clean-list">
         <li v-for="review in reviews" :key="review.id">
             <review-preview :review="review" />
         </li>

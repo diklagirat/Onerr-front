@@ -41,44 +41,8 @@
     }
 
     .gig-preview-owner {
-        display: flex;
-        align-items: center;
         height: 3.375em;
         padding: 13px 13px 8px;
-
-        .owner-image {
-            border-radius: 50%;
-            border: none;
-            width: 24px;
-            height: 24px;
-        }
-
-        .owner-info {
-            display: flex;
-            flex-direction: column;
-            padding-inline-start: 5px;
-            font-size: 14px;
-            margin-left: 5px;
-
-            .name {
-                color: $btn-secondary;
-                line-height: 18px;
-                font-weight: 600;
-                font-family: Macan-Bold;
-            }
-
-            .level {
-                color: $text-secondary;
-                font-weight: 500;
-                line-height: 21px;
-
-                &.topRated {
-                    color: $rate-color;
-                }
-            }
-
-        }
-
     }
 
     .gig-rate-container {

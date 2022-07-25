@@ -9,12 +9,7 @@
 
       <div class="gig-preview-content">
         <div class="gig-preview-owner">
-          <img :src="gig.owner.imgUrl" class="owner-image" />
-          <div class="owner-info">
-            <a class="name">{{ gig.owner.fullname }}</a>
-            <span class="level" :class="[this.isTopRated ? 'topRated' : '']">{{ gig.owner.level
-            }}</span>
-          </div>
+          <user-preview :user="gig.owner"/>
         </div>
         <router-link :to="'/details/' + gig._id">
           <h3 class="gig-preview-title">{{ gig.title }}</h3>
@@ -54,6 +49,7 @@
 </template>
 
 <script>
+import userPreview from '../components/user-preview.vue'
 
 export default {
   name: "gig-preview",
@@ -62,17 +58,15 @@ export default {
   },
   data() {
     return {
-      isTopRated: this.gig.owner.level === 'Top Rated Seller' ? true : false
     }
   },
   methods: {
-    errorHandler() {
-      return true
-    },
+    // errorHandler() {
+    //   return true
+    // },
   },
   components: {
-
-
+    userPreview,
   },
 }
 </script>

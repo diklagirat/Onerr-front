@@ -1,0 +1,22 @@
+.owner-review {
+    li {
+        font-size: em(14px);
+        border-top: $border-bottom-line;
+        padding: 1em 0 2em 2.75em;
+        color: $text-third;
+
+        article {
+
+            .svg-container {
+                padding: 0 .3em;
+                svg {
+                    height: 14px;
+                    width: 14px;
+                }
+            }
+            .not-helpful {
+                padding-right: 1em;
+            }
+        }
+    }
+}

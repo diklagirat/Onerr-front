@@ -1,27 +1,84 @@
 .owner-rate {
+    padding-bottom: 1.5em;
     header {
-        // h1 {
-        //     line-height: 2.625em;
+        padding-bottom: 1.25em;
+        h1 {
+            line-height: 2.625em;
 
-        //     article {
-        //         font-size: 1.25em;
-        //         color: $text-third;
-        //     }
+            article {
+                font-size: 1.25em;
+                color: $text-third;
+            }
 
-        //     .el-rate {
-        //         padding-left: .5em;
-        //     }
+            .el-rate {
+                padding-left: 0.5em;
+                padding-bottom: 1.5em;
+        
+                span {
+                    height: 1em;
+                }
+                .el-rate__text {
+                    color: #ffb33e;
+                }
+                .el-rate__icon.is-active {
+                    color: #ffb33e;
+                }
+                .el-rate__decimal {
+                    color: #ffb33e;
+                }
+            }
+        }
+    }
 
-        //     svg {
-        //         font-size: 1em;
-        //         width: 100%;
-        //         height: 100%;
-        //         margin: auto;
-        //     }
-
-        //     span {
-        //         height: 20px;
-        //     }
-        // }
+    .demo-progress {
+        width: 50%;
+        h3{
+            padding: .5em .5em 0;
+            color: #446ee7;
+            span {
+                padding-right: .3em;
+            }
+        }
+        
+        .el-progress--line {
+            padding: .6em 0 0 .5em ;
+            margin-bottom: .6em ;
+            width: 100%;
+        }
+        
+        .el-progress-bar__outer {
+            
+            height: .5em !important;
+        }
+        .el-progress.is-warning {
+            .el-progress-bar__inner {
+                background-color: #ffb33e;
+            }
+        }
+        .el-progress__text {
+            font-size: 16px;
+            color: #446ee7;
+            margin-left: 1em;
+        }
+    }
+    .rating-breakdown {
+        width: 50%;
+        h2 {
+            line-height: 140%;
+            padding-bottom: 1em;
+            color: $text-third;
+        }
+        li {
+            line-height: 140%;
+            color: #95979d;
+            padding-bottom: .5em;
+            span {
+                color: #ffb33e;
+                .star {
+                    font-size: 1.4em;
+                    padding-right: .2em;
+                }
+            }
+        }
     }
 }

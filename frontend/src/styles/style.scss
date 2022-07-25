@@ -13,6 +13,7 @@
 // COMPONENTS
 @import 'cmps/_gig-filter';
 @import 'cmps/app-footer';
+@import 'cmps/user-preview';
 
 //Home page
 @import 'cmps/app-header';
@@ -38,6 +39,7 @@
 @import 'cmps/details-page/owner-about';
 @import 'cmps/details-page/gig-about';
 @import 'cmps/details-page/owner-rate';
+@import 'cmps/details-page/owner-review';
 
 // VIEWS
 @import 'views/home-page';

@@ -1,20 +1,22 @@
 <template>
-    <section class="gig-header">
-        <div class="gig-header-container">
-            <p> {{ gig.title }} </p>
-<!-- TODO: add user-preview component -->
-            <h1 style="background-color: yellow;"> Here come's user-preview component </h1> 
-        </div>
-    </section>
+  <section class="gig-header">
+    <div class="gig-header-container">
+      <p>{{ gig.title }}</p>
+      <user-preview :user="gig.owner" />
+    </div>
+  </section>
 </template>
 
 <script>
+import userPreview from "../user-preview.vue"
 
 export default {
-    name: 'gig-header',
-    props: {
-        gig: Object,
-    },
+  name: "gig-header",
+  props: {
+    gig: Object,
+  },
+  components: {
+    userPreview,
+  },
 }
-
 </script>
