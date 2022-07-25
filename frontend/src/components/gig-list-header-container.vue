@@ -14,17 +14,28 @@
             </svg>
         </div>
         <div class="gig-list-title">
-            <h1>{{ tag }}</h1>
+            <h1>{{ category }}</h1>
         </div>
     </div>
 </template>
 
 <script>
-export default {
-    name: 'gig-list-header-container',//TODO:
-    props: {
-        tag: String
-    }
 
+export default {
+    name: 'gig-list-header-container',
+    data() {
+        return {
+            category: this.categoryUrl,
+        }
+    },
+    created() {
+        const { category } = this.$route.query
+        this.category = category
+    },
+    computed: {
+        categoryUrl() {
+            return this.$store.getters.getfilterBy.byTag
+        }
+    },
 }
 </script>

@@ -31,18 +31,12 @@ export default {
     },
     methods: {
         setFilter() {
-            var filterBy = {
-                txt: "",
-                byTag: 'Architecture & Interior Design'
-            };
-            filterBy.txt = this.txt;
+            var filterBy = { ...this.$store.getters.getfilterBy }
+            filterBy.txt = this.txt
             this.$store.commit({ type: "setFilterBy", filterBy });
         },
     },
     computed: {
-        // ggg() {
-        //     return this.$store.getfilterBy
-        // }
     },
     components: { SearchIcon }
 }

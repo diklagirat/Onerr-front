@@ -1,6 +1,6 @@
 <template>
   <div>
-    <app-header />
+    <app-header/>
     <RouterView />
     <app-footer />
   </div>
@@ -19,6 +19,7 @@ export default {
   created() {
     this.$store.dispatch({ type: "loadGigs" })
     this.$store.dispatch({ type: "loadUsers" })
+    this.$store.dispatch({ type: "loadTags" })
   },
   methods: {
   }

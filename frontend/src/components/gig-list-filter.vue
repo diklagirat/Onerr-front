@@ -1,64 +1,62 @@
 <template>
     <div class="gig-list-filter flex align-center">
         <div class="btn-filter">
-            <el-select v-model="value" class="m-2 select-options" placeholder="Delivery Time" size="large" style="">
-                <el-option>
-                    <el-radio-group v-model="radio1" class="ml-4">
-                        <el-radio label="1" size="large">Express 24H</el-radio>
-                        <el-radio label="2" size="large">Up to 3 days</el-radio>
-                        <el-radio label="3" size="large">Up to 7 days</el-radio>
-                        <el-radio label="4" size="large"> Anytime</el-radio>
-                    </el-radio-group>
-                </el-option>
+            <el-select v-model="deliveryDay" class="m-2 select-option" placeholder="Delivery Time" size="large">
+                <el-option v-for="item in deliveryDayOptions" :key="item.value" :label="item.label"
+                    :value="item.value" />
             </el-select>
         </div>
         <div class="btn-filter">
-            <el-select v-model="value" class="m-2 select-option" placeholder="Seller Details" size="large">
+            <el-select v-model="ownerLevel" class="m-2 select-option" placeholder="Seller Details" size="large">
                 <el-option v-for="item in options" :key="item.value" :label="item.label" :value="item.value" />
             </el-select>
         </div>
         <div class="btn-filter">
-            <el-select v-model="value" class="m-2 select-option" placeholder="Budget" size="large">
+            <!-- <el-select v-model="value" class="m-2 select-option" placeholder="Budget" size="large">
                 <el-option v-for="item in options" :key="item.value" :label="item.label" :value="item.value" />
-            </el-select>
+            </el-select> -->
         </div>
-
-
     </div>
 </template>
 
 <script>
-
 export default {
 
     data() {
         return {
-            options: [
+            deliveryDayOptions: [
                 {
-                    value: 'Option1',
-                    label: 'Option1',
+                    value: 1,
+                    label: 'Express 24H'
                 },
                 {
-                    value: 'Option2',
-                    label: 'Option2',
+                    value: 3,
+                    label: 'Up to 3 days'
                 },
                 {
-                    value: 'Option3',
-                    label: 'Option3',
+                    value: 7,
+                    label: 'Up to 7 days'
                 },
                 {
-                    value: 'Option4',
-                    label: 'Option4',
-                },
-                {
-                    value: 'Option5',
-                    label: 'Option5',
-                },
-            ]
+                    value: '',
+                    label: 'Anytime'
+                }],
+            deliveryDay: ''
 
         }
     },
+    mutation: {
 
+
+    },
+    watch: {
+        deliveryDay(deliveryDay) {
+            // click on label change state filterBy on store
+            var filterBy = { ...this.$store.getters.getfilterBy }
+            filterBy.deliveryDay = deliveryDay
+            this.$store.commit({ type: 'setFilterBy', filterBy })
+        },
+    },
 }
 
 </script>

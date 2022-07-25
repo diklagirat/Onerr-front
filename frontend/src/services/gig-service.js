@@ -8,32 +8,45 @@ export const gigService = {
     remove,
     save,
     getEmptyGig,
+    getAllTags
 }
 _createGigs()
 
+var gAllTags = [
+    'Architecture & Interior Design',
+    'Logo Animation',
+    'Family & Genealogy',
+    'Social Media Marketing',
+    'Personal Stylists',
+    'LinkedIn Profiles',
+    'Book Cover Design',
+    'Logo Design',
+]
+
+function isPrimaryTag(tag) {
+    return gAllTags.slice(0, 3).includes(tag)
+}
 //TODO: async
+async function getAllTags() {
+    return gAllTags
 
-async function query(filterBy) {
-    // const criteria = _buildCriteria(filterBy)
-    // const collection = await dbService.getCollection('toy')
-    // var toys = await collection.find(criteria).toArray()
-    // return toys
-
-
-    return filterBy ? _filter(filterBy) : storageService.query(KEY)
-    // return storageService.query(KEY)
 }
 
-function _filter(filterBy) { 
+async function query(filterBy) {
+
+    return filterBy ? _filter(filterBy) : storageService.query(KEY)
+}
+
+function _filter(filterBy) {
     var gigs = storageService.query(KEY)
-    console.log('gigs',gigs)
+    console.log('gigs', gigs)
     const { txt } = filterBy
     // txt
     const regex = new RegExp(txt, 'i')
-    var filteredGigs = gigs.filter((gig) =>   {
-        console.log('gigs',gig)
+    var filteredGigs = gigs.filter((gig) => {
+        console.log('gigs', gig)
     })
-  
+
     return Promise.resolve(filteredGigs)
 }
 

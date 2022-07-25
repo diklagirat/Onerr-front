@@ -1,17 +1,12 @@
 <template>
     <section class="category-filter">
-        <div class="categories-menu-wrapper main-layout">
+        <div class="categories-menu-wrapper main-layout ">
             <nav class="categories-menu-package default">
                 <ul class="categories flex space-between clean-list">
-                    <li><a href="/categories/graphics-design?source=category_tree">Architecture & Interior Design</a>
+                    <li v-for="(tag, idx) in tags" :key="idx" @click="setTag(tag)">
+                        <router-link :to="path(tag)">{{ tag }}
+                        </router-link>
                     </li>
-                    <li><a href="/categories/graphics-design?source=category_tree">Logo Animation</a></li>
-                    <li><a href="/categories/online-marketing?source=category_tree">Family &amp; Genealogy</a></li>
-                    <li><a href="/categories/graphics-design?source=category_tree">Personal Stylists</a></li>
-                    <li><a href="/categories/graphics-design?source=category_tree">Book Cover Design</a></li>
-                    <li><a href="/categories/graphics-design?source=category_tree">Logo Design</a></li>
-                    <li><a href="/categories/graphics-design?source=category_tree">Voice Over</a></li>
-                    <li><a href="/categories/graphics-design?source=category_tree">Social Media Marketing</a></li>
                 </ul>
             </nav>
         </div>
@@ -20,8 +15,28 @@
 
 <script>
 export default {
-    name: 'category-filter'
+    name: 'category-filter',
+    data() {
+        return {
+        }
+    },
+    created() {
+    },
+    methods: {
+        path(tag) {
+            return { path: '/explore', query: { category: tag } }
+        },
+        setTag(tag) {
+            var filterBy = { ...this.$store.getters.getfilterBy }
+            filterBy.byTag = tag
+            this.$store.commit({ type: 'setFilterBy', filterBy })
+        }
+    },
+    computed: {
+        tags() {
+            return this.$store.getters.getAllTags
+        }
+    }
 }
+
 </script>
-<style>
-</style>
