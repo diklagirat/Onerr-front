@@ -10,6 +10,7 @@
         
         header {
             padding-bottom: .625em;
+            line-height: 1.5em;
             .titel {
                 color: $text-third;
                 h1 {
@@ -65,6 +66,8 @@
                 padding: .75em 1.5em;
                 background-color: $btn-primary;
                 color: $background-primary;
+                font-size: 1em;
+                font-family: Macan-light;
             }
         }
     }

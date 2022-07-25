@@ -3,7 +3,7 @@
     <div class="gig-package-container">
       <header>
         <div class="titel flex space-between">
-          <h1>Packege Details</h1>
+          <h1>PACKEGE DETAILS</h1>
           <h3>${{ gig.packageDetails.price }}</h3>
         </div>
         <div class="second-titel">
@@ -53,7 +53,7 @@
         </ul>
       </article>
       <footer>
-        <button>Continue ({{ gig.price }}$)</button>
+        <button>Continue (${{ gig.packageDetails.price }})</button>
       </footer>
     </div>
   </section>

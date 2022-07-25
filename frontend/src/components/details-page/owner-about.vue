@@ -3,7 +3,7 @@
     <h1>About The Owner</h1>
     <p style="background-color: yellow">Here come's user-preview comonent</p>
     <div class="about-container">
-      <ul class="owner-stats">
+      <ul class="owner-stats clean-list flex wrap">
         <li>
           From<strong>{{ owner.state }}</strong>
         </li>

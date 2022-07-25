@@ -3,6 +3,7 @@
     <div class="details">
       <div class="details-main">
         <gig-header :gig="gig" />
+        <gig-image :images="gig.imgUrl" />
         <div class="details-side-bar">
           <gig-package :gig="gig" />
         </div>
@@ -23,21 +24,25 @@ import { userService } from "../services/user-service.js"
 
 import gigPackage from "../components/details-page/gig-package.vue"
 import gigHeader from "../components/details-page/gig-header.vue"
+import gigImage from "../components/details-page/gig-image.vue"
 import gigAbout from "../components/details-page/gig-about.vue"
 import ownerAbout from "../components/details-page/owner-about.vue"
 import ownerRate from "../components/details-page/owner-rate.vue"
 import ownerReviewList from "../components/details-page/owner-review-list.vue"
+import GigImage from "../components/details-page/gig-image.vue"
 
 export default {
   name: "gig-details",
   components: {
     gigPackage,
     gigHeader,
+    gigImage,
     gigAbout,
     ownerAbout,
     ownerRate,
     ownerReviewList,
-  },
+    GigImage
+},
   data() {
     return {
       gig: null,
