@@ -4,7 +4,7 @@
             <header class="main-header main-layout flex">
                 <div class="logo-and-filter flex">
                     <app-logo :isFooter="false" />
-                    <gig-filter @setFilter="setFilter" :isHero="false" />
+                    <gig-filter :isHero="false" />
                 </div>
                 <app-nav />
             </header>
@@ -25,7 +25,7 @@ export default {
         gigFilter,
         appNav
     },
-    
+
     methods: {
     }
 }

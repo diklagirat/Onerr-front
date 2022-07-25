@@ -4,6 +4,9 @@
             <!-- <span class="trusted-by-title">Trusted by:</span> -->
             <ul class="trusted-by-list clean-list">
                 <li>
+                    <span>Trusted by:</span>
+                </li>
+                <li>
                     <img src="@/assets/images/facebook.png" />
                 </li>
                 <li>
