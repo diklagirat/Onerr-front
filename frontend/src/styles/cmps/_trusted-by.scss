@@ -25,8 +25,16 @@
         }
 
         img {
-            height: 60px;
+            height: em(95px);
             padding: 0 24px;
+        }
+
+        li {
+            width: em(106px);
+            span {
+                font-family: Macan-bold;
+                font-size: em(16px);
+            }
         }
     }
 }

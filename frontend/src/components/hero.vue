@@ -10,8 +10,17 @@
                 <div class="search">
                     <gig-filter :isHero="true" />
                 </div>
-                <div class="popular">
-                    <p> Popular: </p>
+                <div class="popular flex">
+                    <div class="flex">
+                        <p> Popular: </p>
+                        <ul class="clean-list flex">
+                            <li class="flex center align-center" v-for="category in popularCategories" :key="category">
+                                <a class="clean-link">
+                                    {{ category }}
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
@@ -83,7 +92,7 @@ export default {
     components: {
         gigFilter
     },
-    data(){
+    data() {
         return {
             popularCategories: [
                 'Website Design',
@@ -93,8 +102,8 @@ export default {
             ]
         }
     },
-    created(){
-        console.log('this.popularCategories',this.popularCategories)
+    created() {
+        console.log('this.popularCategories', this.popularCategories)
     }
 
 }
