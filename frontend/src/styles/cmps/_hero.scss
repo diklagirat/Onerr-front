@@ -24,11 +24,24 @@
 .header {
     color: $background-primary;
     font-size: em(48px);
-    line-height: 56px;
+    line-height: rem(56px);
+    font-family: Macan-bold;
+    margin-bottom: rem(24px);
+
 
     i {
         font-family: Domaine, Helvetica Neue, Helvetica, Arial, sans-serif;
     }
+}
+
+.popular {
+   font-size: em(14px);
+   line-height: em(27px);
+   color: $background-primary;
+   font-family: Macan-Bold;
+   height: em(27px);
+   width: em(650px);
+   padding-top: em(12px);
 }
 
 // .hero-main-header {
