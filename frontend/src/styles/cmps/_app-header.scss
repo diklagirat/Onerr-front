@@ -1,6 +1,6 @@
 .app-header {
     background-color: $background-primary;
-    border-bottom: $border-bottom-line;
+   
     // position: fixed;
     // z-index: 100;
     // width: 100%;
@@ -16,6 +16,7 @@
 
     .main-header-container {
         display: block;
+        border-bottom: $border-bottom-line;
     }
 
     .main-header {
@@ -36,4 +37,3 @@
 .logo-and-filter {
     justify-content: space-between;
 }
-
