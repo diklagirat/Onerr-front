@@ -1,9 +1,11 @@
 .app-header {
-    background-color: transparent;
+    background-color: $background-primary;
     border-bottom: $border-bottom-line;
-    // position: fixed
-    z-index: 100;
-    width: 100%;
+    // position: fixed;
+    // z-index: 100;
+    // width: 100%;
+    // position: sticky;
+    top: 0px;
 
     //TODO: show and hide stick navbar
     // position: fixed;
@@ -34,3 +36,4 @@
 .logo-and-filter {
     justify-content: space-between;
 }
+
