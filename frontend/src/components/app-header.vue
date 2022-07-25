@@ -1,5 +1,5 @@
 <template>
-    <section class="app-header">
+    <section class="app-header" :class="{ 'in-homepage': isHomepage }">
         <div class="main-header-container">
             <header class="main-header main-layout flex">
                 <div class="logo-and-filter flex">
@@ -9,8 +9,10 @@
                 <app-nav />
             </header>
         </div>
+        <div>
+            <category-filter />
+        </div>
     </section>
-    <category-filter />
 </template>
 
 <script>
@@ -22,13 +24,18 @@ import appNav from './app-nav.vue'
 
 export default {
     name: 'app-header',
+    props: {
+        isHomepage: Boolean
+    },
     components: {
         appLogo,
         gigFilter,
         appNav,
         categoryFilter
     },
-
+    created() {
+        // console.log('this.isHomepage', this.isHomepage)
+    },
     methods: {
     }
 }
