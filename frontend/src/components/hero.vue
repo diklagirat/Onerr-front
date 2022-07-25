@@ -10,9 +10,9 @@
                 <div class="search">
 
                 </div>
-                <div class="popular">
+                <!-- <div class="popular">
 
-                </div>
+                </div> -->
             </div>
         </div>
 

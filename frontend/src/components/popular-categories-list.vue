@@ -5,7 +5,7 @@
             <ul>
                 <li v-for="gigCategory in gigsCategories" :key="gigCategory">
                     <!-- <p :gigCategory="gigCategory"> -->
-                        {{gigsCategories}}
+                    {{ gigsCategories }}
                     <!-- </p> -->
                 </li>
             </ul>
