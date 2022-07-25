@@ -20,20 +20,22 @@
 </template>
 
 <script>
-import { compileTemplate } from '@vue/compiler-sfc'
 
 export default {
     name: 'gig-list-header-container',
     data() {
         return {
-            category: '',
+            category: this.categoryUrl,
         }
     },
     created() {
-        console.log('route', this.$route)
         const { category } = this.$route.query
         this.category = category
-    }
-
+    },
+    computed: {
+        categoryUrl() {
+            return this.$store.getters.getfilterBy.byTag
+        }
+    },
 }
 </script>

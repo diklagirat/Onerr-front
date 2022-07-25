@@ -1,6 +1,6 @@
 <template>
     <section class="gig-list-header">
-        <gig-list-header-container :tag="tag" />
+        <gig-list-header-container />
         <gig-list-filter />
     </section>
 </template>
@@ -12,7 +12,7 @@
             name: 'gig-list-header',
             data() {
                 return {
-                    tag: 'Architecture & Interior Design'
+                    // tag: 'Architecture & Interior Design'
         
                 }
             },

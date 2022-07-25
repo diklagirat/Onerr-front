@@ -36,7 +36,7 @@ export const gigStore = {
                 filteredGigs = filteredGigs.filter((gig) => gig.owner.level === ownerLevel)
                 console.log('gigsToDisplay-> ownerLevel', filteredGigs)
             }
-            // Delivery day -V TODO: up to 3 , up to 7 
+            // Delivery day -V TODO: up to 3 , up to 7 // input number
             if (deliveryDay) {
                 console.log('deliveryDay:', deliveryDay)
                 filteredGigs = filteredGigs.filter((gig) => deliveryDay >= gig.daysToMake)
@@ -87,7 +87,6 @@ export const gigStore = {
     mutations: {
         setTags(state, { tags }) {
             state.allTags = tags
-            // console.log('store--> ', tags)
         },
         setGigs(state, { gigs }) {
             state.gigs = gigs

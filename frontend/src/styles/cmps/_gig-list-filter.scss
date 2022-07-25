@@ -1,38 +1,29 @@
 .gig-list-filter {
     .el-select {
+
         padding-right: rem(20px);
+        // border in focus TODO: asi
+        --el-select-input-focus-border-color: #dadbdd;
+        --el-text-color-placeholder: #222325;
 
-        .color {
-            color: black;
-        }
-
-        .el-input__inner {
-            color: black;
-            font-weight: bold;
-            font-size: rem(16px);
-            // color: chartreuse !important;
-            // background-color: aqua;
-        }
-
-        .radio-group-container {
-            height: rem(386px);
-            max-height: rem(386px);
-        }
-
-        .el-input__wrapper {
-            max-width: 160px;
-            height: 38px;
-        }
-
-        .el-option {}
-
-        // .el-input__inner:read-only {
-        //     color: aliceblue;
-        //     color: chartreuse !important;
-        //     font-weight: bold;
-        //     // background-color: aqua;
+        // &.selected {
+        //     --el-select-input-focus-border-color: #a6eaca;
+        //     --el-text-color-placeholder: #1dbf73;
         // }
-
     }
 
+    .el-input__inner {
+        font-size: rem(16px);
+        font-family: Macan-Bold;
+    }
+
+    .el-input__wrapper {
+        max-width: 160px;
+        height: 38px;
+    }
+
+    .radio-btn {
+        // width: 260px;
+        max-width: 160px;
+    }
 }
