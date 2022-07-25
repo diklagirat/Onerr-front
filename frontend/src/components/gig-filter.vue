@@ -28,7 +28,6 @@ export default {
         };
     },
     created() {
-        console.log('this.isHero', this.isHero)
     },
     methods: {
         setFilter() {

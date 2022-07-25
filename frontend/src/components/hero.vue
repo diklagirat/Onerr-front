@@ -83,6 +83,19 @@ export default {
     components: {
         gigFilter
     },
+    data(){
+        return {
+            popularCategories: [
+                'Website Design',
+                'WordPress',
+                'Logo Design',
+                'NFT Art'
+            ]
+        }
+    },
+    created(){
+        console.log('this.popularCategories',this.popularCategories)
+    }
 
 }
 </script>
