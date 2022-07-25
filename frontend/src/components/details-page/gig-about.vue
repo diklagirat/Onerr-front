@@ -1,5 +1,5 @@
 <template>
-    <section class="about-gig">
+    <section class="gig-about">
         <div class="about-gig-container">
             <h1> About This Gig </h1>
             <p>{{ gig.description }}</p>

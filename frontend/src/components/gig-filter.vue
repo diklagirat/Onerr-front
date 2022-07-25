@@ -33,6 +33,7 @@ export default {
         setFilter() {
             var filterBy = {
                 txt: "",
+                byTag: 'Architecture & Interior Design'
             };
             filterBy.txt = this.txt;
             this.$store.commit({ type: "setFilterBy", filterBy });

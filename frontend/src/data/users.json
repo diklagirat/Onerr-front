@@ -21,6 +21,36 @@
                     "fullname": "User 2",
                     "imgUrl": "https://robohash.org/user2"
                 }
+            },
+            {
+                "id": "r101",
+                "txt": "Very kind and works fast",
+                "rate": 5,
+                "by": {
+                    "_id": "u102",
+                    "fullname": "User 2",
+                    "imgUrl": "https://robohash.org/user2"
+                }
+            },
+            {
+                "id": "r101",
+                "txt": "Very kind and works fast",
+                "rate": 4,
+                "by": {
+                    "_id": "u102",
+                    "fullname": "User 2",
+                    "imgUrl": "https://robohash.org/user2"
+                }
+            },
+            {
+                "id": "r101",
+                "txt": "Very kind and works fast",
+                "rate": 3,
+                "by": {
+                    "_id": "u102",
+                    "fullname": "User 2",
+                    "imgUrl": "https://robohash.org/user2"
+                }
             }
         ]
     },
@@ -31,6 +61,11 @@
         "username": "user2",
         "password": "secret2",
         "level": "basic/premium",
+        "state": "USA",
+        "created": "Feb 2021",
+        "responseTime": "1 hour",
+        "LastDelivery": "2Days",
+        "description": "I hold masters degree in engineering . I am a professional graphic designer and have designed many creative websites. So if you want a creative and professional website for your business, you are at the right place. Apart from web designing i offer different services like designing infographics, Photoshop, writing articles and blog posts. I always prefer customer's satisfaction.",
         "reviews": [
             {
                 "id": "r102",

@@ -12,7 +12,8 @@
           <img :src="gig.owner.imgUrl" class="owner-image" />
           <div class="owner-info">
             <a class="name">{{ gig.owner.fullname }}</a>
-            <span class="level">{{ gig.owner.level }} </span>
+            <span class="level" :class="[this.isTopRated ? 'topRated' : '']">{{ gig.owner.level
+            }}</span>
           </div>
         </div>
         <router-link :to="'/details/' + gig._id">
@@ -42,7 +43,6 @@
         </div>
         <div class="price-line-brake flex column">
           <small>STARTING AT</small>
-          <small>STARTING AT</small>
           <router-link :to="'/details/' + gig._id">
             <span> $450 <sup>23</sup></span>
           </router-link>
@@ -54,19 +54,25 @@
 </template>
 
 <script>
+
 export default {
   name: "gig-preview",
   props: {
     gig: Object,
   },
   data() {
-    return {}
+    return {
+      isTopRated: this.gig.owner.level === 'Top Rated Seller' ? true : false
+    }
   },
   methods: {
     errorHandler() {
       return true
     },
   },
-  components: {},
+  components: {
+
+
+  },
 }
 </script>
