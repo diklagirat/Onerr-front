@@ -34,7 +34,7 @@ export default {
         categoryFilter
     },
     created() {
-        console.log('this.isHomepage', this.isHomepage)
+        // console.log('this.isHomepage', this.isHomepage)
     },
     methods: {
     }
