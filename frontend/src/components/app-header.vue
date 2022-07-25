@@ -4,10 +4,6 @@
             <header class="main-header main-layout flex">
                 <div class="logo-and-filter flex">
                     <app-logo :isFooter="false" />
-<<<<<<< HEAD
-=======
-                    <gig-filter :isHero="false" />
->>>>>>> 84dc998dee5ad3ef9ed055674031f52e820abddc
                 </div>
                 <app-nav />
             </header>
