@@ -101,7 +101,6 @@ export const gigStore = {
                 const gigs = await gigService.query()
                 commit({ type: 'setGigs', gigs })
             } catch (err) {
-                console.log('gigsStore: Error in loadGigs', err)
                 throw err
             }
         },
@@ -110,7 +109,6 @@ export const gigStore = {
                 const tags = await gigService.getAllTags()
                 commit({ type: 'setTags', tags })
             } catch (err) {
-                console.log('gigsStore: Error in loadTags', err)
                 throw err
             }
         }
