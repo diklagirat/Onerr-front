@@ -13,7 +13,6 @@ export const orderService = {
 //TODO: 
 //  orderedGigs => orderService.query({userId: 'u101'})
 // Order- confirm Order
-// Lastly: GigExplore, Filtering
 
 function query() {
     return storageService.query(KEY)
@@ -38,7 +37,6 @@ function _createOrders() {
     var orders = JSON.parse(localStorage.getItem(KEY))
     if (!orders || !orders.length) {
         orders = ordersJson
-        console.log('orders', orders)
         localStorage.setItem(KEY, JSON.stringify(orders))
     }
     return orders
