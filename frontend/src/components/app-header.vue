@@ -1,5 +1,5 @@
 <template>
-    <section class="app-header" :class="{ 'in-homepage': isHomepage }">
+    <section :class="getClass">
         <div class="main-header-container">
             <header class="main-header main-layout flex">
                 <div class="logo-and-filter flex">
@@ -24,19 +24,48 @@ import appNav from './app-nav.vue'
 
 export default {
     name: 'app-header',
-    props: {
-        isHomepage: Boolean
-    },
     components: {
         appLogo,
         gigFilter,
         appNav,
-        categoryFilter
+        categoryFilter,
+
     },
+    data() {
+        return {
+
+        }
+    },
+
     created() {
-        // console.log('this.isHomepage', this.isHomepage)
+
     },
-    methods: {
+    computed: {
+        getClass() {
+            const val = this.$store.getters.getObserver
+                  if (val && this.$route.path === '/') {
+                return 'sticky app-header'
+            }
+            return 'app-header'
+
+        }
     }
+
 }
-</script>
+</script >
+
+<style scoped>
+.observe {
+    text-align: center;
+    height: 150px;
+    border: 1px solid black;
+}
+
+.sticky {
+    background-color: #fff;
+    z-index: 1;
+    position: sticky;
+    top: 0px;
+
+}
+</style>

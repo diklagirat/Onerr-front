@@ -1,5 +1,12 @@
 .main-nav {
 
+    // position: fixed;
+    // z-index: 100;
+    // top: 0px;
+    // left: 0;
+    // right: 0;
+    // transition: all 0.3s ease-in-out;
+
     .main-container {
         display: flex;
         align-items: center;
@@ -55,26 +62,3 @@
     // }
 }
 
-.in-homepage {
-    background-color: #B54562; // TODO: Change to transperent
-
-    a {
-        color: $background-primary;
-    }
-
-    button {
-        border-color: $background-primary;
-
-        span {
-            color: $background-primary;
-            // color: $btn-primary;
-        }
-    }
-
-    .el-button--success {
-        --el-button-text-color: $btn-primary;
-        // --el-button-text-color: $background-primary;
-
-
-    }
-}

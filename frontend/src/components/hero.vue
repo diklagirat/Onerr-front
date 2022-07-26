@@ -1,5 +1,6 @@
 <template>
-    <div class="hero-wrapper hero-andrea lohp-row">
+    <div class="hero-wrapper hero-andrea lohp-row" ref="hero">
+        <!-- ref="hero" -->
         <div class="hero-background">
         </div>
         <div class="hero flex main-layout">
@@ -15,7 +16,7 @@
                         <p> Popular: </p>
                         <ul class="clean-list flex">
                             <li class="flex center align-center" v-for="category in popularCategories" :key="category">
-                                <a class="clean-link">
+                                <a class="clean-link" @click="setPath(category)">
                                     {{ category }}
                                 </a>
                             </li>
@@ -52,7 +53,7 @@
                 </div>
             </div> -->
     </div>
-   
+
 </template>
 
 
@@ -67,17 +68,48 @@ export default {
     },
     data() {
         return {
+            heroObserver: null,
             popularCategories: [
                 'Website Design',
                 'WordPress',
                 'Logo Design',
                 'NFT Art'
-            ]
+            ],
+            isSticky: false,
+            page: '',
         }
     },
     created() {
-        console.log('this.popularCategories', this.popularCategories)
-    }
+        this.page = this.$route.path
+        // console.log('this.popularCategories', this.popularCategories)
+    },
+    methods: {
+        setPath(category) {
+            var filterBy = { ...this.$store.getters.getfilterBy }
+            filterBy.byTag = category
+            this.$store.commit({ type: 'setFilterBy', filterBy })
+            this.$router.push({ path: '/explore', query: { category: category } })
+            // console.log('this.popularCategories', this.popularCategories) 
+        },
+        onHeaderObserved(entries) {
+            if (this.page !== '/') {
+                console.log(this.page);
+            }
+            entries.forEach((entry) => {
 
+                this.isSticky = entry.isIntersecting ? false : true
+            })
+            this.$store.commit({ type: 'setObserver', val: this.isSticky })
+        },
+    },
+    mounted() {
+        console.log('hero', this.$refs.hero)
+        // console.log(this.$refs.test)
+        this.headerObserver = new IntersectionObserver(this.onHeaderObserved, {
+            rootMargin: '40px',
+            threshold: 1.0,
+        })
+        this.headerObserver.observe(this.$refs.hero)
+    },
 }
 </script>

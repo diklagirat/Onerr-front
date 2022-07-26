@@ -11,6 +11,7 @@ export const gigStore = {
             deliveryDay: '',
             byTag: ''
         },
+        observer: null
     },
     getters: {
         getfilterBy({ filterBy }) {
@@ -82,6 +83,9 @@ export const gigStore = {
             //          9. WordPress
             //          10. Social Media Marketing
 
+        },
+        getObserver(state) {
+            return state.observer
         }
     },
     mutations: {
@@ -94,14 +98,18 @@ export const gigStore = {
         setFilterBy(state, { filterBy }) {
             state.filterBy = { ...filterBy }
         },
+        setObserver(state, {val}){
+            state.observer=val
+            console.log(state.observer);
+        }
     },
     actions: {
+
         async loadGigs({ commit, state }) {
             try {
                 const gigs = await gigService.query()
                 commit({ type: 'setGigs', gigs })
             } catch (err) {
-                console.log('gigsStore: Error in loadGigs', err)
                 throw err
             }
         },
@@ -110,7 +118,6 @@ export const gigStore = {
                 const tags = await gigService.getAllTags()
                 commit({ type: 'setTags', tags })
             } catch (err) {
-                console.log('gigsStore: Error in loadTags', err)
                 throw err
             }
         }

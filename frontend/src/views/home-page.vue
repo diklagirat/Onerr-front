@@ -35,11 +35,13 @@ export default {
                 'artisitic',
                 'proffesional',
                 'accessible',
-            ]
+            ],
+            isSticky: false
         }
     },
     created() {
-    }
+    },
+    
 }
 
 </script>
