@@ -62,26 +62,3 @@
     // }
 }
 
-.in-homepage {
-    background-color: #B54562; // TODO: Change to transperent
-  
-    a {
-        color: $background-primary;
-    }
-
-    button {
-        border-color: $background-primary;
-
-        span {
-            color: $background-primary;
-            // color: $btn-primary;
-        }
-    }
-
-    .el-button--success {
-        --el-button-text-color: $btn-primary;
-        // --el-button-text-color: $background-primary;
-
-
-    }
-}

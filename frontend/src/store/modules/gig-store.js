@@ -11,6 +11,7 @@ export const gigStore = {
             deliveryDay: '',
             byTag: ''
         },
+        observer: null
     },
     getters: {
         getfilterBy({ filterBy }) {
@@ -82,6 +83,9 @@ export const gigStore = {
             //          9. WordPress
             //          10. Social Media Marketing
 
+        },
+        getObserver(state) {
+            return state.observer
         }
     },
     mutations: {
@@ -94,8 +98,13 @@ export const gigStore = {
         setFilterBy(state, { filterBy }) {
             state.filterBy = { ...filterBy }
         },
+        setObserver(state, {val}){
+            state.observer=val
+            console.log(state.observer);
+        }
     },
     actions: {
+
         async loadGigs({ commit, state }) {
             try {
                 const gigs = await gigService.query()

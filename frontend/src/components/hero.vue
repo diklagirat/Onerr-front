@@ -1,5 +1,6 @@
 <template>
-    <div class="hero-wrapper hero-andrea lohp-row"  > <!-- ref="hero" -->
+    <div class="hero-wrapper hero-andrea lohp-row" ref="hero">
+        <!-- ref="hero" -->
         <div class="hero-background">
         </div>
         <div class="hero flex main-layout">
@@ -52,13 +53,12 @@
                 </div>
             </div> -->
     </div>
-   
+
 </template>
 
 
 <script>
 
-import { tryOnMounted } from "@vueuse/core";
 import gigFilter from "./gig-filter.vue";
 
 export default {
@@ -74,12 +74,42 @@ export default {
                 'WordPress',
                 'Logo Design',
                 'NFT Art'
-            ]
+            ],
+            isSticky: false,
+            page: '',
         }
     },
+    
     created() {
+        this.page = this.$route.path
+
         console.log('this.popularCategories', this.popularCategories)
     },
+    methods: {
+        onHeaderObserved(entries) {
+            if (this.page !== '/') {
+                console.log(this.page);
+            }
+            entries.forEach((entry) => {
+
+                this.isSticky = entry.isIntersecting ? false : true
+            })
+            this.$store.commit({ type: 'setObserver', val: this.isSticky })
+        },
+
+    },
+    mounted() {
+        console.log('hero', this.$refs.hero)
+        // console.log(this.$refs.test)
+        this.headerObserver = new IntersectionObserver(this.onHeaderObserved, {
+            rootMargin: '40px',
+            threshold: 1.0,
+        })
+        this.headerObserver.observe(this.$refs.hero)
+
+
+    },
+
     // methods: {
     //     onHeroObserved(entries) {
     //         entries.forEach(entry => {
