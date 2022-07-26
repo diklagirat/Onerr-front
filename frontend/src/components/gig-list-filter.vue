@@ -1,14 +1,15 @@
 <template>
     <div class="gig-list-filter flex align-center">
         <div class="btn-filter">
-            <el-select v-model="deliveryDay" class="m-2 select-option" placeholder="Delivery Time" size="large">
-                <el-option v-for="item in deliveryDayOptions" :key="item.value" :label="item.label"
+            <el-select v-model="deliveryDay" placeholder="Delivery Time" size="large">
+                <el-option v-for="(item, idx) in deliveryDayOptions" :key="idx" :label="item.label"
                     :value="item.value" />
             </el-select>
         </div>
         <div class="btn-filter">
             <el-select v-model="ownerLevel" class="m-2 select-option" placeholder="Seller Details" size="large">
-                <el-option v-for="item in options" :key="item.value" :label="item.label" :value="item.value" />
+                <el-option v-for="(item, idx) in ownerLevelOptions" :key="idx" :label="item.label"
+                    :value="item.value" />
             </el-select>
         </div>
         <div class="btn-filter">
@@ -41,19 +42,44 @@ export default {
                     value: '',
                     label: 'Anytime'
                 }],
-            deliveryDay: ''
+            deliveryDay: '',
+            ownerLevelOptions: [
+                {
+                    value: 'Top Rated Seller',
+                    label: 'Top Rated'
+                },
+                {
+                    value: 'Level 1 Seller',
+                    label: 'Level One'
+                },
+                {
+                    value: 'Level 2 Seller',
+                    label: 'Level Two '
+                },
+                {
+                    value: 'New Seller',
+                    label: this.value
+                },
+            ],
+            ownerLevel: '',
 
         }
     },
     mutation: {
 
-
     },
     watch: {
+        //TODO: repeat????
         deliveryDay(deliveryDay) {
             // click on label change state filterBy on store
             var filterBy = { ...this.$store.getters.getfilterBy }
             filterBy.deliveryDay = deliveryDay
+            this.$store.commit({ type: 'setFilterBy', filterBy })
+        },
+        ownerLevel(ownerLevel) {
+            var filterBy = { ...this.$store.getters.getfilterBy }
+            console.log(ownerLevel)
+            filterBy.ownerLevel = ownerLevel
             this.$store.commit({ type: 'setFilterBy', filterBy })
         },
     },

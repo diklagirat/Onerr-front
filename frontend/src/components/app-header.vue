@@ -21,7 +21,6 @@ import appLogo from './app-logo.vue'
 import gigFilter from './gig-filter.vue'
 import categoryFilter from '../components/category-filter.vue'
 import appNav from './app-nav.vue'
-import GigFilter from './gig-filter.vue'
 
 export default {
     name: 'app-header',
@@ -30,7 +29,6 @@ export default {
         gigFilter,
         appNav,
         categoryFilter,
-        GigFilter,
 
     },
     data() {

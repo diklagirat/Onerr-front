@@ -16,7 +16,7 @@
                         <p> Popular: </p>
                         <ul class="clean-list flex">
                             <li class="flex center align-center" v-for="category in popularCategories" :key="category">
-                                <a class="clean-link">
+                                <a class="clean-link" @click="setPath(category)">
                                     {{ category }}
                                 </a>
                             </li>
@@ -79,13 +79,18 @@ export default {
             page: '',
         }
     },
-    
     created() {
         this.page = this.$route.path
-
-        console.log('this.popularCategories', this.popularCategories)
+        // console.log('this.popularCategories', this.popularCategories)
     },
     methods: {
+        setPath(category) {
+            var filterBy = { ...this.$store.getters.getfilterBy }
+            filterBy.byTag = category
+            this.$store.commit({ type: 'setFilterBy', filterBy })
+            this.$router.push({ path: '/explore', query: { category: category } })
+            // console.log('this.popularCategories', this.popularCategories) 
+        },
         onHeaderObserved(entries) {
             if (this.page !== '/') {
                 console.log(this.page);
@@ -96,7 +101,6 @@ export default {
             })
             this.$store.commit({ type: 'setObserver', val: this.isSticky })
         },
-
     },
     mounted() {
         console.log('hero', this.$refs.hero)
@@ -106,21 +110,6 @@ export default {
             threshold: 1.0,
         })
         this.headerObserver.observe(this.$refs.hero)
-
-
     },
-
-    // methods: {
-    //     onHeroObserved(entries) {
-    //         entries.forEach(entry => {
-    //            console.log('hey im observed', entry);
-    //         })
-    //     },
-    // },
-    // mounted() {
-    //     console.log('mounted', this.$refs.hero );
-    //     this.heroObserver = new IntersectionObserver(this.onHeroObserved);
-    //     this.heroObserver.observe(this.$refs.hero);
-    // }
 }
 </script>
