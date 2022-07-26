@@ -15,7 +15,7 @@
                         <p> Popular: </p>
                         <ul class="clean-list flex">
                             <li class="flex center align-center" v-for="category in popularCategories" :key="category">
-                                <a class="clean-link">
+                                <a class="clean-link" @click="setPath(category)">
                                     {{ category }}
                                 </a>
                             </li>
@@ -52,7 +52,7 @@
                 </div>
             </div> -->
     </div>
-   
+
 </template>
 
 
@@ -76,7 +76,15 @@ export default {
         }
     },
     created() {
-        console.log('this.popularCategories', this.popularCategories)
+        // console.log('this.popularCategories', this.popularCategories)
+    },
+    methods: {
+        setPath(category) {
+            var filterBy = { ...this.$store.getters.getfilterBy }
+            filterBy.byTag = category
+            this.$store.commit({ type: 'setFilterBy', filterBy })
+            this.$router.push({ path: '/explore', query: { category: category } })
+        },
     }
 
 }
