@@ -4,6 +4,7 @@
             <header class="main-header main-layout flex">
                 <div class="logo-and-filter flex">
                     <app-logo :isFooter="false" />
+                    <gigFilter />
                 </div>
                 <app-nav />
             </header>

@@ -33,7 +33,8 @@ export default {
         setFilter() {
             var filterBy = { ...this.$store.getters.getfilterBy }
             filterBy.txt = this.txt
-            this.$store.commit({ type: "setFilterBy", filterBy });
+            this.$store.commit({ type: "setFilterBy", filterBy })
+            this.$router.push({ path: '/explore', query: { txt: this.txt } })
         },
     },
     computed: {
