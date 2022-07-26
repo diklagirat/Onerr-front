@@ -106,7 +106,7 @@ export default {
         console.log('hero', this.$refs.hero)
         // console.log(this.$refs.test)
         this.headerObserver = new IntersectionObserver(this.onHeaderObserved, {
-            rootMargin: '40px',
+            rootMargin: '1px',
             threshold: 1.0,
         })
         this.headerObserver.observe(this.$refs.hero)

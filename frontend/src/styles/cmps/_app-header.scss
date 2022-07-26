@@ -1,19 +1,11 @@
 .app-header {
-    
-
-
-    // position: fixed;
-    // z-index: 100;
-    // width: 100%;
-    // position: sticky;
-    top: 0px;
 
     //TODO: show and hide stick navbar
     // position: fixed;
     // top: 0;
     // left: 0;
     // right: 0;
-    // transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
 
     .main-header-container {
         display: block;
@@ -40,25 +32,59 @@
 }
 
 .in-homepage {
-    background-color: #B54562; // TODO: Change to transperent
+    background-color: transparent;
+    position: fixed;
+    z-index: 10;
+    width: 100%;
 
-    a {
-        color: $background-primary;
+    .main-header-container {
+        border-bottom: transparent 0px solid;
     }
 
-    button {
-        border-color: $background-primary;
-
-        span {
+    .app-logo-in-homepage {
+        a {
             color: $background-primary;
-            // color: $btn-primary;
         }
     }
 
-    .el-button--success {
-        --el-button-text-color: $btn-primary;
-        // --el-button-text-color: $background-primary;
-
-
+    .gig-filter-in-homepage{
+        display: none;
     }
+
+    .app-nav-in-hompage {
+
+        a {
+            color: $background-primary;
+        }
+
+        button {
+            border-color: $background-primary;
+
+            span {
+                color: $background-primary;
+                // color: $btn-primary;
+            }
+        }
+
+        .el-button--success {
+            --el-button-text-color: $btn-primary;
+            // --el-button-text-color: $background-primary;
+        }
+
+        .category-filter {
+            display: none;
+        }
+    }
+
+    .category-filter-in-homepage {
+        display: none;
+    }
+}
+
+.sticky {
+    background-color: $background-primary;
+    z-index: 100;
+    position: sticky;
+    top: 0px;
+    transition: all 0.3s ease-in-out;
 }
