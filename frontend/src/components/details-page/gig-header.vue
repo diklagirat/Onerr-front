@@ -2,7 +2,7 @@
   <section class="gig-header">
     <div class="gig-header-container">
       <p>{{ gig.title }}</p>
-      <user-preview :user="gig.owner" />
+      <user-preview :user="gig.owner" :isHeader="true"/>
     </div>
   </section>
 </template>

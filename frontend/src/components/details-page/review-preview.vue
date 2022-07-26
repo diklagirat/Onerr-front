@@ -1,7 +1,7 @@
 <template>
   <section class="review-preview">
     <!-- TODO add mini user -->
-    <p style="background-color: yellow">Here come's user-preview comonent</p>
+    <userPreview :user="review.by" :rait="review.rait" :isReview="true"/>
     <p>{{ review.txt }}</p>
     <article class="flex">
       <div class="not-helpful flex">
@@ -39,10 +39,14 @@
 </template>
 
 <script>
+import userPreview from "../user-preview.vue"
 export default {
   name: "review-preview",
   props: {
     review: Object,
+  },
+  components: {
+    userPreview,
   },
 }
 </script>

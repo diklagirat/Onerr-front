@@ -10,26 +10,9 @@
                 color: $text-third;
             }
 
-            .el-rate {
-                padding-left: 0.5em;
-                padding-bottom: 1.5em;
-        
-                span {
-                    height: 1em;
-                }
-                .el-rate__text {
-                    color: #ffb33e;
-                }
-                .el-rate__icon.is-active {
-                    color: #ffb33e;
-                }
-                .el-rate__decimal {
-                    color: #ffb33e;
-                }
-            }
         }
     }
-
+    
     .demo-progress {
         width: 50%;
         h3{
@@ -82,3 +65,4 @@
         }
     }
 }
+

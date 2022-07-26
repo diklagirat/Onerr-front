@@ -1,7 +1,7 @@
 <template>
   <section class="owner-about">
     <h1>About The Owner</h1>
-    <p style="background-color: yellow">Here come's user-preview comonent</p>
+    <user-preview :user="owner" :isOwnerDetails="true"/>
     <div class="about-container">
       <ul class="owner-stats clean-list flex wrap">
         <li>
@@ -24,6 +24,7 @@
 </template>
 
 <script>
+import userPreview from '../user-preview.vue'
 export default {
   name: "owner-about",
   props: {
@@ -31,8 +32,10 @@ export default {
   },
   mounted() {
     // console.log('this.owner',this.owner)
-    
   },
+  components: {
+    userPreview
+  }
 }
 </script>
 

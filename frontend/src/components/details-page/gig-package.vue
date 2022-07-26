@@ -31,7 +31,7 @@
         </ul>
       </article>
       <footer>
-        <button>Continue (${{ gig.packageDetails.price }})</button>
+        <button class="btn-basic">Continue (${{ gig.packageDetails.price }})</button>
       </footer>
     </div>
   </section>

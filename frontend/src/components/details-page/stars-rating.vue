@@ -11,15 +11,15 @@
 
 <script>
 export default {
-    name: 'stars-rating',
-    props: {
-        rate: Number
+  name: "stars-rating",
+  props: {
+    rate: Number,
+  },
+  computed: {
+    value() {
+      return this.rate
     },
-    computed: {
-        value() {
-            return this.rate
-        }
-    },
+  },
 }
 </script>
 
