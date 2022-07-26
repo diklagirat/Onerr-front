@@ -3,7 +3,10 @@
         <div class="main-header-container">
             <header class="main-header main-layout flex">
                 <div class="logo-and-filter flex">
+                    <home /> 
+                    <!-- TODO: delete home component and test file  -->
                     <app-logo :isFooter="false" />
+                    <gig-filter />
                 </div>
                 <app-nav />
             </header>
@@ -16,26 +19,29 @@
 
 <script>
 
+import home from '../../../test.vue'
 import appLogo from './app-logo.vue'
 import gigFilter from './gig-filter.vue'
 import categoryFilter from '../components/category-filter.vue'
 import appNav from './app-nav.vue'
+import GigFilter from './gig-filter.vue'
 
 export default {
     name: 'app-header',
-    props: {
-        isHomepage: Boolean
-    },
     components: {
         appLogo,
         gigFilter,
         appNav,
-        categoryFilter
+        categoryFilter,
+        GigFilter,
+        home
+    },
+    data() {
+        return {
+        }
     },
     created() {
-        // console.log('this.isHomepage', this.isHomepage)
     },
-    methods: {
-    }
+  
 }
 </script>

@@ -1,5 +1,5 @@
 <template>
-    <div class="hero-wrapper hero-andrea lohp-row">
+    <div class="hero-wrapper hero-andrea lohp-row"  > <!-- ref="hero" -->
         <div class="hero-background">
         </div>
         <div class="hero flex main-layout">
@@ -58,6 +58,7 @@
 
 <script>
 
+import { tryOnMounted } from "@vueuse/core";
 import gigFilter from "./gig-filter.vue";
 
 export default {
@@ -67,6 +68,7 @@ export default {
     },
     data() {
         return {
+            heroObserver: null,
             popularCategories: [
                 'Website Design',
                 'WordPress',
@@ -77,7 +79,18 @@ export default {
     },
     created() {
         console.log('this.popularCategories', this.popularCategories)
-    }
-
+    },
+    // methods: {
+    //     onHeroObserved(entries) {
+    //         entries.forEach(entry => {
+    //            console.log('hey im observed', entry);
+    //         })
+    //     },
+    // },
+    // mounted() {
+    //     console.log('mounted', this.$refs.hero );
+    //     this.heroObserver = new IntersectionObserver(this.onHeroObserved);
+    //     this.heroObserver.observe(this.$refs.hero);
+    // }
 }
 </script>
