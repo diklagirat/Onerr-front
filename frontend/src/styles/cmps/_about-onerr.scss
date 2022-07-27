@@ -3,6 +3,7 @@
     // background-color: lightcoral; // TODO: delete and change to about-color
     // height: em(705px);
     margin-bottom: em(96px);
+    height: em(705px);
 }
 
 .about-onerr-container {
@@ -10,8 +11,9 @@
 }
 
 .text-video-container {
-    // padding: em(96px) em(32px);
-}
+    height: em(706px);
+    padding: 96px 32px;
+  }
 
 .text-container {
     // height: em(514px);
@@ -24,12 +26,17 @@
         font-family: Macan-bold;
         font-size: em(32px);
         color: $text-third;
+        padding-bottom: em(24px);
     }
     
     svg, path {
         fill: $text-secondary;
     }
     
+    span {
+        padding-right: 8px;
+    }
+
     h6 {
         font-family: Macan-bold;
         padding-bottom: 8px;
@@ -37,5 +44,10 @@
         color: $text-third;
         font-size: em(18px);
 
+    }
+
+    p {
+        font-size: em(16px);
+        line-height: em(26px);
     }
 }

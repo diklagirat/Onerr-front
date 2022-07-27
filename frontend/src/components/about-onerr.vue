@@ -6,7 +6,7 @@
                     <h1>A whole world of freelance talent at your fingertips</h1>
                     <ul class="clean-list">
                         <li>
-                            <h6>
+                            <h6 class="flex align-start">
                                 <span>
                                     <vIcon />
                                 </span>The best for every budget
