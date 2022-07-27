@@ -55,7 +55,7 @@
         "deliveredAt": 9898989,
         "toDate": "April, 21, 2022",
         "totalPrice": 93,
-        "status": "onProgress",
+        "status": "on progress",
         "buyer": {
             "_id": "g5433",
             "fullname": "kingston34",
