@@ -31,7 +31,11 @@
         </ul>
       </article>
       <footer>
-        <button class="btn-basic">Continue (${{ gig.packageDetails.price }})</button>
+        <router-link to="/" class="clean-link">
+          <button class="btn-basic" @click="setOrder">
+            Continue (${{ gig.packageDetails.price }})
+          </button>
+        </router-link>
       </footer>
     </div>
   </section>
@@ -41,6 +45,8 @@
 import packageDeliveryIcon from "../icons/package-delivery-icon.vue"
 import packageRevisionsIcon from "../icons/package-revisions-icon.vue"
 import packageVIcon from "../icons/package-v-icon.vue"
+import {showErrorMsg, showSuccessMsg} from '../../services/event-bus.service'
+
 
 export default {
   name: "gig-package",
@@ -53,7 +59,31 @@ export default {
   components: {
     packageDeliveryIcon,
     packageRevisionsIcon,
-    packageVIcon
+    packageVIcon,
+  },
+  methods: {
+    setOrder() {
+      const order = {
+        totalPrice: this.gig.price,
+        buyer: 'loggedinUser',
+        seller: this.gig.owner,
+        gig: {
+          _id: this.gig._id,
+          name: this.gig.name,
+          amount: 2
+        }
+      }
+      this.addOrder(order) 
+    },
+    async addOrder(order) {
+      try {
+        await this.$store.dispatch({type: 'addOrder', order: order})
+        showSuccessMsg('Order completed')
+        this.reviewToEdit = {txt: '', aboutUserId: null}
+      } catch(err) {
+        showErrorMsg('Cannot add order')
+      }
+    }
   },
 }
 </script>
