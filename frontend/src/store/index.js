@@ -22,7 +22,7 @@ const store = createStore({
     },
   },
   modules: {
-    //TODO: orderStore,
+    orderStore,
     gigStore,
     userStore,
     orderStore

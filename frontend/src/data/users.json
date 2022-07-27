@@ -2,7 +2,8 @@
     {
         "_id": "u101",
         "fullname": "User 1",
-        "imgUrl": "https://robohash.org/user1",
+        "imgUrl": "https://fiverr-res.cloudinary.com/image/upload/t_profile_original,q_auto,f_auto/v1/attachments/profile/photo/f6a1514779a0e777fb5f785a39c85816-1648468392711/cf54e7b9-0101-4f51-b334-1a7dbec9d0ef.jpg",
+        "isSeller": true,
         "username": "user1",
         "password": "secret",
         "level": "basic/premium",
@@ -59,6 +60,33 @@
         "fullname": "User 2",
         "imgUrl": "https://robohash.org/user2",
         "username": "user2",
+        "isSeller": true,
+        "password": "secret2",
+        "level": "basic/premium",
+        "state": "USA",
+        "created": "Feb 2021",
+        "responseTime": "1 hour",
+        "LastDelivery": "2Days",
+        "description": "I hold masters degree in engineering . I am a professional graphic designer and have designed many creative websites. So if you want a creative and professional website for your business, you are at the right place. Apart from web designing i offer different services like designing infographics, Photoshop, writing articles and blog posts. I always prefer customer's satisfaction.",
+        "reviews": [
+            {
+                "id": "r102",
+                "txt": "Great service and very fast",
+                "rate": 5,
+                "by": {
+                    "_id": "u101",
+                    "fullname": "User 1",
+                    "imgUrl": "https://robohash.org/user1"
+                }
+            }
+        ]
+    },
+    {
+        "_id": "u103",
+        "fullname": "User 2",
+        "imgUrl": "https://robohash.org/user2",
+        "username": "user2",
+        "isSeller": true,
         "password": "secret2",
         "level": "basic/premium",
         "state": "USA",

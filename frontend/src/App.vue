@@ -22,6 +22,7 @@ export default {
     this.$store.dispatch({ type: "loadGigs" })
     this.$store.dispatch({ type: "loadUsers" })
     this.$store.dispatch({ type: "loadTags" })
+    this.$store.dispatch({ type: "loadOrders" })
   },
   methods: {},
 }
