@@ -41,22 +41,22 @@ export default {
 
     },
     computed: {
-        // getClass() {
-        //     const val = this.$store.getters.getObserver
-
-        //     if (this.$route.path === '/') {
-        //         return val ? 'app-header sticky' : 'app-header in-homepage'
-        //     }
-        //     return 'app-header'
-        // }
         getClass() {
             const val = this.$store.getters.getObserver
-                  if (val && this.$route.path === '/') {
-                return 'sticky app-header'
-            }
-            return 'app-header in-homepage'
 
+            if (this.$route.path === '/') {
+                return val ? 'app-header sticky' : 'app-header in-homepage'
+            }
+            return 'app-header'
         }
+        // getClass() {
+        //     const val = this.$store.getters.getObserver
+        //           if (val && this.$route.path === '/') {
+        //         return 'sticky app-header'
+        //     }
+        //     return 'app-header in-homepage'
+
+        // }
     }
 
 }
