@@ -9,7 +9,7 @@
 
       <div class="gig-preview-content">
         <div class="gig-preview-owner">
-          <user-preview :user="gig.owner" :isPreview="true"/>
+          <user-preview :user="gig.owner" :isPreview="true" />
         </div>
         <router-link :to="'/details/' + gig._id">
           <h3 class="gig-preview-title">{{ gig.title }}</h3>
@@ -61,9 +61,6 @@ export default {
     }
   },
   methods: {
-    // errorHandler() {
-    //   return true
-    // },
   },
   components: {
     userPreview,

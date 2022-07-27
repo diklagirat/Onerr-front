@@ -26,7 +26,6 @@ var gAllTags = [
 function isPrimaryTag(tag) {
     return gAllTags.slice(0, 3).includes(tag)
 }
-//TODO: async
 async function getAllTags() {
     return gAllTags
 
@@ -39,9 +38,7 @@ async function query(filterBy) {
 
 function _filter(filterBy) {
     var gigs = storageService.query(KEY)
-    console.log('gigs', gigs)
     const { txt } = filterBy
-    // txt
     const regex = new RegExp(txt, 'i')
     var filteredGigs = gigs.filter((gig) => {
         console.log('gigs', gig)
@@ -70,7 +67,6 @@ function getEmptyGig() {
 
     }
 }
-// TODO: change to our data
 function _createGigs() {
     var gigs = JSON.parse(localStorage.getItem(KEY))
     if (!gigs || !gigs.length) {

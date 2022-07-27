@@ -1,6 +1,7 @@
 import { createStore } from "vuex"
 import { gigStore } from "./modules/gig-store"
 import { userStore } from "./modules/user-store"
+import { orderStore } from "./modules/order-store"
 
 const store = createStore({
   strict: true,
@@ -21,9 +22,10 @@ const store = createStore({
     },
   },
   modules: {
-    //TODO: orderStore,
+    orderStore,
     gigStore,
     userStore,
+    orderStore
   },
 })
 
