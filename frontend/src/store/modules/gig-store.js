@@ -100,7 +100,6 @@ export const gigStore = {
         },
         setObserver(state, {val}){
             state.observer=val
-            console.log(state.observer);
         }
     },
     actions: {

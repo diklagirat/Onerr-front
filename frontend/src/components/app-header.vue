@@ -1,5 +1,5 @@
 <template>
-    <section :class="getClass" class="app-header">
+    <section :class="getClass">
         <div class="main-header-container">
             <header class="main-header main-layout flex">
                 <div class="logo-and-filter flex">
@@ -41,32 +41,23 @@ export default {
 
     },
     computed: {
-        getClass() {
-            const val = this.$store.getters.getObserver
-
-            if (this.$route.path === '/') {
-                return val ? 'sticky' : 'in-homepage'
-            }
-            return ''
-
-        }
         // getClass() {
         //     const val = this.$store.getters.getObserver
-        //           if (val && this.$route.path === '/') {
-        //         return 'sticky app-header'
-        //     }
-        //     return 'app-header in-homepage'
 
+        //     if (this.$route.path === '/') {
+        //         return val ? 'app-header sticky' : 'app-header in-homepage'
+        //     }
+        //     return 'app-header'
         // }
+        getClass() {
+            const val = this.$store.getters.getObserver
+                  if (val && this.$route.path === '/') {
+                return 'sticky app-header'
+            }
+            return 'app-header in-homepage'
+
+        }
     }
 
 }
 </script >
-
-<style scoped>
-.observe {
-    text-align: center;
-    height: 150px;
-    border: 1px solid black;
-}
-</style>

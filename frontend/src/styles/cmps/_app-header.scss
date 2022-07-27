@@ -34,7 +34,7 @@
 .in-homepage {
     background-color: transparent;
     position: fixed;
-    z-index: 10;
+    z-index: 100;
     width: 100%;
 
     .main-header-container {
@@ -83,8 +83,8 @@
 
 .sticky {
     background-color: $background-primary;
-    z-index: 100;
     position: sticky;
+    z-index: 100;
     top: 0px;
     transition: all 0.3s ease-in-out;
 }

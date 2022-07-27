@@ -3,9 +3,9 @@
         <div class="main-content">
             <hero />
             <trusted-by />
-            <!-- <popular-categories-list :gigsCategories="gigsCategories" /> -->
-            <!-- <gig-info /> -->
-            <signup />
+            <!-- <popular-categories-list /> -->
+            <about />
+            <!-- <signup /> -->
         </div>
     </section>
 </template>
@@ -14,7 +14,7 @@
 import hero from '../components/hero.vue'
 import trustedBy from '../components/trusted-by.vue'
 import popularCategoriesList from '../components/popular-categories-list.vue'
-import gigInfo from '../components/gig-info.vue'
+import about from '../components/about.vue'
 import signup from '../components/signup.vue'
 
 export default {
@@ -23,25 +23,17 @@ export default {
         hero,
         trustedBy,
         popularCategoriesList,
-        gigInfo,
+        about,
         signup,
     },
     data() {
         return {
-            gigsCategories: [
-                'logo-design',
-                'wordpress',
-                'voice-over',
-                'artisitic',
-                'proffesional',
-                'accessible',
-            ],
             isSticky: false
         }
     },
     created() {
     },
-    
+
 }
 
 </script>

@@ -81,7 +81,6 @@ export default {
     },
     created() {
         this.page = this.$route.path
-        // console.log('this.popularCategories', this.popularCategories)
     },
     methods: {
         setPath(category) {
@@ -89,7 +88,6 @@ export default {
             filterBy.byTag = category
             this.$store.commit({ type: 'setFilterBy', filterBy })
             this.$router.push({ path: '/explore', query: { category: category } })
-            // console.log('this.popularCategories', this.popularCategories) 
         },
         onHeaderObserved(entries) {
             if (this.page !== '/') {
@@ -103,10 +101,8 @@ export default {
         },
     },
     mounted() {
-        console.log('hero', this.$refs.hero)
-        // console.log(this.$refs.test)
         this.headerObserver = new IntersectionObserver(this.onHeaderObserved, {
-            rootMargin: '1px',
+            rootMargin: '40px',
             threshold: 1.0,
         })
         this.headerObserver.observe(this.$refs.hero)

@@ -22,6 +22,8 @@
 @import 'cmps/hero';
 @import 'cmps/trusted-by';
 @import 'cmps/signup';
+@import 'cmps/popular-categories-list.scss';
+@import 'cmps/about';
 
 // Explore page
 @import 'cmps/_gig-list-header';
@@ -29,9 +31,6 @@
 @import 'cmps/_gig-list';
 @import 'cmps/gig-preview';
 @import 'cmps/_gig-list-filter';
-
-
-@import 'cmps/gig-info';
 
 // Details page
 @import 'cmps/details-page/details-page';
