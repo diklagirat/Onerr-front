@@ -2,7 +2,7 @@
   <div>
     <user-msg />
     <app-header />
-    <RouterView />
+    <RouterView class="router-view"/>
     <app-footer />
   </div>
 </template>

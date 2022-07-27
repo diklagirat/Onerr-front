@@ -1,3 +1,5 @@
+@import 'App';
+
 // SETUP
 @import 'setup/typography';
 @import 'setup/variables';
@@ -27,7 +29,7 @@
 @import 'cmps/trusted-by';
 @import 'cmps/signup';
 @import 'cmps/popular-categories-list.scss';
-@import 'cmps/about';
+@import 'cmps/about-onerr';
 
 // Explore page
 @import 'cmps/_gig-list-header';
