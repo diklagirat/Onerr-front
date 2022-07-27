@@ -3,7 +3,7 @@
         <div class="main-content">
             <hero />
             <trusted-by />
-            <!-- <popular-categories-list /> -->
+            <popular-categories-list />
             <about />
             <!-- <signup /> -->
         </div>
