@@ -14,10 +14,10 @@ export const orderStore = {
         setOrders(state, { orders }) {
             state.orders = orders
         },
-        addOrder(state, { order }) {
-            state.orders.push(order)
-            console.log('state.orders',state.orders)
-        },
+        // addOrder(state, { order }) {
+        //     state.orders.push(order)
+        //     console.log('state.orders',state.orders)
+        // },
     },
     // actions: {
     //     async addOrder(context, { order }) {

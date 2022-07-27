@@ -20,11 +20,7 @@
           </div>
         </div>
         <ul class="clean-list">
-          <li
-            class="flex align-center"
-            v-for="feature in gig.packageDetails.features"
-            :key="feature"
-          >
+          <li class="flex align-center" v-for="feature in gig.packageDetails.features" :key="feature">
             <package-v-icon />
             <h1>{{ feature }}</h1>
           </li>
@@ -45,7 +41,7 @@
 import packageDeliveryIcon from "../icons/package-delivery-icon.vue"
 import packageRevisionsIcon from "../icons/package-revisions-icon.vue"
 import packageVIcon from "../icons/package-v-icon.vue"
-import {showErrorMsg, showSuccessMsg} from '../../services/event-bus.service'
+import { showErrorMsg, showSuccessMsg } from '../../services/event-bus.service'
 
 
 export default {
@@ -73,14 +69,14 @@ export default {
           amount: 2
         }
       }
-      this.addOrder(order) 
+      this.addOrder(order)
     },
     async addOrder(order) {
       try {
-        await this.$store.dispatch({type: 'addOrder', order: order})
+        // await this.$store.dispatch({type: 'addOrder', order: order})
         showSuccessMsg('Order completed')
-        this.reviewToEdit = {txt: '', aboutUserId: null}
-      } catch(err) {
+        this.reviewToEdit = { txt: '', aboutUserId: null }
+      } catch (err) {
         showErrorMsg('Cannot add order')
       }
     }
