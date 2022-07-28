@@ -1,16 +1,17 @@
 <template>
   <section class="user-preview">
     <div v-if="user" class="gig-preview-user flex align-center" 
-    v-bind:class="{preview:isPreview, header:isHeader}">
+    v-bind:class="{preview:isPreview, header:isHeader, ownerDetails:isOwnerDetails, review:isReview}">
       <img :src="user.imgUrl" class="user-image" />
       <div class="user-info flex " v-bind:class="{column:isPreview}" >
         <a class="name">{{ user.fullname }}</a>
         <div class="rate">
             <stars-rating class="rate" :rate="avrgRite" />
         </div>
-        <span class="level" :class="[this.isTopRated ? 'topRated' : '']">{{
+        <span class="level" :class="[isTopRated ? 'topRated' : '']">{{
           user.level
         }}</span>
+        <button class="contact btn-basic">Contact Me</button>
       </div>
     </div>
   </section>

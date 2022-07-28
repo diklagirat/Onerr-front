@@ -6,7 +6,7 @@
         }
     }
     .header {
-        .user-info{
+        .user-info {
             font-size: 16px;
             align-items: center;
             .level {
@@ -14,6 +14,26 @@
             }
         }
     }
+    .ownerDetails {
+        padding-bottom: 1em;
+        .user-image {
+            width: 8em;
+            height: 8em;
+        }
+        .user-info {
+            flex-direction: column;
+            .name {
+                padding-bottom: 1em;
+            }
+            .contact {
+                display: block;
+            }
+            .level {
+                display: none;
+            }
+        }
+    }
+
     .user-image {
         border-radius: 50%;
         border: none;
@@ -32,9 +52,9 @@
             font-family: Macan-Bold;
         }
 
-        .rate {
-            padding-top: .3em;
-        }
+        // .rate {
+        //     padding-top: .3em;
+        // }
 
         .level {
             color: $text-secondary;
@@ -43,6 +63,20 @@
 
             &.topRated {
                 color: $rate-color;
+            }
+        }
+        .contact {
+            display: none;
+            margin-top: 2em;
+            color: #62646a;
+            border: 1px solid #62646a;
+            background-color: white;
+            font-family: Macan-Bold;
+            font-size: 14px;
+            
+            &:hover {
+                color: white;
+                background-color: #62646a;
             }
         }
     }

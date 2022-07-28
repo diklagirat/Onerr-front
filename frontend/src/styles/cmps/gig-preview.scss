@@ -32,11 +32,52 @@
 
     .gig-preview-header {
         height: 12.125rem;
-
-        .gig-image {
+        .vueperslides__parallax-wrapper {
             object-fit: cover;
-            height: 100%;
-            width: 100%;
+            height: 194px;
+        }
+        .vueperslides__arrow{
+            background-color: white;
+            opacity: 10;
+            border: $border-bottom-line;
+            width: 1.7em;
+            height: 1.8em;
+            color: gray;
+            // padding-right: 1em;
+            display: none;
+
+            
+            &.vueperslides__arrow--prev {
+                left: -30px;
+                border-top-right-radius: 50%;
+                border-bottom-right-radius: 50%;
+
+                svg {
+                    padding-left: 0;
+                }
+            }
+            &.vueperslides__arrow--next {
+                right: -30px;
+                border-top-left-radius: 50%;
+                border-bottom-left-radius: 50%;
+            }
+
+            
+            svg {
+                height: 1.2em;
+                width: 1.2em;
+                padding: .2em;
+            }
+        }
+        &:hover {
+            .vueperslides__arrow--next {
+                right: 0;
+                display: block;
+            }
+            .vueperslides__arrow--prev {
+                left: 0;
+                display: block;
+            }
         }
     }
 

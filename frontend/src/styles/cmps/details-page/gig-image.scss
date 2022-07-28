@@ -1,0 +1,44 @@
+.gig-image {
+  margin-bottom: 5em;
+  .thumbnails {
+      margin: auto;
+      max-width: 300px;
+    }
+    
+    .thumbnails .vueperslide {
+      margin-top: .5em;
+      box-sizing: border-box;
+      border: 1px solid #fff;
+      transition: 0.3s ease-in-out;
+      opacity: 0.3;
+      cursor: pointer;
+    }
+    
+    .thumbnails .vueperslide--active {
+      opacity: 1;
+    }
+  
+    .vueperslides__arrow {
+      background-color: white;
+      opacity: 10;
+      height: 3em;
+      width: 3em;
+      border-radius: 50%;
+      color: gray;
+      box-shadow: 0 2px 5px 0 rgb(0 0 0 / 15%);
+  
+      &.vueperslides__arrow--next {
+          right: -1.5em;
+      }
+  
+      &.vueperslides__arrow--prev {
+          left: -1.5em;
+      }
+  
+      svg {
+          padding: .5em;
+          width: 2em;
+          height: 2em;
+      }
+    }
+}

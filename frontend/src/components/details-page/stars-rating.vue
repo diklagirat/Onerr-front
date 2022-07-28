@@ -20,6 +20,9 @@ export default {
       return this.rate
     },
   },
+  created() {
+    console.log(this.rate)
+  },
 }
 </script>
 

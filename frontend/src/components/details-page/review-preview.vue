@@ -1,7 +1,7 @@
 <template>
   <section class="review-preview">
     <!-- TODO add mini user -->
-    <userPreview :user="review.by" :rait="review.rait" :isReview="true"/>
+    <userPreview :user="review.by" :rate="review.rate" :isReview="true"/>
     <p>{{ review.txt }}</p>
     <article class="flex">
       <div class="not-helpful flex">

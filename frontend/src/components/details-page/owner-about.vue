@@ -35,7 +35,10 @@ export default {
   },
   components: {
     userPreview
-  }
+  },
+  created() {
+    console.log(this.owner)
+  },
 }
 </script>
 
