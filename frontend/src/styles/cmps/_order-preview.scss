@@ -1,0 +1,15 @@
+.order-preview {
+    text-align: center;
+    width: 100%;
+
+
+    padding: 20px 15px;
+    border-bottom: 1px solid #e4e5e7;
+
+    .gig-title {
+        overflow: hidden;
+        max-width: 55ch;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+}

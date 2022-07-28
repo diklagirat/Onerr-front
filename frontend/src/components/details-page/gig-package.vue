@@ -69,17 +69,17 @@ export default {
           amount: 2
         }
       }
-      this.addOrder(order)
+      // this.addOrder(order)
     },
-    async addOrder(order) {
-      try {
-        // await this.$store.dispatch({type: 'addOrder', order: order})
-        showSuccessMsg('Order completed')
-        this.reviewToEdit = { txt: '', aboutUserId: null }
-      } catch (err) {
-        showErrorMsg('Cannot add order')
-      }
-    }
+    // async addOrder(order) {
+    //   try {
+    //     // await this.$store.dispatch({type: 'addOrder', order: order})
+    //     showSuccessMsg('Order completed')
+    //     this.reviewToEdit = { txt: '', aboutUserId: null }
+    //   } catch (err) {
+    //     showErrorMsg('Cannot add order')
+    //   }
+    // }
   },
 }
 </script>
