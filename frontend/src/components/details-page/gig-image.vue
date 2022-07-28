@@ -28,7 +28,7 @@
           emit: false,
         })
       "
-      :visible-slides="slides.length"
+      :visible-slides="6"
       fixed-height="75px"
       :bullets="false"
       :touchable="false"

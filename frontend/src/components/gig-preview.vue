@@ -57,7 +57,7 @@
         <div class="price-line-brake flex column">
           <small>STARTING AT</small>
           <router-link :to="'/details/' + gig._id">
-            <span> $450 <sup>23</sup></span>
+            <span> ${{gig.price}} <sup>23</sup></span>
           </router-link>
           <!-- TODO: 2 computed function 1. 90 2. 23  -->
         </div>
