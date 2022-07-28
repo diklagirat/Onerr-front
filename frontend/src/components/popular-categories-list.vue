@@ -1,5 +1,5 @@
 <template>
-    <secction class="popular-categories-list main-layout">
+    <section class="popular-categories-list main-layout">
         <div class="popular-categories-list-container main-layout">
             <h1>Popular professional services </h1>
             <div class="flex column">
@@ -18,7 +18,7 @@
                 </vueper-slides>
             </div>
         </div>
-    </secction>
+    </section>
 </template>
 
 <script>
