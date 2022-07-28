@@ -6,6 +6,10 @@
     // left: 0;
     // right: 0;
     transition: all 0.3s ease-in-out;
+    background-color: transparent;
+    position: sticky;
+    z-index: 100;
+    width: 100%;
 
     .main-header-container {
         display: block;
@@ -33,7 +37,7 @@
 
 .in-homepage {
     background-color: transparent;
-    position: fixed;
+    position: sticky;
     z-index: 100;
     width: 100%;
 
@@ -84,7 +88,7 @@
 .sticky {
     background-color: $background-primary;
     position: sticky;
-    z-index: 101;
+    z-index: 100;
     top: 0px;
     transition: all 0.3s ease-in-out;
 }

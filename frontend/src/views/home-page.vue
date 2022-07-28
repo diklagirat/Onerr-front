@@ -37,3 +37,13 @@ export default {
 }
 
 </script>
+
+
+<style>
+
+.home-page {
+    position: relative;
+    top: em(-81px)
+}
+
+</style>

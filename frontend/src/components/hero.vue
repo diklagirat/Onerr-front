@@ -1,5 +1,5 @@
 <template>
-    <div class="hero-container " ref="hero">
+    <div class="hero-container" ref="hero">
         <!-- ref="hero" -->
         <div v-if="url" class="hero-background" :style="{ 'background-image': `url(${url})` }">
         </div>
@@ -69,7 +69,7 @@ export default {
     },
     data() {
         return {
-            heroObserver: null,
+            headerObserver: '',
             isSticky: false,
             page: '',
             popularCategories: [
@@ -121,7 +121,7 @@ export default {
     },
     created() {
         this.page = this.$route.path
-        
+
         setInterval(this.changeBcgDetails, 5000)
     },
     computed: {
@@ -136,10 +136,9 @@ export default {
         },
         onHeaderObserved(entries) {
             if (this.page !== '/') {
-                console.log(this.page);
+                console.log(this.page)
             }
             entries.forEach((entry) => {
-
                 this.isSticky = entry.isIntersecting ? false : true
             })
             this.$store.commit({ type: 'setObserver', val: this.isSticky })
@@ -150,7 +149,6 @@ export default {
             return bcgDetails[0].imgUrl
         },
         changeBcgDetails() {
-            console.log('changed')
             // Copy of originally array
             const backgroundDetails = [...this.backgroundDetails]
             const bcgDetailsIdx = backgroundDetails.findIndex((currDetails) => currDetails.isShown === true)
@@ -171,10 +169,13 @@ export default {
     },
     mounted() {
         this.headerObserver = new IntersectionObserver(this.onHeaderObserved, {
-            rootMargin: '40px',
-            threshold: 1.0,
+            rootMargin: '80px 0px 0px',
+            threshold: 1,
         })
         this.headerObserver.observe(this.$refs.hero)
     },
+    beforeDestroy() {
+        this.headerObserver.unobserve(this.$refs.hero)
+    }
 }
 </script>
