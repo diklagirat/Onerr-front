@@ -12,6 +12,8 @@
         // }
     }
 
+    
+
     .el-input__inner {
         font-size: rem(16px);
         font-family: Macan-Bold;
@@ -25,5 +27,12 @@
     .radio-btn {
         // width: 260px;
         max-width: 160px;
+    }
+}
+
+.el-select-dropdown__item {
+    &.selected {
+
+        color: gray;
     }
 }
