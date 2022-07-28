@@ -1,11 +1,9 @@
 <template>
     <div class="hero-container " ref="hero">
         <!-- ref="hero" -->
-        <div class="hero-background"
-            style="background-image: url('https://fiverr-res.cloudinary.com/image/upload/q_auto,f_auto/v1/attachments/generic_asset/asset/bb5958e41c91bb37f4afe2a318b71599-1599344049970/bg-hero-5-1792-x1.png');"
-            >
+        <div v-if="url" class="hero-background" :style="{ 'background-image': `url(${url})` }">
         </div>
-        <!-- style="background-image: url(backgroundDetails.imgUrl)" -->
+
         <div class="hero flex main-layout">
             <div class="hero-header flex column center align-start ">
                 <h1 class="header">
@@ -72,14 +70,14 @@ export default {
     data() {
         return {
             heroObserver: null,
+            isSticky: false,
+            page: '',
             popularCategories: [
                 'Website Design',
                 'WordPress',
                 'Logo Design',
                 'NFT Art'
             ],
-            isSticky: false,
-            page: '',
             backgroundDetails: [
                 {
                     gigOwnerName: 'Moon',
@@ -117,12 +115,17 @@ export default {
                     imgUrl: 'https://fiverr-res.cloudinary.com/image/upload/q_auto,f_auto/v1/attachments/generic_asset/asset/bb5958e41c91bb37f4afe2a318b71599-1599344049970/bg-hero-5-1792-x1.png',
                     isShown: false
                 }
-            ]
-
+            ],
+            url: 'https://fiverr-res.cloudinary.com/image/upload/q_auto,f_auto/v1/attachments/generic_asset/asset/2413b8415dda9dbd7756d02cb87cd4b1-1599595203045/bg-hero-2-1792-x1.png'
         }
     },
     created() {
         this.page = this.$route.path
+        
+        setInterval(this.changeBcgDetails, 5000)
+    },
+    computed: {
+
     },
     methods: {
         setPath(category) {
@@ -141,6 +144,30 @@ export default {
             })
             this.$store.commit({ type: 'setObserver', val: this.isSticky })
         },
+        imgUrl() {
+            const backgroundDetails = [...this.backgroundDetails]
+            var bcgDetails = backgroundDetails.filter((currDetails) => currDetails.isShown === true)
+            return bcgDetails[0].imgUrl
+        },
+        changeBcgDetails() {
+            console.log('changed')
+            // Copy of originally array
+            const backgroundDetails = [...this.backgroundDetails]
+            const bcgDetailsIdx = backgroundDetails.findIndex((currDetails) => currDetails.isShown === true)
+
+            // Originally array
+            var bcgDetails = this.backgroundDetails
+
+            bcgDetails[bcgDetailsIdx].isShown = false
+
+            if (bcgDetailsIdx === bcgDetails.length - 1) {
+                bcgDetails[0].isShown = true
+            } else {
+                bcgDetails[bcgDetailsIdx + 1].isShown = true
+            }
+
+            this.url = this.imgUrl()
+        }
     },
     mounted() {
         this.headerObserver = new IntersectionObserver(this.onHeaderObserved, {
