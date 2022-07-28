@@ -3,8 +3,8 @@
         <div class="main-content">
             <hero />
             <trusted-by />
-            <!-- <popular-categories-list /> -->
-            <about />
+            <popular-categories-list />
+            <about-onerr />
             <!-- <signup /> -->
         </div>
     </section>
@@ -14,7 +14,7 @@
 import hero from '../components/hero.vue'
 import trustedBy from '../components/trusted-by.vue'
 import popularCategoriesList from '../components/popular-categories-list.vue'
-import about from '../components/about.vue'
+import aboutOnerr from '../components/about-onerr.vue'
 import signup from '../components/signup.vue'
 
 export default {
@@ -23,7 +23,7 @@ export default {
         hero,
         trustedBy,
         popularCategoriesList,
-        about,
+        aboutOnerr,
         signup,
     },
     data() {

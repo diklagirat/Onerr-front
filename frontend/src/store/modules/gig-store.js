@@ -14,43 +14,34 @@ export const gigStore = {
         observer: null
     },
     getters: {
-        getfilterBy({ filterBy }) {
-            return filterBy
-        },
-        getAllTags({ allTags }) {
-            return allTags
-        },
         gigsToDisplay({ gigs, filterBy }) {
             if (!gigs) return
 
             const { txt, ownerLevel, deliveryDay, byTag } = filterBy
-            console.log('filterBy:', filterBy)
-
             // By txt- V
             var regex = new RegExp(txt, 'i')
             let filteredGigs = gigs.filter((gig) => regex.test(gig.title))
 
             // By ownerLevel - V
             if (ownerLevel) {
-                console.log('ownerLevel:', ownerLevel)
-
                 filteredGigs = filteredGigs.filter((gig) => gig.owner.level === ownerLevel)
-                console.log('gigsToDisplay-> ownerLevel', filteredGigs)
             }
-            // Delivery day -V TODO: up to 3 , up to 7 // input number
+            // Delivery day -V 
             if (deliveryDay) {
-                console.log('deliveryDay:', deliveryDay)
                 filteredGigs = filteredGigs.filter((gig) => deliveryDay >= gig.daysToMake)
-                console.log('gigsToDisplay-> deliveryDay', filteredGigs)
             }
 
             // Category - V
             if (byTag && byTag.length) {
-                console.log('byTag', byTag)
                 filteredGigs = filteredGigs.filter((gig) => gig.tags.includes(byTag))
             }
 
             return filteredGigs
+
+
+
+
+
 
             //  1.Seller Details: DONE: filterBy.ownerLevel = gig.owner.level
             // Options:
@@ -84,6 +75,12 @@ export const gigStore = {
             //          10. Social Media Marketing
 
         },
+        getfilterBy({ filterBy }) {
+            return filterBy
+        },
+        getAllTags({ allTags }) {
+            return allTags
+        },
         getObserver(state) {
             return state.observer
         }
@@ -98,8 +95,8 @@ export const gigStore = {
         setFilterBy(state, { filterBy }) {
             state.filterBy = { ...filterBy }
         },
-        setObserver(state, {val}){
-            state.observer=val
+        setObserver(state, { val }) {
+            state.observer = val
         }
     },
     actions: {

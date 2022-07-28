@@ -12,11 +12,6 @@
                     :value="item.value" />
             </el-select>
         </div>
-        <div class="btn-filter">
-            <!-- <el-select v-model="value" class="m-2 select-option" placeholder="Budget" size="large">
-                <el-option v-for="item in options" :key="item.value" :label="item.label" :value="item.value" />
-            </el-select> -->
-        </div>
     </div>
 </template>
 
@@ -69,16 +64,13 @@ export default {
 
     },
     watch: {
-        //TODO: repeat????
         deliveryDay(deliveryDay) {
-            // click on label change state filterBy on store
             var filterBy = { ...this.$store.getters.getfilterBy }
             filterBy.deliveryDay = deliveryDay
             this.$store.commit({ type: 'setFilterBy', filterBy })
         },
         ownerLevel(ownerLevel) {
             var filterBy = { ...this.$store.getters.getfilterBy }
-            console.log(ownerLevel)
             filterBy.ownerLevel = ownerLevel
             this.$store.commit({ type: 'setFilterBy', filterBy })
         },
