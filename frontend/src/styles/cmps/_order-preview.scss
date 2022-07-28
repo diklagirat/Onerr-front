@@ -2,6 +2,27 @@
     text-align: center;
     width: 100%;
 
+    button {
+        width: 145px;
+        text-transform: capitalize;
+
+        &.rejected {
+            background-color: rgb(237, 71, 71);
+        }
+
+        &.pending {
+            background-color: rgb(49, 119, 239);
+        }
+
+        &.complete {
+            // background-color: ;
+        }
+
+        &.on-progress {
+            background-color: rgb(237, 148, 46)
+        }
+
+    }
 
     padding: 20px 15px;
     border-bottom: 1px solid #e4e5e7;
@@ -12,4 +33,14 @@
         text-overflow: ellipsis;
         white-space: nowrap;
     }
+
+    .more-btn {
+        width: 30px;
+
+        .fa-ellipsis-v {
+            padding-top: 50%;
+        }
+    }
+
+
 }
