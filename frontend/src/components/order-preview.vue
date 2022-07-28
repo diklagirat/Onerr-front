@@ -18,7 +18,6 @@
 </template>
 
 <script>
-import { compileTemplate } from "@vue/compiler-sfc";
 import UserPreview from "../components/user-preview.vue";
 export default {
 
@@ -53,7 +52,6 @@ export default {
     },
     computed: {
         statusColor() {
-            console.log('fffff', this.order.status)
             return this.order.status === 'on progress' ? 'on-progress' : this.order.status
         }
     }

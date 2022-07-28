@@ -2,13 +2,20 @@
     <section class="dashboard">
         <div class="dashboard-container main-layout">
             <earnings :orders="orders" />
+            <h1>Manage Orders</h1>
+            <div class="title flex grow">
+                <h2>Padding</h2>
+                <h2>On progress</h2>
+                <h2>Complete</h2>
+                <h2>All</h2>
+            </div>
             <section class="orders-list">
-                <div class="title flex grow">
+                <!-- <div class="title flex grow">
                     <h2>Padding</h2>
                     <h2>On progress</h2>
                     <h2>Complete</h2>
                     <h2>All</h2>
-                </div>
+                </div> -->
                 <div>
                     <ul class="orders-list-container clean-list">
                         <li v-for="order in orders" :key="order._id">

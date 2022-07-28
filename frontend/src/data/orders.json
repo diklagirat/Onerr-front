@@ -97,30 +97,6 @@
         ]
     },
     {
-        "_id": "jhkde8yg87sdycbsd8bc8ds7",
-        "createdAt": 9898989,
-        "deliveredAt": 9898989,
-        "totalPrice": 90,
-        "status": "pending",
-        "buyer": {
-            "_id": "u101",
-            "fullname": "hamzagraphics",
-            "imgUrl": "https://fiverr-res.cloudinary.com/image/upload/t_profile_original,q_auto,f_auto/v1/attachments/profile/photo/f6a1514779a0e777fb5f785a39c85816-1648468392711/cf54e7b9-0101-4f51-b334-1a7dbec9d0ef.jpg"
-        },
-        "seller": {
-            "_id": "u105",
-            "name": "mubashirali679",
-            "imgUrl": "https://fiverr-res.cloudinary.com/image/upload/f_auto,q_auto,t_profile_small/v1/attachments/profile/photo/ebeac8208e5da55b085a447f5011641e-1256425651654207631.993435/118910AC-5AA6-4B31-BA40-428431391C8C.jpg"
-        },
-        "gigs": [
-            {
-                "_id": "i101",
-                "name": "I will do house exterior design, interior design and 3d rendering",
-                "amount": 2
-            }
-        ]
-    },
-    {
         "_id": "rrr4",
         "createdAt": 9898989,
         "deliveredAt": 9898989,

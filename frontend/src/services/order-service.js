@@ -27,6 +27,7 @@ function remove(id) {
 }
 
 function save(order) {
+    console.log(order._id)
     const savedOrder = order._id
         ? storageService.put(KEY, order)
         : storageService.post(KEY, order)
