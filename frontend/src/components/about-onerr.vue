@@ -1,12 +1,12 @@
 <template>
-    <section class="about-container">
-        <div class="about main-layout flex">
-            <div class="text-video-container flex align-center">
+    <section class="about-onerr-container">
+        <div class="about-onerr main-layout flex">
+            <div class="text-video-container flex align-center main-layout">
                 <article class="text-container flex column center">
                     <h1>A whole world of freelance talent at your fingertips</h1>
                     <ul class="clean-list">
                         <li>
-                            <h6>
+                            <h6 class="flex align-start">
                                 <span>
                                     <vIcon />
                                 </span>The best for every budget
