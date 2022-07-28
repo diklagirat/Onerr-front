@@ -38,11 +38,6 @@ export const gigStore = {
 
             return filteredGigs
 
-
-
-
-
-
             //  1.Seller Details: DONE: filterBy.ownerLevel = gig.owner.level
             // Options:
             //          Top Rated Seller

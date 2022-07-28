@@ -9,7 +9,7 @@
       "imgUrl": "https://fiverr-res.cloudinary.com/image/upload/f_auto,q_auto,t_profile_small/v1/attachments/profile/photo/d06d3197ca9b9f010e75540d2a0bf264-1626300570975/fa60b74e-0d30-49d6-9485-0285ba2315bd.jpg",
       "level": "Top Rated Seller",
       "rate": 5.0,
-      "rateSome": 45,
+      "rateSum": 45,
       "reviews": [
         {
           "id": "r101",
@@ -103,7 +103,7 @@
       "imgUrl": "https://fiverr-res.cloudinary.com/t_profile_original,q_auto,f_auto/attachments/profile/photo/68a7768929036bd9f082d387054da729-1653833944281/102fee2d-26a3-4bb1-a6c1-e6719b021e69.jpeg",
       "level": "Level 1 Seller",
       "rate": 4.9,
-      "rateSome": 79
+      "rateSum": 79
     },
     "packageDetails": {
       "title": "I can build a professional 2-3 pages website OR fix a small bug",
@@ -139,7 +139,7 @@
       "fullname": "davis_nguyen9",
       "imgUrl": "https://fiverr-res.cloudinary.com/t_profile_original,q_auto,f_auto/attachments/profile/photo/774a3a9c66a6c18a63e923a3ae4794ec-1626444905858/1941ff67-bba9-4e64-8f0c-4c76e1e20c9d.jpg",
       "level": "Level 1 Seller",
-      "rateSome": 302,
+      "rateSum": 302,
       "rate": 4.9
     },
     "packageDetails": {
@@ -185,7 +185,7 @@
       "fullname": "quocnguyen777",
       "imgUrl": "https://fiverr-res.cloudinary.com/t_profile_thumb,q_auto,f_auto/attachments/profile/photo/38fb0018f2d582458e8804c030c53c04-1649257278272/e4e6cff1-d5f7-4252-9c7e-e87eed6b960e.png",
       "level": "Level 2 Seller",
-      "rateSome": 98,
+      "rateSum": 98,
       "rate": 4.9
     },
     "packageDetails": {
@@ -219,10 +219,10 @@
     "price": 680,
     "owner": {
       "_id": "u102",
-      "fullname": "quocnguyen777",
+      "fullname": "studionzm",
       "imgUrl": "https://fiverr-res.cloudinary.com/t_profile_thumb,q_auto,f_auto/attachments/profile/photo/c4c1086d428cfab8dd92780bbf3ccde3-1600706680933/27d939bc-0e69-425f-bdd2-edb188f57d53.jpeg",
       "level": "Top Rated Seller",
-      "rateSome": 651,
+      "rateSum": 651,
       "rate": 4.9
     },
     "packageDetails": {
@@ -256,10 +256,10 @@
     "price": 100,
     "owner": {
       "_id": "u102",
-      "fullname": "quocnguyen777",
+      "fullname": "architect_offic",
       "imgUrl": "https://fiverr-res.cloudinary.com/t_profile_original,q_auto,f_auto/attachments/profile/photo/83cc7c97f9873bdb052590a94d32f84c-1576419363871/ed47443e-0f9b-42ab-beaf-ec0a0acccfe8.jpeg",
       "level": "Top Rated Seller",
-      "rateSome": 42,
+      "rateSum": 42,
       "rate": 4.9
     },
     "packageDetails": {
@@ -296,7 +296,7 @@
       "fullname": "quocnguyen777",
       "imgUrl": "https://fiverr-res.cloudinary.com/t_profile_thumb,q_auto,f_auto/attachments/profile/photo/ffc13a6326576eab1aa379f00ef48680-1629201228504/8ac708c4-4ccb-4c95-87ea-13c12cc0faf5.jpg",
       "level": "Level 1 Seller",
-      "rateSome": 4,
+      "rateSum": 4,
       "rate": 4.8
     },
     "packageDetails": {
@@ -325,15 +325,52 @@
     ]
   },
   {
+    "_id": "i114",
+    "title": "I will design a unique logo tailored to your brand vision",
+    "price": 560,
+    "owner": {
+      "_id": "u102",
+      "fullname": "shingirai_joe",
+      "imgUrl": "https://fiverr-res.cloudinary.com/t_profile_thumb,q_auto,f_auto/attachments/profile/photo/38fb0018f2d582458e8804c030c53c04-1649257278272/e4e6cff1-d5f7-4252-9c7e-e87eed6b960e.png",
+      "level": "Level 2 Seller",
+      "rateSum": 98,
+      "rate": 4.9
+    },
+    "packageDetails": {
+      "title": "I can build a professional 2-3 pages website OR fix a small bug",
+      "price": 560,
+      "daysToMake": 1,
+      "features": [
+        "3 Initial Concepts Included",
+        "Source File",
+        "Logo Transparency",
+        "Family & Genealogy"
+      ]
+    },
+    "daysToMake": 1,
+    "description": "Hey ! Thanks for visiting my gig :)\nIn this gig i'm offering you a very 3 unique, preferable and affordable packages.\nIf you are thinking for giving someone special a very beautiful, eye catching gift( hyper realistic hand drawing pencil sketch portrait)?\nPlease select the desirable package and place your order right now and i'll give you a perfect portrait sketch, hand drawing, realistic drawing,pencil drawing in high resolution JPEG/PNG digital file.\nI will provide hand-drawn black & White or colored realistic portraits.\nKindly provide me clear reference photo as much as possible.\nThe material I used for Creating pencil portraits are:\nDrawing materials: graphite pencil, charcoal, Bristol paper, tombomono eraser, brush, blending stump, mechanical pencil, graphite powder etc .\nYou can give me anything:\nPortrait photos\nFamily photos\nAnimal photos\nAny product photos\nLandscape photos\nArchitecture photos\nAnything you imagine\nPlease contact me before placing your order! Thanks.\nI DO NOT DELIVER ORIGINAL PHYSICAL COPY BUT A HIGH RESOLUTION JPEG DIGITAL FILE, IF YOU WANT THE ORIGINAL ONE THEN MESSAGE ME FOR DETAILS.\nFeel free to ask me anything! :)\nThank You...\nvividstore",
+    "imgUrl": [
+      "https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs/243813726/original/d488da42e2855698096f69072a36fa74142bbb85/design-a-minimalist-logo-tailored-to-your-brand.jpg",
+      "https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs2/243813726/original/3e4b078113717be8d881f7eecd20a16d94bba235/design-a-minimalist-logo-tailored-to-your-brand.jpg",
+      "https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs3/243813726/original/38b29b217ac85fe0173bdbdde9082b91146bedf0/design-a-minimalist-logo-tailored-to-your-brand.jpg"
+    ],
+    "tags": [
+      "Logo Animation"
+    ],
+    "likedByUsers": [
+      "mini-user"
+    ]
+  },
+  {
     "_id": "i115",
     "title": "I will do professional and custom business logo design and branding",
     "price": 50,
     "owner": {
       "_id": "u102",
-      "fullname": "quocnguyen777",
+      "fullname": "criswinpe",
       "imgUrl": "https://fiverr-res.cloudinary.com/t_profile_thumb,q_auto,f_auto/profile/photos/27046634/original/h.png",
       "level": "Top Rated Seller",
-      "rateSome": 31,
+      "rateSum": 31,
       "rate": 4.9
     },
     "packageDetails": {
@@ -367,10 +404,10 @@
     "price": 320,
     "owner": {
       "_id": "u102",
-      "fullname": "quocnguyen777",
+      "fullname": "laurasteldesign",
       "imgUrl": "https://fiverr-res.cloudinary.com/t_profile_thumb,q_auto,f_auto/attachments/profile/photo/668aa309fc80b6dc9560f2ee271e1ff3-1650720973844/f0271532-cc0e-4e86-bbaa-bde1c048f33c.jpg",
       "level": "Level 2 Seller",
-      "rateSome": 87,
+      "rateSum": 87,
       "rate": 4.9
     },
     "packageDetails": {
@@ -404,10 +441,10 @@
     "price": 150,
     "owner": {
       "_id": "u102",
-      "fullname": "quocnguyen777",
+      "fullname": "cchhiieelll",
       "imgUrl": "https://fiverr-res.cloudinary.com/t_profile_thumb,q_auto,f_auto/attachments/profile/photo/9e097301cd6fc47ba44d9ce0b804f1be-1658473587226/63db83eb-dd98-4d0a-b99e-e8d2d6d6dd59.png",
       "level": "Top Rated Seller",
-      "rateSome": 23,
+      "rateSum": 23,
       "rate": 4.9
     },
     "packageDetails": {
@@ -444,7 +481,7 @@
       "fullname": "laurasteldesign",
       "imgUrl": "https://fiverr-res.cloudinary.com/t_profile_original,q_auto,f_auto/attachments/profile/photo/5344c10fd4820db3626c4fc24968783d-1588608774469/1e4a3bd9-b71d-48ce-8ac0-0ff6d667caf4.jpeg",
       "level": "Level 2 Seller",
-      "rateSome": 18,
+      "rateSum": 18,
       "rate": 5.0
     },
     "reviews": [
@@ -576,7 +613,7 @@
       "fullname": "petersaferna",
       "imgUrl": "https://fiverr-res.cloudinary.com/t_profile_thumb,q_auto,f_auto/attachments/profile/photo/78afd09d1a3fc6586855f96be2ad01f7-1648484980881/22b273c3-758a-4f42-a200-96c1fbde185d.png",
       "level": "Top Rated Seller",
-      "rateSome": 12,
+      "rateSum": 12,
       "rate": 5.0
     },
     "packageDetails": {
@@ -615,7 +652,7 @@
       "fullname": "architectumair6",
       "imgUrl": "https://fiverr-res.cloudinary.com/t_profile_thumb,q_auto,f_auto/attachments/profile/photo/f1d221b4765b19c4464d06a39afba6a8-1629137449472/cbdadac6-7fd8-4714-ba65-fdc8bf9187c6.jpg",
       "level": "Level 2 Seller",
-      "rateSome": 72,
+      "rateSum": 72,
       "rate": 4.9
     },
     "packageDetails": {
@@ -657,7 +694,7 @@
       "fullname": "ahmad4236",
       "imgUrl": "https://fiverr-res.cloudinary.com/t_profile_thumb,q_auto,f_auto/attachments/profile/photo/0c0992451ea8beb0ad55116d7b180642-1648498033551/17be53f4-bd43-4f89-96b1-e6301c8556ee.jpg",
       "level": "Top Rated Seller",
-      "rateSome": 7,
+      "rateSum": 7,
       "rate": 5
     },
     "packageDetails": {
@@ -697,7 +734,7 @@
       "fullname": "lofrender",
       "imgUrl": "https://fiverr-res.cloudinary.com/t_profile_thumb,q_auto,f_auto/attachments/profile/photo/32a613782ad8f9d1f601bbecbdeb9b0a-1649339507014/434def7f-1a0b-48b3-8296-5cd4f6ba95db.jpg",
       "level": "Top Rated Seller",
-      "rateSome": 38,
+      "rateSum": 38,
       "rate": 5
     },
     "packageDetails": {

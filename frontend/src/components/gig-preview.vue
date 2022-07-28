@@ -25,7 +25,7 @@
             </svg>
           </span>
           <span class="owner-rate">{{ gig.owner.rate }}</span>
-          <span class="rate-sum">({{ gig.owner.rateSome }})</span>
+          <span class="rate-sum">({{ gig.owner.rateSum }})</span>
         </div>
       </div>
       <div class="footer flex space-between align-center">
