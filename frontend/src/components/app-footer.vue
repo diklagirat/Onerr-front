@@ -1,6 +1,6 @@
 <template>
-    <section class="app-footer">
-        <footer class="main-footer main-layout">
+    <section class="app-footer main-layout">
+        <footer class="main-footer ">
             <div class="footer-left flex">
                 <app-logo :isFooter="true" />
                 <div class="copy-right">
