@@ -1,6 +1,5 @@
 [
   {
-    "_id": "i101",
     "title": "I will create an awesome 3d render",
     "price": 350,
     "owner": {
@@ -94,7 +93,6 @@
     ]
   },
   {
-    "_id": "i110",
     "title": "I will design an unique modern vintage logo or retro style in 24hrs",
     "price": 50,
     "owner": {
@@ -104,7 +102,6 @@
       "level": "Level 1 Seller",
       "rate": 4.9,
       "rateSum": 79
-
     },
     "packageDetails": {
       "title": "I can build a professional 2-3 pages website OR fix a small bug",
@@ -132,7 +129,6 @@
     ]
   },
   {
-    "_id": "i106",
     "title": "I will render exterior building 3d architecture visualization",
     "price": 289,
     "owner": {
@@ -178,7 +174,42 @@
     ]
   },
   {
-    "_id": "i111",
+    "title": "I will design a unique logo tailored to your brand vision",
+    "price": 560,
+    "owner": {
+      "_id": "u102",
+      "fullname": "quocnguyen777",
+      "imgUrl": "https://fiverr-res.cloudinary.com/t_profile_thumb,q_auto,f_auto/attachments/profile/photo/38fb0018f2d582458e8804c030c53c04-1649257278272/e4e6cff1-d5f7-4252-9c7e-e87eed6b960e.png",
+      "level": "Level 2 Seller",
+      "rateSum": 98,
+      "rate": 4.9
+    },
+    "packageDetails": {
+      "title": "I can build a professional 2-3 pages website OR fix a small bug",
+      "price": 560,
+      "daysToMake": 1,
+      "features": [
+        "3 Initial Concepts Included",
+        "Source File",
+        "Logo Transparency",
+        "Family & Genealogy"
+      ]
+    },
+    "daysToMake": 1,
+    "description": "Hey ! Thanks for visiting my gig :)\nIn this gig i'm offering you a very 3 unique, preferable and affordable packages.\nIf you are thinking for giving someone special a very beautiful, eye catching gift( hyper realistic hand drawing pencil sketch portrait)?\nPlease select the desirable package and place your order right now and i'll give you a perfect portrait sketch, hand drawing, realistic drawing,pencil drawing in high resolution JPEG/PNG digital file.\nI will provide hand-drawn black & White or colored realistic portraits.\nKindly provide me clear reference photo as much as possible.\nThe material I used for Creating pencil portraits are:\nDrawing materials: graphite pencil, charcoal, Bristol paper, tombomono eraser, brush, blending stump, mechanical pencil, graphite powder etc .\nYou can give me anything:\nPortrait photos\nFamily photos\nAnimal photos\nAny product photos\nLandscape photos\nArchitecture photos\nAnything you imagine\nPlease contact me before placing your order! Thanks.\nI DO NOT DELIVER ORIGINAL PHYSICAL COPY BUT A HIGH RESOLUTION JPEG DIGITAL FILE, IF YOU WANT THE ORIGINAL ONE THEN MESSAGE ME FOR DETAILS.\nFeel free to ask me anything! :)\nThank You...\nvividstore",
+    "imgUrl": [
+      "https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs/243813726/original/d488da42e2855698096f69072a36fa74142bbb85/design-a-minimalist-logo-tailored-to-your-brand.jpg",
+      "https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs2/243813726/original/3e4b078113717be8d881f7eecd20a16d94bba235/design-a-minimalist-logo-tailored-to-your-brand.jpg",
+      "https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs3/243813726/original/38b29b217ac85fe0173bdbdde9082b91146bedf0/design-a-minimalist-logo-tailored-to-your-brand.jpg"
+    ],
+    "tags": [
+      "Logo Animation"
+    ],
+    "likedByUsers": [
+      "mini-user"
+    ]
+  },
+  {
     "title": "I will design your premium logo",
     "price": 680,
     "owner": {
@@ -215,7 +246,6 @@
     ]
   },
   {
-    "_id": "i112",
     "title": "Our Studio will design professional business logo",
     "price": 100,
     "owner": {
@@ -252,7 +282,6 @@
     ]
   },
   {
-    "_id": "i113",
     "title": "I will design 3 modern minimalist logo design",
     "price": 55,
     "owner": {
@@ -289,7 +318,6 @@
     ]
   },
   {
-    "_id": "i114",
     "title": "I will design a unique logo tailored to your brand vision",
     "price": 560,
     "owner": {
@@ -326,7 +354,6 @@
     ]
   },
   {
-    "_id": "i115",
     "title": "I will do professional and custom business logo design and branding",
     "price": 50,
     "owner": {
@@ -363,7 +390,6 @@
     ]
   },
   {
-    "_id": "i116",
     "title": "I will do highly creative modern business logo design for you",
     "price": 320,
     "owner": {
@@ -400,7 +426,6 @@
     ]
   },
   {
-    "_id": "i117",
     "title": "I will design 3 unique modern and minimalist business logo design",
     "price": 150,
     "owner": {
@@ -437,7 +462,6 @@
     ]
   },
   {
-    "_id": "i103",
     "title": "I will provide interior design for a room in your home, complete with a...",
     "price": 150,
     "owner": {
@@ -569,7 +593,6 @@
     ]
   },
   {
-    "_id": "i104",
     "title": "I will do realistic virtual staging for your listing",
     "price": 200,
     "owner": {
@@ -608,7 +631,6 @@
     ]
   },
   {
-    "_id": "i105",
     "title": "I will make any 3d model in sketchup and render",
     "price": 180,
     "owner": {
@@ -650,7 +672,6 @@
     ]
   },
   {
-    "_id": "i107",
     "title": "I will do super fast sketchup 3d models and render",
     "price": 202.11,
     "owner": {
@@ -690,7 +711,6 @@
     ]
   },
   {
-    "_id": "i108",
     "title": "I will make any 3d model in sketchup and render",
     "price": 72.30,
     "owner": {

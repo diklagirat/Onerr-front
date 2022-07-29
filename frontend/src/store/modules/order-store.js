@@ -14,34 +14,25 @@ export const orderStore = {
         setOrders(state, { orders }) {
             state.orders = orders
         },
-        // addOrder(state, { order }) {
-        //     state.orders.push(order)
-        //     console.log('state.orders',state.orders)
-        // },
+        updateOrder(state, { order }) {
+            const idx = state.orders.findIndex((o) => o._id === order._id)
+            state.orders.splice(idx, 1, order)
+        }
     },
-    // actions: {
-    //     async addOrder(context, { order }) {
-    //         try {
-    //             // order = await orderService.add(order)
-    //             context.commit({ type: 'addOrder', order })
-    //             return order
-    //         } catch (err) {
-    //             console.log('orderStore: Error in addOrder', err)
-    //             throw err
-    //         }
-    //     },
-    //     async loadOrders(context) {
-    //         try {
-    //             // const orders = await orderService.query()
-    //             context.commit({ type: 'setOrders', orders })
-    //         } catch (err) {
-    //             console.log('orderStore: Error in loadderss', err)
-    // },
     actions: {
         async loadOrders({ commit, state }) {
             try {
                 const orders = await orderService.query()
                 commit({ type: 'setOrders', orders })
+            } catch (err) {
+                throw err
+            }
+        },
+        async saveOrder({ commit }, { orderToEdit }) {
+            try {
+                const savedOrder = await orderService.save(orderToEdit)
+                console.log('updateOrder-->', savedOrder)
+                commit({ type: 'updateOrder', order: orderToEdit })
             } catch (err) {
                 throw err
             }

@@ -3,6 +3,7 @@
         font-family: Macan-Bold;
         font-size: 40px;
         padding-bottom: 10px;
+        margin-top: 20px;
     }
 
     margin-bottom: 20px;
@@ -17,6 +18,10 @@
             font-size: 30px;
         }
     }
+}
+
+.labels-list {
+    justify-content: center;
 }
 
 .labels-list>* {

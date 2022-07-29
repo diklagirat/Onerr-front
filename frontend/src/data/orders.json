@@ -148,31 +148,6 @@
         "_id": "rt433s",
         "createdAt": 9898989,
         "deliveredAt": 9898989,
-        "toDate": "April, 21, 2022",
-        "totalPrice": 202,
-        "status": "on progress",
-        "buyer": {
-            "_id": "g5433",
-            "fullname": "kingston34",
-            "imgUrl": "https://fiverr-res.cloudinary.com/t_profile_original,q_auto,f_auto/attachments/profile/photo/bf97006bc2ef9f0d888d5a377393927d-1626495318081/59983dce-0129-486a-aaf0-aff139c3ce9b.jpg"
-        },
-        "seller": {
-            "_id": "y675",
-            "name": "max_shapira",
-            "imgUrl": "https://fiverr-res.cloudinary.com/image/upload/f_auto,q_auto,t_profile_small/v1/attachments/profile/photo/c91b508137925e3bc4500215cabad257-1650123870356/2f84447c-0ab4-42f8-b5a6-6a1ac2fface7.jpg"
-        },
-        "gigs": [
-            {
-                "_id": "i103",
-                "name": "If you’re looking for high quality editing for your videos, you’ve come to the right place. I offer professional editing, color correction and grading, transitions, audio syncing, motion graphics and much more",
-                "amount": 2
-            }
-        ]
-    },
-    {
-        "_id": "rt433s",
-        "createdAt": 9898989,
-        "deliveredAt": 9898989,
         "totalPrice": 93,
         "status": "rejected",
         "buyer": {
@@ -237,55 +212,6 @@
             {
                 "_id": "i102",
                 "name": "Applying for a job/university can be tough in today's competitive world.",
-                "amount": 2
-            }
-        ]
-    },
-    {
-        "_id": "rt433s",
-        "createdAt": 9898989,
-        "deliveredAt": 9898989,
-        "toDate": "April, 21, 2022",
-        "totalPrice": 202,
-        "status": "on progress",
-        "buyer": {
-            "_id": "g5433",
-            "fullname": "kingston34",
-            "imgUrl": "https://fiverr-res.cloudinary.com/t_profile_original,q_auto,f_auto/attachments/profile/photo/bf97006bc2ef9f0d888d5a377393927d-1626495318081/59983dce-0129-486a-aaf0-aff139c3ce9b.jpg"
-        },
-        "seller": {
-            "_id": "y675",
-            "name": "max_shapira",
-            "imgUrl": "https://fiverr-res.cloudinary.com/image/upload/f_auto,q_auto,t_profile_small/v1/attachments/profile/photo/c91b508137925e3bc4500215cabad257-1650123870356/2f84447c-0ab4-42f8-b5a6-6a1ac2fface7.jpg"
-        },
-        "gigs": [
-            {
-                "_id": "i103",
-                "name": "If you’re looking for high quality editing for your videos, you’ve come to the right place. I offer professional editing, color correction and grading, transitions, audio syncing, motion graphics and much more",
-                "amount": 2
-            }
-        ]
-    },
-    {
-        "_id": "rt433s",
-        "createdAt": 9898989,
-        "deliveredAt": 9898989,
-        "totalPrice": 93,
-        "status": "rejected",
-        "buyer": {
-            "_id": "g5903",
-            "fullname": "graphicslc",
-            "imgUrl": "https://fiverr-res.cloudinary.com/t_profile_thumb,q_auto,f_auto/attachments/profile/photo/5597ec46e9762edc8b95ff573ea5b1d5-1647281385737/f5766f11-db82-4fc1-9779-193be51ed400.png"
-        },
-        "seller": {
-            "_id": "d4432",
-            "name": "sa_elarx",
-            "imgUrl": "https://fiverr-res.cloudinary.com/t_profile_original,q_auto,f_auto/attachments/profile/photo/8dfcf6342c10d3fb06e47d51170f0191-1605817413777/4d10be14-a7f5-4c14-ac7f-bfa15ea8e3f3.jpg"
-        },
-        "gigs": [
-            {
-                "_id": "v0124",
-                "name": "design environment or interior concept art",
                 "amount": 2
             }
         ]

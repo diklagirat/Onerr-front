@@ -9,9 +9,11 @@
                 </router-link>
             </li>
             <li>
-                <a href="/">
-                    Become a Seller
-                </a>
+                <router-link to="/dashboard" class="clean-link">
+                    <a>
+                        Dashboard
+                    </a>
+                </router-link>
             </li>
             <li>
                 <a href="/">

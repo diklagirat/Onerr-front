@@ -1,7 +1,11 @@
 <template>
-    <div class="hero-container " ref="hero">
+    <div class="hero-container" ref="hero">
         <!-- ref="hero" -->
         <div v-if="url" class="hero-background" :style="{ 'background-image': `url(${url})` }">
+            <!-- <p> {{ rate }}</p>
+            <p>{{ gigOwnerName }},
+                <b>{{ gigOwnerTitle }}</b>
+            </p> -->
         </div>
 
         <div class="hero flex main-layout">
@@ -33,25 +37,7 @@
                     <p>Andrea, <b>Fashion Designer</b></p>
                 </div>
             </div>
-            <div class="hero-moon" style="opacity: 0;">
-                <div class="seller-name max-width-container show-stars">
-                    <p>Moon, <b>Marketing Expert</b></p>
-                </div>
-            </div>
-            <div class="hero-ritika" style="opacity: 0;">
-                <div class="seller-name max-width-container">
-                    <p>Ritika, <b>Shoemaker and Designer</b></p>
-                </div>
-            </div>
-            <div class="hero-zach" style="opacity: 0;">
-                <div class="seller-name max-width-container">
-                    <p>Zach, <b>Bar Owner</b></p>
-                </div>
-            </div>
-            <div class="hero-gabrielle" style="opacity: 1;">
-                <div class="seller-name max-width-container show-stars">
-                    <p>Gabrielle, <b>Video Editor</b></p>
-                </div>
+          
             </div> -->
     </div>
 
@@ -69,7 +55,7 @@ export default {
     },
     data() {
         return {
-            heroObserver: null,
+            headerObserver: '',
             isSticky: false,
             page: '',
             popularCategories: [
@@ -78,7 +64,7 @@ export default {
                 'Logo Design',
                 'NFT Art'
             ],
-            backgroundDetails: [
+            heroDetails: [
                 {
                     gigOwnerName: 'Moon',
                     gigOwnerTitle: 'Marketing Expert',
@@ -116,12 +102,15 @@ export default {
                     isShown: false
                 }
             ],
-            url: 'https://fiverr-res.cloudinary.com/image/upload/q_auto,f_auto/v1/attachments/generic_asset/asset/2413b8415dda9dbd7756d02cb87cd4b1-1599595203045/bg-hero-2-1792-x1.png'
+            url: 'https://fiverr-res.cloudinary.com/image/upload/q_auto,f_auto/v1/attachments/generic_asset/asset/2413b8415dda9dbd7756d02cb87cd4b1-1599595203045/bg-hero-2-1792-x1.png',
+            gigOwnerName: 'Moon',
+            gigOwnerTitle: 'Marketing Expert',
+            rate: '✨✨✨✨✨'
         }
     },
     created() {
         this.page = this.$route.path
-        
+
         setInterval(this.changeBcgDetails, 5000)
     },
     computed: {
@@ -136,27 +125,35 @@ export default {
         },
         onHeaderObserved(entries) {
             if (this.page !== '/') {
-                console.log(this.page);
+                console.log(this.page)
             }
             entries.forEach((entry) => {
-
                 this.isSticky = entry.isIntersecting ? false : true
             })
             this.$store.commit({ type: 'setObserver', val: this.isSticky })
         },
         imgUrl() {
-            const backgroundDetails = [...this.backgroundDetails]
-            var bcgDetails = backgroundDetails.filter((currDetails) => currDetails.isShown === true)
+            const heroDetails = [...this.heroDetails]
+            var bcgDetails = heroDetails.filter((currDetails) => currDetails.isShown === true)
             return bcgDetails[0].imgUrl
         },
         changeBcgDetails() {
-            console.log('changed')
             // Copy of originally array
-            const backgroundDetails = [...this.backgroundDetails]
-            const bcgDetailsIdx = backgroundDetails.findIndex((currDetails) => currDetails.isShown === true)
+            const heroDetails = [...this.heroDetails]
+            const bcgDetailsIdx = heroDetails.findIndex((currDetails) => currDetails.isShown === true)
+
+            // Update curr hero details in hero background
+            // var bcgDetails = heroDetails.filter((currDetails) => currDetails.isShown === true)
+            // this.gigOwnerName = bcgDetails[0].gigOwnerName
+            // this.gigOwnerTitle = bcgDetails[0].gigOwnerTitle
+            // this.rate = bcgDetails[0].rate
 
             // Originally array
-            var bcgDetails = this.backgroundDetails
+            const bcgDetails = this.heroDetails
+            const res = bcgDetails.filter((currDetails) => currDetails.isShown === true)
+            this.gigOwnerName = res[0].gigOwnerName
+            this.gigOwnerTitle = res[0].gigOwnerTitle
+            this.rate = res[0].rate
 
             bcgDetails[bcgDetailsIdx].isShown = false
 
@@ -171,10 +168,13 @@ export default {
     },
     mounted() {
         this.headerObserver = new IntersectionObserver(this.onHeaderObserved, {
-            rootMargin: '40px',
-            threshold: 1.0,
+            rootMargin: '80px 0px 0px',
+            threshold: 1,
         })
         this.headerObserver.observe(this.$refs.hero)
     },
+    beforeDestroy() {
+        this.headerObserver.unobserve(this.$refs.hero)
+    }
 }
 </script>
