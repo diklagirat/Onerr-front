@@ -2,10 +2,10 @@
     <div class="hero-container" ref="hero">
         <!-- ref="hero" -->
         <div v-if="url" class="hero-background" :style="{ 'background-image': `url(${url})` }">
-            <p> {{ rate }}</p>
+            <!-- <p> {{ rate }}</p>
             <p>{{ gigOwnerName }},
                 <b>{{ gigOwnerTitle }}</b>
-            </p>
+            </p> -->
         </div>
 
         <div class="hero flex main-layout">
