@@ -32,6 +32,8 @@ export default {
         }
     },
     created() {
+        // Scroll to top of the page
+        this.$store.dispatch('scrollToTop')
     },
 
 }
@@ -40,10 +42,8 @@ export default {
 
 
 <style>
-
 .home-page {
     position: relative;
     top: em(-81px)
 }
-
 </style>

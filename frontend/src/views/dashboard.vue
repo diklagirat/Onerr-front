@@ -38,6 +38,8 @@ export default {
         return {}
     },
     created() {
+        // Scroll to top of the page
+        this.$store.dispatch('scrollToTop')
     },
     computed: {
         orders() {
