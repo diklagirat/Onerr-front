@@ -34,7 +34,7 @@ export default {
                     label: 'Up to 7 days'
                 },
                 {
-                    value: '',
+                    value: 0,
                     label: 'Anytime'
                 }],
             deliveryDay: '',

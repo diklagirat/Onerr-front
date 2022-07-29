@@ -78,6 +78,11 @@
                 left: 0;
                 display: block;
             }
+            .gig-preview-content{
+                .gig-preview-title {
+                    color: $btn-primary;
+                }
+            }
         }
     }
 

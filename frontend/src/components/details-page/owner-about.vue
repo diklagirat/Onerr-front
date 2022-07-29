@@ -37,7 +37,7 @@ export default {
     userPreview
   },
   created() {
-    console.log(this.owner)
+    // console.log(this.owner)
   },
 }
 </script>
