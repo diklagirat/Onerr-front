@@ -7,13 +7,19 @@
         padding-bottom: em(24px);
     }
 
+    img {
+        :hover {
+            opacity: 0.85;
+        }
+    }
+
     .vueperslides__arrow {
         background-color: white;
         opacity: 10;
         height: 3em;
         width: 3em;
         border-radius: 50%;
-       
+
         box-shadow: 0 2px 5px 0 rgb(0 0 0 / 15%);
 
         &.vueperslides__arrow--next {
@@ -38,6 +44,7 @@
     display: flex;
     text-align: left;
     padding: 0;
+
 }
 
 .vueperslide__content-wrapper:not(.vueperslide__content-wrapper--outside-top):not(.vueperslide__content-wrapper--outside-bottom) {
