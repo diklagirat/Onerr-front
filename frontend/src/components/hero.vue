@@ -2,10 +2,12 @@
     <div class="hero-container" ref="hero">
         <!-- ref="hero" -->
         <div v-if="url" class="hero-background" :style="{ 'background-image': `url(${url})` }">
-            <!-- <p> {{ rate }}</p>
-            <p>{{ gigOwnerName }},
-                <b>{{ gigOwnerTitle }}</b>
-            </p> -->
+            <article class="main-layout flex column end align-end">
+                <p class="star-in-hero"> {{ rate }}</p>
+                <p>{{ gigOwnerName }},
+                    <b>{{ gigOwnerTitle }}</b>
+                </p>
+            </article>
         </div>
 
         <div class="hero flex main-layout">
@@ -68,7 +70,7 @@ export default {
                 {
                     gigOwnerName: 'Moon',
                     gigOwnerTitle: 'Marketing Expert',
-                    rate: '✨✨✨✨✨',
+                    rate: '★★★★★',
                     imgUrl: 'https://fiverr-res.cloudinary.com/image/upload/q_auto,f_auto/v1/attachments/generic_asset/asset/2413b8415dda9dbd7756d02cb87cd4b1-1599595203045/bg-hero-2-1792-x1.png',
                     isShown: true
 
@@ -97,7 +99,7 @@ export default {
                 {
                     gigOwnerName: 'Gabrielle',
                     gigOwnerTitle: 'Video Editor',
-                    rate: '✨✨✨✨✨',
+                    rate: '★★★★★',
                     imgUrl: 'https://fiverr-res.cloudinary.com/image/upload/q_auto,f_auto/v1/attachments/generic_asset/asset/bb5958e41c91bb37f4afe2a318b71599-1599344049970/bg-hero-5-1792-x1.png',
                     isShown: false
                 }
@@ -105,7 +107,7 @@ export default {
             url: 'https://fiverr-res.cloudinary.com/image/upload/q_auto,f_auto/v1/attachments/generic_asset/asset/2413b8415dda9dbd7756d02cb87cd4b1-1599595203045/bg-hero-2-1792-x1.png',
             gigOwnerName: 'Moon',
             gigOwnerTitle: 'Marketing Expert',
-            rate: '✨✨✨✨✨'
+            rate: '★★★★★'
         }
     },
     created() {
@@ -150,10 +152,6 @@ export default {
 
             // Originally array
             const bcgDetails = this.heroDetails
-            const res = bcgDetails.filter((currDetails) => currDetails.isShown === true)
-            this.gigOwnerName = res[0].gigOwnerName
-            this.gigOwnerTitle = res[0].gigOwnerTitle
-            this.rate = res[0].rate
 
             bcgDetails[bcgDetailsIdx].isShown = false
 
@@ -162,6 +160,12 @@ export default {
             } else {
                 bcgDetails[bcgDetailsIdx + 1].isShown = true
             }
+
+            const res = bcgDetails.filter((currDetails) => currDetails.isShown === true)
+            this.gigOwnerName = res[0].gigOwnerName
+            this.gigOwnerTitle = res[0].gigOwnerTitle
+            this.rate = res[0].rate
+
 
             this.url = this.imgUrl()
         }

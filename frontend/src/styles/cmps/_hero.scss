@@ -80,17 +80,16 @@
     }
 }
 
-// .hero-main-header {
-//     background-color: transparent;
-// }
+article {
+    transition: 1.5s;
+    height: em(661px);
+    color: $background-primary;
 
-// .hero {
-//     height: 42.5rem;
-//     background-image: url(https://fiverr-res.cloudinary.com/image/upload/q_auto,f_auto/v1/attachments/generic_asset/asset/2413b8415dda9dbd7756d02cb87cd4b1-1599595203045/bg-hero-2-1792-x1.png);
+    p {
+        margin: 2px;
+    }
+}
 
-//     position: relative;
-//     display: flex;
-//     background-repeat: no-repeat;
-//     background-size: cover;
-//     background-position: center;
-// }
+.star-in-hero {
+    color: $rate-color;
+}
