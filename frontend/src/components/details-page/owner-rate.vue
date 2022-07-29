@@ -3,7 +3,7 @@
     <header class="flex">
       <h1 class="flex align-center center">
         <article>{{ reviews.length }} Reviews</article>
-        <stars-rating :rate="average"/>
+        <!-- <stars-rating :rate="average"/> -->
       </h1>
     </header>
     <main class="flex">

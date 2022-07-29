@@ -6,7 +6,8 @@
       <div class="user-info flex " v-bind:class="{column:isPreview}" >
         <a class="name">{{ user.fullname }}</a>
         <div class="rate">
-            <stars-rating class="rate" :rate="avrgRite" />
+            <!-- <stars-rating class="rate" :rate="avrgRite" /> -->
+            <!-- <p>&#9733;</p> -->
         </div>
         <span class="level" :class="[isTopRated ? 'topRated' : '']">{{
           user.level
