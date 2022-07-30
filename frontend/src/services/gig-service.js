@@ -1,16 +1,6 @@
-import { storageService } from "./async-storage.service.js"
-import gigsJson from '../data/gigs.json'
-const KEY = 'gig_DB'
+import { httpService } from './http.service'
 
-export const gigService = {
-    query,
-    getById,
-    remove,
-    save,
-    getEmptyGig,
-    getAllTags
-}
-_createGigs()
+const ENDPOINT = 'gig'
 
 var gAllTags = [
     'Architecture & Interior Design',
@@ -22,56 +12,39 @@ var gAllTags = [
     'Book Cover Design',
     'Logo Design',
 ]
-
-function isPrimaryTag(tag) {
-    return gAllTags.slice(0, 3).includes(tag)
+async function query() {
+    var gigs = await httpService.get(ENDPOINT)
+    return gigs
 }
+
 async function getAllTags() {
     return gAllTags
-
 }
 
-async function query(filterBy) {
-
-    return filterBy ? _filter(filterBy) : storageService.query(KEY)
+async function save(gig) {
+    var gig = JSON.parse(JSON.stringify(gig));
+    return await httpService.put(`${ENDPOINT}/${gig._id}`, gig)
 }
 
-function _filter(filterBy) {
-    var gigs = storageService.query(KEY)
-    const { txt } = filterBy
-    const regex = new RegExp(txt, 'i')
-    var filteredGigs = gigs.filter((gig) => {
-        console.log('gigs', gig)
-    })
-
-    return Promise.resolve(filteredGigs)
+async function add(gig) {
+    return await httpService.post(ENDPOINT, gig);
 }
 
-function getById(id) {
-    return storageService.get(KEY, id)
+function remove(gigId) {
+    return httpService.delete(`gig/${gigId}`)
 }
 
-function remove(id) {
-    return storageService.remove(KEY, id)
+async function getById(gigId) {
+    const gig = await httpService.get(`gig/${gigId}`)
+    console.log('gigById', gig)
+    return gig
 }
 
-function save(gig) {
-    const savedGig = gig._id
-        ? storageService.put(KEY, gig)
-        : storageService.post(KEY, gig)
-    return savedGig
-}
-
-function getEmptyGig() {
-    return {
-
-    }
-}
-function _createGigs() {
-    var gigs = JSON.parse(localStorage.getItem(KEY))
-    if (!gigs || !gigs.length) {
-        gigs = gigsJson
-        localStorage.setItem(KEY, JSON.stringify(gigs))
-    }
-    return gigs
+export const gigService = {
+    query,
+    getById,
+    add,
+    remove,
+    save,
+    getAllTags
 }
