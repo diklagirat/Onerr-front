@@ -41,7 +41,7 @@ export default {
     ownerAbout,
     ownerRate,
     ownerReviewList,
-    GigImage
+    GigImage,
   },
   data() {
     return {

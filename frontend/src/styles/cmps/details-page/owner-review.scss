@@ -4,9 +4,19 @@
         border-top: $border-bottom-line;
         padding: 1em 0 2em 2.75em;
         color: $text-third;
-
+        line-height: 22px;
+        
+        .gig-preview-user {
+            float: left;
+            margin-left: -3em;
+            img {
+                height: 32px;
+                width: 32px;
+            }
+        }
+        
         article {
-
+            font-family: Macan-Bold;
             .svg-container {
                 padding: 0 .3em;
                 svg {
@@ -14,7 +24,7 @@
                     width: 14px;
                 }
             }
-            .not-helpful {
+            .helpful {
                 padding-right: 1em;
             }
         }

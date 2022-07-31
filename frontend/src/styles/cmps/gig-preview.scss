@@ -48,20 +48,15 @@
 
             
             &.vueperslides__arrow--prev {
-                left: -30px;
                 border-top-right-radius: 50%;
                 border-bottom-right-radius: 50%;
-
-                svg {
-                    padding-left: 0;
-                }
+                border-left: 0;
             }
             &.vueperslides__arrow--next {
-                right: -30px;
                 border-top-left-radius: 50%;
                 border-bottom-left-radius: 50%;
+                border-right: 0;
             }
-
             
             svg {
                 height: 1.2em;
@@ -96,18 +91,7 @@
         padding: 12px 12px 8px;
         font-size: 14px;
         vertical-align: -0.16em;
-
-        .owner-rate {
-            width: 15px;
-            height: 15px;
-            margin-right: 3px;
-            color: $rate-color;
-            font-family: Macan-Bold;
-
-            svg {
-                padding-top: 2px;
-            }
-        }
+        line-height: 120%;
 
         .rate-sum {
             color: $text-third;

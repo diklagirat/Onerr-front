@@ -1,6 +1,20 @@
 .hero-container {
     position: relative;
     // top: em(-81px)
+
+    article {
+        transition: 1.5s;
+        height: em(661px);
+        color: $background-primary;
+
+        p {
+            margin: 2px;
+        }
+    }
+
+    .star-in-hero {
+        color: $rate-color;
+    }
 }
 
 .hero-background {
@@ -78,18 +92,6 @@
             color: $text-third;
         }
     }
-}
 
-article {
-    transition: 1.5s;
-    height: em(661px);
-    color: $background-primary;
 
-    p {
-        margin: 2px;
-    }
-}
-
-.star-in-hero {
-    color: $rate-color;
 }

@@ -5,10 +5,7 @@
       <img :src="user.imgUrl" class="user-image" />
       <div class="user-info flex " v-bind:class="{column:isPreview}" >
         <a class="name">{{ user.fullname }}</a>
-        <div class="rate">
-            <!-- <stars-rating class="rate" :rate="avrgRite" /> -->
-            <!-- <p>&#9733;</p> -->
-        </div>
+            <stars-rating class="rate" :rate="avrgRite" :length="5"/>
         <span class="level" :class="[isTopRated ? 'topRated' : '']">{{
           user.level
         }}</span>

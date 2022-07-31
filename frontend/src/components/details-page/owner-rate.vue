@@ -3,17 +3,17 @@
     <header class="flex">
       <h1 class="flex align-center center">
         <article>{{ reviews.length }} Reviews</article>
-        <!-- <stars-rating :rate="average"/> -->
+        <stars-rating :rate="average" :length="5"/>
       </h1>
     </header>
     <main class="flex">
       <div class="demo-progress">
-        <div class="progress-stars-5 flex">
+        <!-- <div class="flex" v-for="idx in 5" v-bind:class="{fill:value(idx)}" :key="idx">
           <h3><span>5</span>Stars</h3>
           <el-progress :percentage="percent(5)" status="warning"
             >({{ amountReviewsPerStar(5) }})</el-progress
           >
-        </div>
+        </div> -->
         <div class="progress-stars-4 flex">
           <h3><span>4</span>Stars</h3>
           <el-progress style="--el-menu-sub-item-height: 40px" :percentage="percent(4)" status="warning"
@@ -43,13 +43,13 @@
         <h2>Rating Breakdown</h2>
         <ul class="clean-list">
           <li class="flex space-between">
-            Seller communication level <span><span class="star">★</span>{{ this.average }}</span>
+            Seller communication level <stars-rating class="rate" :rate="average" :length="1"/>
           </li>
           <li class="flex space-between">
-            Recommend to a friend <span><span class="star">★</span>{{ this.average }}</span>
+            Recommend to a friend <stars-rating class="rate" :rate="average" :length="1"/>
           </li>
           <li class="flex space-between">
-            Service as described <span><span class="star">★</span>{{ this.average }}</span>
+            Service as described <stars-rating class="rate" :rate="average" :length="1"/>
           </li>
         </ul>
       </section>

@@ -1,17 +1,40 @@
-.el-rate {
-    padding-left: 0.5em;
-    padding-bottom: 1.5em;
-
-    span {
-        height: 1em;
+.stars-rate {
+    margin-left: .5em;
+    color: rgb(194, 194, 194);
+    .value {
+        color: $rate-color;
+        font-family: Macan-Bold;
+        // padding-top: .1em;
     }
-    .el-rate__text {
-        color: #ffb33e;
+    .fill {
+        color: $rate-color;
     }
-    .el-rate__icon.is-active {
-        color: #ffb33e;
-    }
-    .el-rate__decimal {
-        color: #ffb33e;
+    .fa {
+        padding-right: .3em;
     }
 }
+
+
+// .el-rate {
+//     padding-left: 0.5em;
+//     padding-bottom: 1.5em;
+
+//     span {
+//         height: 1em;
+//     }
+//     .el-rate__text {
+//         color: #ffb33e;
+//     }
+//     .el-rate__icon.is-active {
+//         color: #ffb33e;
+//     }
+//     .el-rate__decimal {
+//         color: #ffb33e;
+//     }
+// }
+
+// .rate {
+//     .fa{
+//         font-family: "Font Awesome 5 Free";
+//     }
+// }

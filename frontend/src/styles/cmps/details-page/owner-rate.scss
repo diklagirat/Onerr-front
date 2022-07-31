@@ -53,14 +53,10 @@
         }
         li {
             line-height: 140%;
-            color: #95979d;
-            padding-bottom: .5em;
-            span {
-                color: #ffb33e;
-                .star {
-                    font-size: 1.4em;
-                    padding-right: .2em;
-                }
+            // color: #95979d;
+            padding-bottom: .6em;
+            .value {
+                line-height: 130%;
             }
         }
     }
