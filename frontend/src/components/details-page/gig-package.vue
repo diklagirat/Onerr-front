@@ -27,11 +27,11 @@
         </ul>
       </article>
       <footer>
-        <router-link to="/" class="clean-link">
-          <button class="btn-basic">
+        <!-- <router-link to="/" class="clean-link"> -->
+          <button class="btn-basic" @click="showMsg">
             Continue (${{ gig.packageDetails.price }})
           </button>
-        </router-link>
+        <!-- </router-link> -->
       </footer>
     </div>
   </section>
@@ -58,6 +58,9 @@ export default {
     packageVIcon,
   },
   methods: {
+    showMsg() {
+        showSuccessMsg('Order complited')
+    }
     // setOrder() {
     //   const order = {
     //     totalPrice: this.gig.price,

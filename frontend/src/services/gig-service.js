@@ -36,7 +36,6 @@ function remove(gigId) {
 
 async function getById(gigId) {
     const gig = await httpService.get(`gig/${gigId}`)
-    console.log('gigById', gig)
     return gig
 }
 

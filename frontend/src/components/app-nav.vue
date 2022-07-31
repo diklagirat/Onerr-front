@@ -54,11 +54,7 @@
         computed: {
             loggedInUser() {
                 this.loggedInUser = this.$store.getters.getloggedinUser
-<<<<<<< HEAD
-                // console.log('logg',loggedInUser)
-=======
                 // console.log('loggedInUser',loggedInUser)
->>>>>>> 00092d3611514ad927161220e77efe691a8649cc
                 return this.$store.getters.getloggedinUser
             }
         },

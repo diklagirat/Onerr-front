@@ -22,6 +22,10 @@
                 padding-left: 1em;
             }
         }
+        .rateSum {
+            padding-left: .5em;
+            display: block;
+        }    
     }
     .ownerDetails {
         padding-bottom: 1em;
@@ -42,12 +46,16 @@
             }
         }
     }
-
+    
     .user-image {
         border-radius: 50%;
         border: none;
         width: 24px;
         height: 24px;
+    }
+    
+    .rateSum {
+        display: none;
     }
 
     .user-info {

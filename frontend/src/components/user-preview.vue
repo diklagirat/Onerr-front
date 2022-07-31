@@ -1,11 +1,21 @@
 <template>
   <section class="user-preview">
-    <div v-if="user" class="gig-preview-user flex align-center" 
-    v-bind:class="{preview:isPreview, header:isHeader, ownerDetails:isOwnerDetails, review:isReview}">
+    <div
+      v-if="user"
+      class="gig-preview-user flex align-center"
+      v-bind:class="{
+        preview: isPreview,
+        header: isHeader,
+        ownerDetails: isOwnerDetails,
+        review: isReview,
+        dashboard: isDashboard,
+      }"
+    >
       <img :src="user.imgUrl" class="user-image" />
-      <div class="user-info flex " v-bind:class="{column:isPreview}" >
+      <div class="user-info flex" v-bind:class="{ column: isPreview }">
         <a class="name">{{ user.fullname }}</a>
-            <stars-rating class="rate" :rate="avrgRite" :length="5"/>
+        <stars-rating class="rate" :rate="avrgRite" :length="5" />
+        <span class="rateSum">({{user.rateSum}})</span>
         <span class="level" :class="[isTopRated ? 'topRated' : '']">{{
           user.level
         }}</span>
@@ -16,7 +26,7 @@
 </template>
 
 <script>
-import starsRating from './details-page/stars-rating.vue'
+import starsRating from "./details-page/stars-rating.vue"
 export default {
   name: "user-preview",
   props: {
@@ -25,23 +35,23 @@ export default {
     isHeader: Boolean,
     isOwnerDetails: Boolean,
     isReview: Boolean,
-    rate: Number
+    isDashboard: Boolean,
+    rate: Number,
   },
   data() {
     return {
-      isTopRated: this.user.level === 'Top Rated Seller' ? true : false
+      isTopRated: this.user.level === "Top Rated Seller" ? true : false,
     }
   },
   computed: {
     avrgRite() {
-        if(this.isReview) return this.rate
-        return this.user.rate
-    }
+      if (this.isReview) return this.rate
+      return this.user.rate
+    },
   },
   components: {
-    starsRating
-  }
-
+    starsRating,
+  },
 }
 </script>
 

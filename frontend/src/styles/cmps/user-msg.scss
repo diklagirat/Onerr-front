@@ -1,8 +1,11 @@
 .alert{
-    background-color: rgb(191, 192, 192);
+    background-color: $btn-primary;
     position: absolute;
-    top: 1em;
-    right: 2em;
-    font-size: 2em;
-    padding: 1em;
+    bottom: 6em;
+    right: 4em;
+    font-size: 1.3em;
+    padding: 1em 2em;
+    font-family: Macan-Bold;
+    color: $background-four;
+    border-radius: 4px;
 }

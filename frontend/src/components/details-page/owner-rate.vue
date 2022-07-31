@@ -8,12 +8,12 @@
     </header>
     <main class="flex">
       <div class="demo-progress">
-        <!-- <div class="flex" v-for="idx in 5" v-bind:class="{fill:value(idx)}" :key="idx">
+       <div class="progress-stars-5 flex">
           <h3><span>5</span>Stars</h3>
-          <el-progress :percentage="percent(5)" status="warning"
+          <el-progress style="--el-menu-sub-item-height: 40px" :percentage="percent(5)" status="warning"
             >({{ amountReviewsPerStar(5) }})</el-progress
           >
-        </div> -->
+        </div>
         <div class="progress-stars-4 flex">
           <h3><span>4</span>Stars</h3>
           <el-progress style="--el-menu-sub-item-height: 40px" :percentage="percent(4)" status="warning"
