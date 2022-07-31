@@ -61,11 +61,13 @@ export default {
 
     addOrder() {
       const buyer = this.$store.getters.getloggedinUser
+
       console.log('buyer', buyer)
       console.log('seller', buyer)
+
       const orderToAdd = {
         createdAt: Date.now(),
-        deliveredAt: Date.now(),
+        deliveredAt: Date.now() + this.gig.packageDetails.daysToMake * 24 * 60 * 60 * 1000,
         totalPrice: this.gig.price,
         status: "pending",
         buyer: {
@@ -87,8 +89,9 @@ export default {
         ]
       }
       console.log('orderToAdd', orderToAdd)
+
       this.$store.dispatch({ type: 'saveOrder', orderToEdit: orderToAdd })
-            showSuccessMsg('Order submited')
+      showSuccessMsg('Order submited')
     }
   },
 }
