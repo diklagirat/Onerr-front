@@ -21,7 +21,8 @@
                 </a>
             </li>
             <li>
-                <el-button @click="login" type="success">Join</el-button>
+                <span v-if="loggedInUser">here{{ loggedInUser.fullname }}</span>
+                <el-button v-else @click.prevent="login" type="success">Join</el-button>
             </li>
         </ul>
     </nav>
@@ -35,14 +36,20 @@
         name: 'app-nav',
         data() {
             return {
-                isOpen: false
+                loggedInUser: null
             }
         },
         created() {
         },
         methods: {
             login() {
-                isOpen = !isOpen
+                this.$store.commit({ type: 'setIsLoading', isLoading: true })
+            }
+        },
+        computed: {
+            loggedInUser() {
+                this.loggedInUser = this.$store.getters.getloggedinUser
+                return this.$store.getters.getloggedinUser
             }
         },
         components: {

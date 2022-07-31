@@ -1,6 +1,10 @@
 import { storageService } from './async-storage.service.js'
-const STORAGE_KEY_LOGGEDIN_USER = 'loggedinUser'
-var gWatchedUser = null
+// import { httpService } from './http.service'
+
+const ENDPOINT = 'user'
+
+// const STORAGE_KEY_LOGGEDIN_USER = 'loggedinUser'
+// var gWatchedUser = null
 import usersJson from '../data/users.json'
 const KEY = 'user_DB'
 
@@ -22,8 +26,9 @@ _createUsers()
 // Debug technique
 // window.userService = userService
 
-function getUsers() {
-    return storageService.query('user')
+async function getUsers() {
+    // return await httpService.get(ENDPOINT)
+    return storageService.query(KEY)
 }
 
 function getById(id) {

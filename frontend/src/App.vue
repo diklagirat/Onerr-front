@@ -2,7 +2,7 @@
   <div>
     <user-msg />
     <app-header />
-    <login v-if="isLoggedIn" />
+    <login v-if="isLoading" />
     <RouterView v-else class=" router-view" />
     <app-footer />
   </div>
@@ -27,6 +27,7 @@ export default {
     login
   },
   created() {
+    this.isLoggedIn = this.$store.getters.getIsLoading
     this.$store.dispatch({ type: "loadGigs" })
     this.$store.dispatch({ type: "loadUsers" })
     this.$store.dispatch({ type: "loadTags" })
@@ -35,5 +36,10 @@ export default {
   methods: {
 
   },
+  computed: {
+    isLoading() {
+      return this.$store.getters.getIsLoading
+    }
+  }
 }
 </script>
