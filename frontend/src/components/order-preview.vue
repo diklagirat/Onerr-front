@@ -1,9 +1,10 @@
 <template>
     <div v-if="order" class="order-preview  flex space-between ">
         <!-- <div v-if="order" class="order-preview table-row "> -->
-        <UserPreview class="userPre" :user="order.buyer" :isDashboard="true"/>
+        <UserPreview class="userPre" :user="order.buyer" :isDashboard="true" />
         <h2 class="gig-title">{{ order.gigs[0].name }}</h2>
-        <h2 class="date">{{ order.toDate }}</h2>
+        <!-- <h2 class="date">{{ order.toDate }}</h2> -->
+        <h2 class="date">{{ dateOfDeliver }}</h2>
         <h2 class="price">${{ order.totalPrice }}</h2>
         <button class="btn-basic" :class="statusColor">{{ order.status }}</button>
 
@@ -28,11 +29,13 @@ export default {
     data() {
         return {
             isSelected: false,
-            orderStatus: ['rejected', 'pending', 'on progress', 'complete'],
-            status: this.order.status
+            orderStatus: ['Rejected', 'Pending', 'On Progress', 'Complete'],
+            status: this.order.status,
+            dateOfDeliver: null
         }
     },
     created() {
+        this.dateOfDeliver = new Date(this.order.deliveredAt).toDateString()
     },
     methods: {
         toggleSelect() {
