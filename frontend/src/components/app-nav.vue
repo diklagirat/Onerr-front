@@ -21,7 +21,7 @@
                 </a>
             </li>
             <li>
-                <span v-if="loggedInUser">here{{ loggedInUser.fullname }}</span>
+                <span v-if="loggedInUser">here{{ isLogin.fullname }}</span>
                 <el-button v-else @click.prevent="login" type="success">Join</el-button>
             </li>
         </ul>
@@ -36,7 +36,7 @@
         name: 'app-nav',
         data() {
             return {
-                loggedInUser: null
+                isLogin: null
             }
         },
         created() {
@@ -48,8 +48,8 @@
         },
         computed: {
             loggedInUser() {
-                this.loggedInUser = this.$store.getters.getloggedinUser
-                return this.$store.getters.getloggedinUser
+                this.isLogin = this.$store.getters.getloggedinUser
+                return this.isLogin
             }
         },
         components: {

@@ -3,9 +3,45 @@ import { userService } from "../../services/user-service"
 export const userStore = {
     strict: true,
     state: {
-        users: [],
+        users: [
+
+            {
+                _id: "e999999",
+                fullname: "Dikla Girat-buyer",
+                imgUrl: "https://fiverr-res.cloudinary.com/image/upload/f_auto,q_auto,t_profile_small/v1/attachments/profile/photo/d06d3197ca9b9f010e75540d2a0bf264-1626300570975/fa60b74e-0d30-49d6-9485-0285ba2315bd.jpg",
+                isSeller: false,
+                username: "dikla@gmail.com",
+                password: "1234",
+                level: "basic/premium",
+                rate: 4,
+                state: "USA",
+                created: "Feb 2021",
+                responseTime: "1 hour",
+                LastDelivery: "2Days",
+                description: "I hold masters degree in engineering . I am a professional graphic designer and have designed many creative websites. So if you want a creative and professional website for your business, you are at the right place. Apart from web designing i offer different services like designing infographics, Photoshop, writing articles and blog posts. I always prefer customer's satisfaction.",
+                reviews: []
+            },
+            {
+
+                _id: "s9999",
+                fullname: "Dikla -seller",
+                imgUrl: "https://fiverr-res.cloudinary.com/image/upload/f_auto,q_auto,t_profile_small/v1/attachments/profile/photo/d06d3197ca9b9f010e75540d2a0bf264-1626300570975/fa60b74e-0d30-49d6-9485-0285ba2315bd.jpg",
+                isSeller: true,
+                username: "diklas@gmail.com",
+                password: "1234",
+                level: "Top Seller Rated",
+                rate: 4,
+                state: "USA",
+                created: "Feb 2021",
+                responseTime: "1 hour",
+                LastDelivery: "2Days",
+                description: "I hold masters degree in engineering . I am a professional graphic designer and have designed many creative websites. So if you want a creative and professional website for your business, you are at the right place. Apart from web designing i offer different services like designing infographics, Photoshop, writing articles and blog posts. I always prefer customer's satisfaction.",
+                reviews: []
+            }
+
+        ],
         loggedInUser: null,
-        isLoading: false
+        isLoading: false,
     },
     getters: {
         getIsLoading({ isLoading }) {
@@ -25,8 +61,9 @@ export const userStore = {
 
         },
         setLoggedinUser(state, { user }) {
-
+            // state.loggedInUser = { ...user }
             state.loggedInUser = { ...user }
+            console.log(state.loggedInUser)
         },
         setUsers(state, { users }) {
             state.users = users
