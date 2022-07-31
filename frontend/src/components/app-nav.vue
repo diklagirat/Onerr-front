@@ -51,15 +51,9 @@
         },
         computed: {
             loggedInUser() {
-<<<<<<< HEAD
-                this.loggedInUser = this.$store.getters.getloggedinUser
-                // console.log('loggedInUser',loggedInUser)
-                return this.$store.getters.getloggedinUser
-=======
                 this.loginUser = this.$store.getters.getloggedinUser
                 // console.log('loggedInUser',loggedInUser)
                 return this.loginUser
->>>>>>> 23d4fcb1b6092c06a646cbd7f9a5ff31ac0d3993
             }
         },
         components: {
