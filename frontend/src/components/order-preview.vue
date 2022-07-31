@@ -1,10 +1,10 @@
 <template>
     <div v-if="order" class="order-preview  flex space-between ">
         <!-- <div v-if="order" class="order-preview table-row "> -->
-        <UserPreview :user="order.buyer" />
+        <UserPreview class="userPre" :user="order.buyer" />
         <h2 class="gig-title">{{ order.gigs[0].name }}</h2>
-        <h2>{{ order.toDate }}</h2>
-        <h2>${{ order.totalPrice }}</h2>
+        <h2 class="date">{{ order.toDate }}</h2>
+        <h2 class="price">${{ order.totalPrice }}</h2>
         <button class="btn-basic" :class="statusColor">{{ order.status }}</button>
 
         <div class="btn-filter" v-if="isSelected">

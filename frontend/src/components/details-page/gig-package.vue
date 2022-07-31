@@ -27,11 +27,11 @@
         </ul>
       </article>
       <footer>
-        <router-link to="/" class="clean-link">
-          <button class="btn-basic" @click="addOrder">
-            Continue (${{ gig.packageDetails.price }})
-          </button>
-        </router-link>
+        <!-- <router-link to="/explore" class="clean-link"> -->
+        <button class="btn-basic" @click="addOrder">
+          Continue (${{ gig.packageDetails.price }})
+        </button>
+        <!-- </router-link> -->
       </footer>
     </div>
   </section>
@@ -88,9 +88,6 @@ export default {
       console.log('orderToAdd', orderToAdd)
       this.$store.dispatch({ type: 'saveOrder', orderToEdit: orderToAdd })
     }
-
-
-
   },
 }
 </script>

@@ -4,6 +4,9 @@
   .thumbnails {
     margin: auto;
     // max-width: 300px;
+    .vueperslide--active{
+      transform: scale(1.04);
+    }
   }
 
   .thumbnails .vueperslide {

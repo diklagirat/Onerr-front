@@ -9,11 +9,14 @@
                 </router-link>
             </li>
             <li>
-                <router-link to="/dashboard" class="clean-link">
-                    <a>
+                <a>
+                    <router-link v-if="loggedInUser" to="/dashboard" class="clean-link">
                         Dashboard
+                    </router-link>
+                    <a v-else class="clean-link">
+                        Become a Seller
                     </a>
-                </router-link>
+                </a>
             </li>
             <li>
                 <a href="/">
@@ -21,13 +24,13 @@
                 </a>
             </li>
             <li>
-                <span v-if="loggedInUser">here{{ isLogin.fullname }}</span>
-                <el-button v-else @click.prevent="login" type="success">Join</el-button>
+                <el-button v-if="!loggedInUser" @click.prevent="login" type="success">Join</el-button>
+                <div v-else class="user-image flex center align-center"
+                    :style="{ 'background-image': `${loggedInUser.imgUrl}` }">D</div>
             </li>
         </ul>
     </nav>
 </template>
-    
     <script>
     //TODO: add <router-link> with link-to='/explore'
     //TODO: add <router-link> with link-to='/' for the logo
@@ -36,7 +39,7 @@
         name: 'app-nav',
         data() {
             return {
-                isLogin: null
+                loginUser: null
             }
         },
         created() {
@@ -48,8 +51,9 @@
         },
         computed: {
             loggedInUser() {
-                this.isLogin = this.$store.getters.getloggedinUser
-                return this.isLogin
+                this.loginUser = this.$store.getters.getloggedinUser
+                // console.log('loggedInUser',loggedInUser)
+                return this.loginUser
             }
         },
         components: {

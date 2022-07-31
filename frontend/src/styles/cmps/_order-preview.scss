@@ -1,10 +1,25 @@
 .order-preview {
-    text-align: center;
+    // text-align: center;
     width: 100%;
 
+    .userPre {
+        // flex-grow: 1;
+        min-width: 300px;
+    }
+    .gig-title {
+        width: 500px;
+    }
+    .date {
+        width: 150px;
+    }
+    .price {
+        width: 100px;
+    }
+
     button {
-        width: 145px;
+        width: 110px;
         text-transform: capitalize;
+        font-size: 12px;
 
         &.rejected {
             background-color: rgb(237, 71, 71);
@@ -14,9 +29,9 @@
             background-color: rgb(49, 119, 239);
         }
 
-        &.complete {
-            // background-color: ;
-        }
+        // &.complete {
+        //     // background-color: ;
+        // }
 
         &.on-progress {
             background-color: rgb(237, 148, 46)
