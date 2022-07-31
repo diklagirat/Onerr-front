@@ -32,6 +32,8 @@ export default {
     this.$store.dispatch({ type: "loadTags" })
     this.$store.dispatch({ type: "loadOrders" })
   },
-  methods: {},
+  methods: {
+
+  },
 }
 </script>
