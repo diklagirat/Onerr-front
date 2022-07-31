@@ -1,25 +1,17 @@
-import { storageService } from "./async-storage.service.js"
-import ordersJson from '../data/orders.json'
-const KEY = 'orders_DB'
+import { httpService } from './http.service'
 
-_createOrders()
+const ENDPOINT = 'order'
 
-export const orderService = {
-    query,
-    getById,
-    remove,
-    save,
-}
 //TODO: 
 //  orderedGigs => orderService.query({userId: 'u101'})
 // Order- confirm Order
 
-function query() {
-    return storageService.query(KEY)
+async function query() {
+    return await httpService.get(ENDPOINT)
 }
 
-function getById(id) {
-    return storageService.get(KEY, id)
+async function getById(orderId) {
+    return await httpService.get(`gig/${orderId}`)
 }
 
 function remove(id) {
@@ -34,11 +26,10 @@ function save(order) {
     return savedOrder
 }
 
-function _createOrders() {
-    var orders = JSON.parse(localStorage.getItem(KEY))
-    if (!orders || !orders.length) {
-        orders = ordersJson
-        localStorage.setItem(KEY, JSON.stringify(orders))
-    }
-    return orders
+export const orderService = {
+    query,
+    getById,
+    remove,
+    save,
+    getById
 }

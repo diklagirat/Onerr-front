@@ -21,16 +21,32 @@
                 </a>
             </li>
             <li>
-                <el-button type="success">Join</el-button>
+                <el-button @click="login" type="success">Join</el-button>
             </li>
         </ul>
     </nav>
 </template>
-
-<script>
-//TODO: add <router-link> with link-to='/explore'
-//TODO: add <router-link> with link-to='/' for the logo
-export default {
-    name: 'app-nav',
-}
-</script>
+    
+    <script>
+    //TODO: add <router-link> with link-to='/explore'
+    //TODO: add <router-link> with link-to='/' for the logo
+    import login from './login.vue'
+    export default {
+        name: 'app-nav',
+        data() {
+            return {
+                isOpen: false
+            }
+        },
+        created() {
+        },
+        methods: {
+            login() {
+                isOpen = !isOpen
+            }
+        },
+        components: {
+            login
+        }
+    }
+    </script>

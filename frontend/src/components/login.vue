@@ -14,11 +14,17 @@
 </template>
 
 <script>
+
 export default {
     data() {
         return {
             emailLogin: '',
             passwordLogin: ''
+        }
+    },
+    methods: {
+        doLogin() {
+
         }
     }
 }
@@ -68,7 +74,7 @@ export default {
     // background-color: bisque;
     top: 30px;
     left: 450px;
-    position: absolute;
+    // position: absolute;
     border-radius: 5px;
     // transform: translate(50%, 50%);
 
