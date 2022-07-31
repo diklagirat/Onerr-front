@@ -3,10 +3,10 @@
     <h1>Earnings</h1>
     <div class="earnings-table">
       <ul class="labels-list clean-list flex wrap align-center">
-        <li v-for="(label, idx) in labels" :key="idx">
+        <li v-for="( earnin, idx) in earnings" :key="idx">
           <div class="order-status">
-            <h3>{{ label }}</h3>
-            <p>${{ 384 * (idx + 10) }}</p>
+            <h3>{{ earnin.label }}</h3>
+            <p>${{ earnin.value }}</p>
           </div>
         </li>
       </ul>
@@ -27,17 +27,29 @@ export default {
     return {
       earnings: [
         { label: "This Year Income", value: "58,535" },
-        { label:"This Month Income", value: "9,489" },
-        { label:"This Month Orders Completed", label},
-        "Orders Pending",
+        { label: "This Month Income", value: "9,489" },
       ],
     }
   },
   created() {
     //TODO: get orders in props
+    // Set This Year Income
+    // this.yearlyIncome()
   },
   computed: {
-    statusNum(status) {},
+    statusNum(status) { },
   },
+  methods: {
+    // yearlyIncome() {
+    //   console.log('this.orders', this.orders)
+    //   const yearlyIncome = this.orders.reduce(
+    //     (previousValue[totalPrice], currentValue[totalPrice]) => {
+    //       previousValue[totalPrice] + currentValue[totalPrice], 0
+    //       console.log('previousValue, currentValue',previousValue[totalPrice], currentValue[totalPrice])
+    //     }
+    //   )
+    // this.earnings[0].value = yearlyIncome.toLocaleString()
+  }
 }
+
 </script>
