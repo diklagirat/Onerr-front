@@ -30,8 +30,8 @@ export const orderStore = {
         },
         async saveOrder({ commit }, { orderToEdit }) {
             try {
+                console.log('orderToEdit saveOrder:', orderToEdit)
                 const savedOrder = await orderService.save(orderToEdit)
-                console.log('updateOrder-->', savedOrder)
                 commit({ type: 'updateOrder', order: orderToEdit })
             } catch (err) {
                 throw err

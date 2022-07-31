@@ -1,74 +1,94 @@
-import { storageService } from './async-storage.service.js'
-// import { httpService } from './http.service'
+import { httpService } from './http.service.js'
 
-const ENDPOINT = 'user'
+const ENDPOINT = 'auth'
 
-const STORAGE_KEY_LOGGEDIN_USER = 'loggedinUser'
-// var gWatchedUser = null
-import usersJson from '../data/users.json'
-const KEY = 'user_DB'
+async function login(cred) {
+    return await httpService.post(ENDPOINT + '/login', cred)
+}
+async function signup(cred) {
+    return await httpService.post(ENDPOINT + '/signup', cred)
+}
+async function logout() {
+    return await httpService.post(ENDPOINT + '/logout')
+}
 
 export const userService = {
     login,
-    logout,
     signup,
-    getLoggedinUser,
-    getUsers,
-    getById,
-    remove,
-    update,
+    logout,
 }
 
-_createUsers()
+// import { storageService } from './async-storage.service.js'
+// // import { httpService } from './http.service'
 
-// TODO:_createUsers() - read json file from data 
+// const ENDPOINT = 'user'
 
-// Debug technique
-// window.userService = userService
+// const STORAGE_KEY_LOGGEDIN_USER = 'loggedinUser'
+// // var gWatchedUser = null
+// import usersJson from '../data/users.json'
+// const KEY = 'user_DB'
 
-async function getUsers() {
-    // return await httpService.get(ENDPOINT)
-    return storageService.query(KEY)
-}
+// export const userService = {
+//     login,
+//     logout,
+//     signup,
+//     getLoggedinUser,
+//     getUsers,
+//     getById,
+//     remove,
+//     update,
+// }
 
-function getById(id) {
-    return storageService.get(KEY, id)
-}
+// _createUsers()
 
-function remove(userId) {
-    return storageService.remove('user', userId)
-}
+// // TODO:_createUsers() - read json file from data 
 
-async function update(user) {
-}
+// // Debug technique
+// // window.userService = userService
 
-async function login(userCred) {
-    // TODO:
-}
+// async function getUsers() {
+//     // return await httpService.get(ENDPOINT)
+//     return storageService.query(KEY)
+// }
 
-async function signup(userCred) {
-    // TODO:
-}
+// function getById(id) {
+//     return storageService.get(KEY, id)
+// }
 
-async function logout() {
-    // TODO:
-}
+// function remove(userId) {
+//     return storageService.remove('user', userId)
+// }
 
-function _saveLocalUser(user) {
-    sessionStorage.setItem(STORAGE_KEY_LOGGEDIN_USER, JSON.stringify(user))
-    return user
-}
+// async function update(user) {
+// }
 
-function getLoggedinUser() {
-    return JSON.parse(sessionStorage.getItem(STORAGE_KEY_LOGGEDIN_USER) || 'null')
-}
+// async function login(userCred) {
+//     // TODO:
+// }
 
-function _createUsers() {
-    var users = JSON.parse(localStorage.getItem(KEY))
-    if (!users || !users.length) {
-        users = usersJson
-        localStorage.setItem(KEY, JSON.stringify(users))
-    }
-    return users
-}
+// async function signup(userCred) {
+//     // TODO:
+// }
+
+// async function logout() {
+//     // TODO:
+// }
+
+// function _saveLocalUser(user) {
+//     sessionStorage.setItem(STORAGE_KEY_LOGGEDIN_USER, JSON.stringify(user))
+//     return user
+// }
+
+// function getLoggedinUser() {
+//     return JSON.parse(sessionStorage.getItem(STORAGE_KEY_LOGGEDIN_USER) || 'null')
+// }
+
+// function _createUsers() {
+//     var users = JSON.parse(localStorage.getItem(KEY))
+//     if (!users || !users.length) {
+//         users = usersJson
+//         localStorage.setItem(KEY, JSON.stringify(users))
+//     }
+//     return users
+// }
 

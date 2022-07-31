@@ -3,10 +3,11 @@
         <div class="login-container">
             <div class="card">
                 <h1>Sign In</h1>
-                <form class="form-group flex  column center">
-                    <input class="form-input" v-model="emailLogin" type="email" placeholder="Email / Username" required>
-                    <input class="form-input" v-model="passwordLogin" type="text" placeholder="Password" required>
-                    <button class="form-input submit-btn" type="submit" @click.prevent="doLogin">Continue</button>
+                <form @submit.prevent="login" class="form-group flex  column center">
+                    <input ref="username" class="form-input" v-model="cred.username" type="text" placeholder="Username"
+                        required>
+                    <input class="form-input" v-model="cred.password" type="text" placeholder="Password" required>
+                    <button class="form-input submit-btn">Continue</button>
                 </form>
             </div>
         </div>
@@ -16,32 +17,40 @@
 <script>
 
 export default {
+    name: 'login-page',
     data() {
         return {
-            emailLogin: '',
-            passwordLogin: ''
+            cred: {
+                username: '',
+                password: '',
+            },
         }
     },
     methods: {
-        async doLogin() {
-            try {
-                // const user = {
-                //     email: this.emailLogin,
-                //     password: this.passwordLogin
-                // }
-                const users = this.$store.getters.users
-                const loggdInUser = users.filter(user =>
-                    user.username === this.emailLogin
-                    && user.password === this.passwordLogin
-                )
-                this.$store.commit({ type: 'setLoggedinUser', user: loggdInUser })
-                this.$store.commit({ type: 'setIsLoading', isLoading: false })
-                // await this.$store.dispatch({ type: 'doLogin', loginUser: user })
-            } catch (err) {
-                console.log(err)
-            }
+        async login() {
+            await this.$store.dispatch({ type: 'login', cred: this.cred });
+            this.$store.commit({ type: 'setIsLoading', isLoading: false })
+            this.$router.push('/explore');
+        },
+        // async doLogin() {
+        //     try {
 
-        }
+        //         const users = this.$store.getters.users
+        //         const loggdInUser = users.filter(user =>
+        //             user.username === this.emailLogin
+        //             && user.password === this.passwordLogin
+        //         )
+        //         this.$store.commit({ type: 'setLoggedinUser', user: loggdInUser })
+        //         this.$stocommit({ type: 'setIsLoading', isLoading: false })
+        //         // await this.$store.dispatch({ type: 'doLogin', loginUser: user })
+        //     } catch (err) {
+        //         console.log(err)
+        //     }
+
+        // }
+        mounted() {
+            this.$refs.username.focus();
+        },
     }
 }
 </script>

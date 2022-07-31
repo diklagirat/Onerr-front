@@ -28,7 +28,7 @@
       </article>
       <footer>
         <!-- <router-link to="/explore" class="clean-link"> -->
-        <button class="btn-basic" @click="addOrder">
+        <button class="btn-basic" @click.prevent="addOrder">
           Continue (${{ gig.packageDetails.price }})
         </button>
         <!-- </router-link> -->
@@ -60,7 +60,7 @@ export default {
   methods: {
 
     addOrder() {
-      const buyer = this.$store.getters.getloggedinUser
+      const buyer = { ...this.$store.getters.getloggedinUser }
       console.log('buyer', buyer)
       console.log('seller', buyer)
       const orderToAdd = {
@@ -88,7 +88,7 @@ export default {
       }
       console.log('orderToAdd', orderToAdd)
       this.$store.dispatch({ type: 'saveOrder', orderToEdit: orderToAdd })
-            showSuccessMsg('Order submited')
+      showSuccessMsg('Order submited')
     }
   },
 }

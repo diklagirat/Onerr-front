@@ -15,18 +15,18 @@
     }
 
     li {
-        padding: 0 20px;
+        // padding: 0 20px;
+        padding-inline-start: 20px;
     }
 
     button {
         padding: em(7px) em(15px);
-        font-family: Macan-Bold;
+        // font-family: Macan-Bold;
         border-color: $btn-primary;
 
         span {
             color: $btn-primary;
         }
-
     }
 
     .el-button {
@@ -42,6 +42,13 @@
         }
     }
 
+    .login-user-img {
+        border-radius: 50%;
+        width: 32px;
+        padding: unset;
+        align-self: flex-end;
+    }
+
     .el-button--success {
         // --el-button-text-color: $btn-primary;
         --el-button-text-color: $background-primary;
@@ -49,13 +56,13 @@
         --el-button-width: em(71px);
     }
 
-  .user-image {
-    background-color: $background-primary;
-    height: 40px;
-    width: 40px;
-    // padding: 15px;
-    font-family: Macan-bold;
-    border-radius: 50%;
-    border: 1px solid $text-primary;
-  }
+    // .user-image {
+    //     background-color: $background-primary;
+    //     height: 40px;
+    //     width: 40px;
+    //     // padding: 15px;
+    //     font-family: Macan-bold;
+    //     border-radius: 50%;
+    //     border: 1px solid $text-primary;
+    // }
 }
