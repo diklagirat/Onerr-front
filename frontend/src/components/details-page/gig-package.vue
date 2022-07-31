@@ -27,10 +27,17 @@
         </ul>
       </article>
       <footer>
+<<<<<<< HEAD
         <!-- <router-link to="/" class="clean-link"> -->
           <button class="btn-basic" @click="showMsg">
             Continue (${{ gig.packageDetails.price }})
           </button>
+=======
+        <!-- <router-link to="/explore" class="clean-link"> -->
+        <button class="btn-basic" @click="addOrder">
+          Continue (${{ gig.packageDetails.price }})
+        </button>
+>>>>>>> 23d4fcb1b6092c06a646cbd7f9a5ff31ac0d3993
         <!-- </router-link> -->
       </footer>
     </div>
@@ -41,7 +48,7 @@
 import packageDeliveryIcon from "../icons/package-delivery-icon.vue"
 import packageRevisionsIcon from "../icons/package-revisions-icon.vue"
 import packageVIcon from "../icons/package-v-icon.vue"
-import { showErrorMsg, showSuccessMsg } from '../../services/event-bus.service'
+// import { showErrorMsg, showSuccessMsg } from '../../services/event-bus.service'
 
 
 export default {
@@ -58,6 +65,7 @@ export default {
     packageVIcon,
   },
   methods: {
+<<<<<<< HEAD
     showMsg() {
         showSuccessMsg('Order complited')
     }
@@ -74,6 +82,38 @@ export default {
     //   }
     // },
 
+=======
+    addOrder() {
+      const buyer = this.$store.getters.getloggedinUser
+      console.log('buyer', buyer)
+      console.log('seller', buyer)
+      const orderToAdd = {
+        createdAt: Date.now(),
+        deliveredAt: Date.now(),
+        totalPrice: this.gig.price,
+        status: "pending",
+        buyer: {
+          _id: buyer._id,
+          fullname: buyer.fullname,
+          imgUrl: buyer.imgUrl
+        },
+        seller: {
+          _id: this.gig.owner._id,
+          fullname: this.gig.owner.fullname,
+          imgUrl: this.gig.owner.imgUrl
+        },
+        gigs: [
+          {
+            _id: this.gig._id,
+            name: this.gig.title,
+            amount: 1
+          }
+        ]
+      }
+      console.log('orderToAdd', orderToAdd)
+      this.$store.dispatch({ type: 'saveOrder', orderToEdit: orderToAdd })
+    }
+>>>>>>> 23d4fcb1b6092c06a646cbd7f9a5ff31ac0d3993
   },
 }
 </script>

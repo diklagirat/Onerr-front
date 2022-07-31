@@ -26,6 +26,7 @@ export default {
     data() {
         return {
             category: this.categoryUrl,
+            // category: 'Architecture & Interior Design',
         }
     },
     created() {
