@@ -58,6 +58,8 @@ export default {
         this.owner = currOwner
       })
     })
+    // Scroll to top of the page
+    this.$store.dispatch('scrollToTop')
   },
 }
 </script>

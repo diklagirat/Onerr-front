@@ -5,15 +5,7 @@
             <div class="flex column">
                 <vueper-slides class="no-shadow" :visible-slides="5" slide-multiple :gap="3.660714" :slide-ratio="1 / 4"
                     :dragging-distance="200" :breakpoints="{ 800: { visibleSlides: 2, slideMultiple: 2 } }">
-                    <!-- costimies arrows -->
-                    <!-- <template #arrow-left>
-                        <i class="icon icon-arrow-left" />
-                    </template>
-
-                    <template #arrow-right>
-                        <i class="icon icon-arrow-right" />
-                    </template> -->
-                    <vueper-slide v-for="slide in slides" :key="slide" :content="slide.content" :title="slide.title"
+                    <vueper-slide class="popular-categories-image" v-for="slide in slides" :key="slide" :content="slide.content" :title="slide.title"
                         :image="slide.image" />
                 </vueper-slides>
             </div>

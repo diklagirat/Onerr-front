@@ -96,7 +96,6 @@ export const gigStore = {
         }
     },
     actions: {
-
         async loadGigs({ commit, state }) {
             try {
                 const gigs = await gigService.query()
@@ -112,6 +111,9 @@ export const gigStore = {
             } catch (err) {
                 throw err
             }
+        },
+        scrollToTop(){
+            window.scrollTo(0, 0)
         }
     }
 }

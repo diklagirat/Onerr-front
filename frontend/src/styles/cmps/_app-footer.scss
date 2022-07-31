@@ -2,13 +2,15 @@
     height: rem(55px);
     // position: fixed;
     width: 100%;
+    border-top: 1px solid #e4e5e7;
 }
 
 .main-footer {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border-top: 1px solid #e4e5e7;
+    padding-bottom: 20px;
+    padding-top: 20px;
 }
 
 .footer-social {

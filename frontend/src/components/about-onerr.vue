@@ -3,15 +3,15 @@
         <div class="about-onerr main-layout flex">
             <div class="text-video-container flex align-center main-layout">
                 <article class="text-container flex column center">
-                    <h1>A whole world of freelance talent at your fingertips</h1>
+                    <h2>A whole world of freelance talent at your fingertips</h2>
                     <ul class="clean-list">
                         <li>
-                            <h6 class="flex align-start">
+                            <h6>
                                 <span>
                                     <vIcon />
                                 </span>The best for every budget
                             </h6>
-                            <p>Find high-quality services at every price point. No hourly rates, just project-based
+                            <p> Find high-quality services at every price point. No hourly rates, just project-based
                                 pricing.
                             </p>
                         </li>

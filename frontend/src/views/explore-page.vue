@@ -16,15 +16,10 @@ export default {
   data() {
     return {}
   },
-  // created() {
-  //   scrollToTop()
+  created() {
+    this.$store.dispatch('scrollToTop')
 
-  // },
-  // methods: {
-  //   scrollToTop() {
-  //     window.scrollTo(0, 0)
-  //   }
-  // },
+  },
   computed: {
     gigs() {
       return this.$store.getters.gigsToDisplay
