@@ -28,7 +28,7 @@
       </article>
       <footer>
         <router-link to="/" class="clean-link">
-          <button class="btn-basic" @click="setOrder">
+          <button class="btn-basic">
             Continue (${{ gig.packageDetails.price }})
           </button>
         </router-link>
@@ -58,28 +58,19 @@ export default {
     packageVIcon,
   },
   methods: {
-    setOrder() {
-      const order = {
-        totalPrice: this.gig.price,
-        buyer: 'loggedinUser',
-        seller: this.gig.owner,
-        gig: {
-          _id: this.gig._id,
-          name: this.gig.name,
-          amount: 2
-        }
-      }
-      // this.addOrder(order)
-    },
-    // async addOrder(order) {
-    //   try {
-    //     // await this.$store.dispatch({type: 'addOrder', order: order})
-    //     showSuccessMsg('Order completed')
-    //     this.reviewToEdit = { txt: '', aboutUserId: null }
-    //   } catch (err) {
-    //     showErrorMsg('Cannot add order')
+    // setOrder() {
+    //   const order = {
+    //     totalPrice: this.gig.price,
+    //     buyer: 'loggedinUser',
+    //     seller: this.gig.owner,
+    //     gig: {
+    //       _id: this.gig._id,
+    //       name: this.gig.name,
+    //       amount: 2
+    //     }
     //   }
-    // }
+    // },
+
   },
 }
 </script>
