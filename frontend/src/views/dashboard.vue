@@ -4,10 +4,10 @@
       <earnings :orders="orders" />
       <h1>Manage Orders</h1>
       <div class="title flex grow">
-        <h2>Panding</h2>
+        <h2>All</h2>
+        <h2>Pending</h2>
         <h2>On progress</h2>
         <h2>Complete</h2>
-        <h2>All</h2>
       </div>
       <section class="orders-list">
         <!-- <div class="title flex grow">
