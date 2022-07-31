@@ -7,23 +7,23 @@
     }
 
     a {
-        // color: $text-secondary;
-        // color: $background-primary;
         color: $text-primary;
         font-family: Macan-bold;
         text-decoration: none;
-        padding: rem(7px) rem(15px);
+        // padding: rem(7px) rem(15px);
         transition: all 0.3s ease-in-out;
     }
 
+    li {
+        padding: 0 20px;
+    }
+
     button {
-        padding: em(7px) em(20px);
+        padding: em(7px) em(15px);
         font-family: Macan-Bold;
-        // border-color: $background-primary;
         border-color: $btn-primary;
 
         span {
-            // color: $background-primary;
             color: $btn-primary;
         }
 
@@ -38,7 +38,6 @@
 
             span {
                 color: $background-primary;
-                // color: $btn-primary;
             }
         }
     }
@@ -50,7 +49,13 @@
         --el-button-width: em(71px);
     }
 
-    // :hover {
-    //     --el-button-text-color: transperant;
-    // }
+  .user-image {
+    background-color: $background-primary;
+    height: 40px;
+    width: 40px;
+    // padding: 15px;
+    font-family: Macan-bold;
+    border-radius: 50%;
+    border: 1px solid $text-primary;
+  }
 }
