@@ -49,6 +49,7 @@
         computed: {
             loggedInUser() {
                 this.loggedInUser = this.$store.getters.getloggedinUser
+                // console.log('logg',loggedInUser)
                 return this.$store.getters.getloggedinUser
             }
         },
