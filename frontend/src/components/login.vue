@@ -25,11 +25,18 @@ export default {
     methods: {
         async doLogin() {
             try {
-                const user = {
-                    email: this.emailLogin,
-                    password: this.passwordLogin
-                }
-                await this.$store.dispatch({ type: 'doLogin', loginUser: user })
+                // const user = {
+                //     email: this.emailLogin,
+                //     password: this.passwordLogin
+                // }
+                const users = this.$store.getters.users
+                const loggdInUser = users.filter(user =>
+                    user.username === this.emailLogin
+                    && user.password === this.passwordLogin
+                )
+                this.$store.commit({ type: 'setLoggedinUser', user: loggdInUser })
+                this.$store.commit({ type: 'setIsLoading', isLoading: false })
+                // await this.$store.dispatch({ type: 'doLogin', loginUser: user })
             } catch (err) {
                 console.log(err)
             }

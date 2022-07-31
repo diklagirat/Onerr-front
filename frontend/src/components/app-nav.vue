@@ -16,7 +16,6 @@
                     <a v-else class="clean-link">
                         Become a Seller
                     </a>
-
                 </a>
             </li>
             <li>
@@ -32,7 +31,6 @@
         </ul>
     </nav>
 </template>
-    
     <script>
     //TODO: add <router-link> with link-to='/explore'
     //TODO: add <router-link> with link-to='/' for the logo
@@ -41,7 +39,7 @@
         name: 'app-nav',
         data() {
             return {
-                loggedInUser: null
+                loginUser: null
             }
         },
         created() {
@@ -53,9 +51,9 @@
         },
         computed: {
             loggedInUser() {
-                this.loggedInUser = this.$store.getters.getloggedinUser
+                this.loginUser = this.$store.getters.getloggedinUser
                 // console.log('loggedInUser',loggedInUser)
-                return this.$store.getters.getloggedinUser
+                return this.loginUser
             }
         },
         components: {

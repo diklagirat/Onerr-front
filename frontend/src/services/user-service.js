@@ -3,7 +3,7 @@ import { storageService } from './async-storage.service.js'
 
 const ENDPOINT = 'user'
 
-// const STORAGE_KEY_LOGGEDIN_USER = 'loggedinUser'
+const STORAGE_KEY_LOGGEDIN_USER = 'loggedinUser'
 // var gWatchedUser = null
 import usersJson from '../data/users.json'
 const KEY = 'user_DB'

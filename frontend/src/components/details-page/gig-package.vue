@@ -27,11 +27,11 @@
         </ul>
       </article>
       <footer>
-        <router-link to="/" class="clean-link">
-          <button class="btn-basic">
-            Continue (${{ gig.packageDetails.price }})
-          </button>
-        </router-link>
+        <!-- <router-link to="/explore" class="clean-link"> -->
+        <button class="btn-basic" @click="addOrder">
+          Continue (${{ gig.packageDetails.price }})
+        </button>
+        <!-- </router-link> -->
       </footer>
     </div>
   </section>
@@ -41,7 +41,7 @@
 import packageDeliveryIcon from "../icons/package-delivery-icon.vue"
 import packageRevisionsIcon from "../icons/package-revisions-icon.vue"
 import packageVIcon from "../icons/package-v-icon.vue"
-import { showErrorMsg, showSuccessMsg } from '../../services/event-bus.service'
+// import { showErrorMsg, showSuccessMsg } from '../../services/event-bus.service'
 
 
 export default {
@@ -58,19 +58,36 @@ export default {
     packageVIcon,
   },
   methods: {
-    // setOrder() {
-    //   const order = {
-    //     totalPrice: this.gig.price,
-    //     buyer: 'loggedinUser',
-    //     seller: this.gig.owner,
-    //     gig: {
-    //       _id: this.gig._id,
-    //       name: this.gig.name,
-    //       amount: 2
-    //     }
-    //   }
-    // },
-
+    addOrder() {
+      const buyer = this.$store.getters.getloggedinUser
+      console.log('buyer', buyer)
+      console.log('seller', buyer)
+      const orderToAdd = {
+        createdAt: Date.now(),
+        deliveredAt: Date.now(),
+        totalPrice: this.gig.price,
+        status: "pending",
+        buyer: {
+          _id: buyer._id,
+          fullname: buyer.fullname,
+          imgUrl: buyer.imgUrl
+        },
+        seller: {
+          _id: this.gig.owner._id,
+          fullname: this.gig.owner.fullname,
+          imgUrl: this.gig.owner.imgUrl
+        },
+        gigs: [
+          {
+            _id: this.gig._id,
+            name: this.gig.title,
+            amount: 1
+          }
+        ]
+      }
+      console.log('orderToAdd', orderToAdd)
+      this.$store.dispatch({ type: 'saveOrder', orderToEdit: orderToAdd })
+    }
   },
 }
 </script>

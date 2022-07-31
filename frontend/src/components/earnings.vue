@@ -6,7 +6,7 @@
                 <li v-for="(label, idx) in labels" :key="idx">
                     <div class="order-status">
                         <h3>{{ label }}</h3>
-                        <p>$4567</p>
+                        <p>${{ 384 * (idx + 10) }}</p>
                     </div>
                 </li>
             </ul>
