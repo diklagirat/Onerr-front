@@ -1,60 +1,31 @@
 <template>
-
-
-
-
-<AirbnbRating
-  count={11}
-  
-/>
-
-
-<!-- <Rating
-  showRating
-  onFinishRating={this.ratingCompleted}
-  style={{ paddingVertical: 10 }}
-/> -->
-
-<!-- <Rating
-  type='heart'
-  ratingCount={3}
-  imageSize={60}
-  showRating
-  onFinishRating={this.ratingCompleted}
-/> -->
-
-<!-- <Rating
-  type='custom'
-  ratingImage={WATER_IMAGE}
-  ratingColor='#3498db'
-  ratingBackgroundColor='#c8c7c8'
-  ratingCount={10}
-  imageSize={30}
-  onFinishRating={this.ratingCompleted}
-  style={{ paddingVertical: 10 }}
-/> -->
+  <div v-if="length" class="stars-rate flex">
+    <div v-if="length === 5">
+      <span
+        v-for="idx in 5"
+        class="fa fa-star"
+        v-bind:class="{ fill: value(idx) }"
+        :key="idx"
+      ></span>
+    </div>
+    <span v-else class="fa fa-star fill"></span>
+    <span class="value">{{ rate }}</span>
+  </div>
 </template>
 
 <script>
-//  import { Rating, AirbnbRating } from 'react-native-ratings';
-// const WATER_IMAGE = require('./water.png')
-
-// ratingCompleted(rating) {
-//   console.log("Rating is: " + rating)
-// }
 export default {
   name: "stars-rating",
   props: {
     rate: Number,
+    length: Number,
   },
-  computed: {
-    value() {
-      return this.rate
+  methods: {
+    value(star) {
+      if (this.rate >= star) return true
+      return false
     },
   },
-  created() {
-  },
-
 }
 </script>
 

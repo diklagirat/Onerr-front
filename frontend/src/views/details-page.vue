@@ -41,8 +41,8 @@ export default {
     ownerAbout,
     ownerRate,
     ownerReviewList,
-    GigImage
-},
+    GigImage,
+  },
   data() {
     return {
       gig: null,
@@ -54,7 +54,7 @@ export default {
     gigService.getById(gigId).then((currGig) => {
       this.gig = currGig
       const ownerId = this.gig.owner._id
-      userService.getById(ownerId).then((currOwner) => {
+      userService.get(ownerId).then((currOwner) => {
         this.owner = currOwner
       })
     })
