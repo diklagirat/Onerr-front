@@ -15,7 +15,7 @@
                 <el-option v-for="(status, idx) in orderStatus" :key="idx" :label="status" :value="status" />
             </el-select>
         </div>
-        <!-- remove on buyer -->
+        <!-- TODO: remove on buyer -->
         <span class="more-btn" @click="toggleSelect"><i class="fas fa-ellipsis-v"></i></span>
 
     </div>

@@ -1,7 +1,7 @@
 <template>
   <section class="dashboard">
     <div class="dashboard-container main-layout">
-      <!-- renov on buyer -->
+      <!-- TODO: remove on buyer -->
       <earnings :orders="orders" />
       <h2 class="order-titel">Manage Orders</h2>
       <!-- TODO: Implement sort -->
@@ -27,7 +27,7 @@
                 <h2 class="date">DUE ON</h2>
                 <h2 class="price">TOTAL</h2>
                 <h2 class="status">STATUS</h2>
-                <!-- remove on buyer  -->
+                <!-- TODO: remove on buyer  -->
                 <h2>SET</h2>
               </div>
             </li>
