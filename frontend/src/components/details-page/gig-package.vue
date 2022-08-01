@@ -3,7 +3,7 @@
     <div class="gig-package-container">
       <header>
         <div class="titel flex space-between">
-          <h1>PACKEGE DETAILS</h1>
+          <h1 class="package-name">{{ gig.packageDetails.name }}</h1>
           <h3>${{ gig.packageDetails.price }}</h3>
         </div>
         <div class="second-titel">
@@ -28,7 +28,7 @@
       </article>
       <footer>
         <!-- <router-link to="/explore" class="clean-link"> -->
-        <button class="btn-basic" @click="addOrder">
+        <button class="btn-basic" @click.prevent="addOrder">
           Continue (${{ gig.packageDetails.price }})
         </button>
         <!-- </router-link> -->
@@ -60,10 +60,10 @@ export default {
   methods: {
 
     addOrder() {
-      const buyer = this.$store.getters.getloggedinUser
-
+      const buyer = { ...this.$store.getters.getUser }
+      const seller = this.gig.owner
       console.log('buyer', buyer)
-      console.log('seller', buyer)
+      console.log('seller', seller)
 
       const orderToAdd = {
         createdAt: Date.now(),
@@ -88,8 +88,6 @@ export default {
           }
         ]
       }
-      console.log('orderToAdd', orderToAdd)
-
       this.$store.dispatch({ type: 'saveOrder', orderToEdit: orderToAdd })
       showSuccessMsg('Order submited')
     }

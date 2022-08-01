@@ -51,15 +51,26 @@ export default {
   },
   created() {
     const { gigId } = this.$route.params
-    gigService.getById(gigId).then((currGig) => {
-      this.gig = currGig
-      const ownerId = this.gig.owner._id
-      userService.getById(ownerId).then((currOwner) => {
-        this.owner = currOwner
-      })
-    })
+    this.getGigById(gigId)
     // Scroll to top of the page
     this.$store.dispatch('scrollToTop')
   },
+  methods: {
+    async getGigById(gigId) {
+      this.gig = await this.$store.dispatch({
+        type: 'getGigById',
+        gigId,
+      })
+      const userId = this.gig.owner._id
+      console.log('userId', userId)
+      this.getUserById(userId)
+    },
+    async getUserById(userId) {
+      this.owner = await this.$store.dispatch({
+        type: 'getUserById',
+        userId,
+      })
+    }
+  }
 }
 </script>

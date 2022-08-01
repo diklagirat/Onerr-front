@@ -4,12 +4,13 @@
       <!-- renov on buyer -->
       <earnings :orders="orders" />
       <h2 class="order-titel">Manage Orders</h2>
-      <div class="title flex grow">
+      <!-- TODO: Implement sort -->
+      <!-- <div class="title flex grow">
         <h2>All</h2>
         <h2>Pending</h2>
         <h2>On progress</h2>
         <h2>Complete</h2>
-      </div>
+      </div> -->
       <section class="orders-list">
         <!-- <div class="title flex grow">
                     <h2>Padding</h2>
@@ -50,12 +51,16 @@ export default {
     return {}
   },
   created() {
+    const currUser = this.$store.getters.getUser
+    console.log('usellerId logged in', currUser)
+    this.$store.commit({ type: 'setCurrUser', currUser })
     // Scroll to top of the page
     this.$store.dispatch("scrollToTop")
   },
   computed: {
     orders() {
-      return this.$store.getters.ordersToDisplay
+      // return this.$store.getters.ordersToDisplay
+      return this.$store.getters.ordersByUser
     },
   },
   components: {

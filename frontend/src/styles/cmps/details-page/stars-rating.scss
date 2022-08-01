@@ -1,14 +1,18 @@
 .stars-rate {
     margin-left: .5em;
     color: rgb(194, 194, 194);
+
     .value {
         color: $rate-color;
         font-family: Macan-Bold;
+        padding-top: 2px;
         // padding-top: .1em;
     }
+
     .fill {
         color: $rate-color;
     }
+
     .fa {
         padding-right: .3em;
     }

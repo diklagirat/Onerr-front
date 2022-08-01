@@ -13,7 +13,6 @@ import userMsg from "./components/user-msg.vue"
 import appHeader from "./components/app-header.vue"
 import appFooter from "./components/app-footer.vue"
 import login from "./components/login.vue"
-
 export default {
   data() {
     return {
