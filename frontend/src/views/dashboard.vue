@@ -1,13 +1,14 @@
 <template>
   <section class="dashboard">
     <div class="dashboard-container main-layout">
+      <!-- renov on buyer -->
       <earnings :orders="orders" />
-      <h1>Manage Orders</h1>
+      <h2 class="order-titel">Manage Orders</h2>
       <div class="title flex grow">
-        <h2>Panding</h2>
+        <h2>All</h2>
+        <h2>Pending</h2>
         <h2>On progress</h2>
         <h2>Complete</h2>
-        <h2>All</h2>
       </div>
       <section class="orders-list">
         <!-- <div class="title flex grow">
@@ -25,6 +26,7 @@
                 <h2 class="date">DUE ON</h2>
                 <h2 class="price">TOTAL</h2>
                 <h2 class="status">STATUS</h2>
+                <!-- remove on buyer  -->
                 <h2>SET</h2>
               </div>
             </li>
@@ -48,12 +50,16 @@ export default {
     return {}
   },
   created() {
+    const currUser = this.$store.getters.getUser
+    console.log('usellerId logged in', currUser)
+    this.$store.commit({ type: 'setCurrUser', currUser })
     // Scroll to top of the page
     this.$store.dispatch("scrollToTop")
   },
   computed: {
     orders() {
-      return this.$store.getters.ordersToDisplay
+      // return this.$store.getters.ordersToDisplay
+      return this.$store.getters.ordersByUser
     },
   },
   components: {

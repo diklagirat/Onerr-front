@@ -4,24 +4,30 @@
     padding: 2em 0 1.25em;
     position: sticky;
     top: 50px;
-    
-    .gig-package-container{
+
+    .gig-package-container {
         padding: 0 1.5em;
-        
+
         header {
             padding-bottom: .625em;
             line-height: 1.5em;
+
             .titel {
                 color: $text-third;
+
                 h1 {
                     min-height: 3em;
-                    margin-bottom: .5em ;
+                    margin-bottom: .5em;
+                    text-transform: capitalize;
+                    font-family: Macan-Bold;
                 }
+
                 h3 {
                     font-size: 1.25em;
                 }
             }
-            .second-titel{
+
+            .second-titel {
                 h1 {
                     min-height: 3.9375em;
                     margin-top: .625em;
@@ -29,28 +35,34 @@
                 }
             }
         }
-        
+
         article {
             .additional-info {
                 color: $text-primary;
                 margin-bottom: .5em;
+
                 h3 {
                     font-size: .875em;
                     margin-left: .5em;
                     font-weight: bold
                 }
+
                 .revisions {
                     margin-left: 1em;
                 }
+
                 svg {
                     fill: $text-primary;
                 }
             }
+
             ul {
                 margin-bottom: 1.25em;
+
                 svg {
                     margin-right: .75em;
                 }
+
                 h1 {
                     font-size: .875em;
                     line-height: 24px;

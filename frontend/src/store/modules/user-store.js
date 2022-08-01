@@ -21,7 +21,7 @@ export const userStore = {
     mutations: {
         setUser(state, { user }) {
             state.loggedinUser = user
-
+            console.log('state.loggedinUser',)
         },
         setIsLoading(state, { isLoading }) {
             state.isLoading = isLoading

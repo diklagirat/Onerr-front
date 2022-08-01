@@ -3,7 +3,7 @@
     <div class="gig-package-container">
       <header>
         <div class="titel flex space-between">
-          <h1>PACKEGE DETAILS</h1>
+          <h1 class="package-name">{{ gig.packageDetails.name }}</h1>
           <h3>${{ gig.packageDetails.price }}</h3>
         </div>
         <div class="second-titel">
@@ -61,11 +61,13 @@ export default {
 
     addOrder() {
       const buyer = { ...this.$store.getters.getUser }
+      const seller = this.gig.owner
       console.log('buyer', buyer)
-      console.log('seller', buyer)
+      console.log('seller', seller)
+
       const orderToAdd = {
         createdAt: Date.now(),
-        deliveredAt: Date.now(),
+        deliveredAt: Date.now() + this.gig.packageDetails.daysToMake * 24 * 60 * 60 * 1000,
         totalPrice: this.gig.price,
         status: "pending",
         buyer: {
