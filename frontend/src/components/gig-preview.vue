@@ -2,11 +2,11 @@
   <section class="gig-preview">
     <div class="gig-preview-container">
       <div class="gig-preview-header">
-        <router-link :to="'/details/' + gig._id">
+        <!-- <router-link :to="'/details/' + gig._id"> -->
           <vueper-slides fade :touchable="false">
             <vueper-slide v-for="(image, i) in gig.imgUrl" :key="i" :image="image" />
           </vueper-slides>
-        </router-link>
+        <!-- </router-link> -->
       </div>
 
       <div class="gig-preview-content">

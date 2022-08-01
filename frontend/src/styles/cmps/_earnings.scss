@@ -6,9 +6,11 @@
         margin-top: 20px;
     }
 
+    
     margin-bottom: 20px;
 
     .order-status {
+        height: 95%;
         h3 {
             color: #1dbf73;
         }
@@ -29,9 +31,10 @@
 }
 
 .labels-list>* {
+    height: 100px;
     margin: 2em 0;
     border-right: 1px solid #e4e5e7;
-    min-width: 200px;
+    width: 250px;
     text-align: center;
     padding: 0 2em;
 }
