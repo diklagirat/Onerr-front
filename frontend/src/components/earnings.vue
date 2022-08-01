@@ -28,17 +28,34 @@ export default {
       earnings: [
         { label: "This Year Income", value: "58,535" },
         { label: "This Month Income", value: "9,489" },
+<<<<<<< HEAD
         { label: "This Year Orders Completed", value: "274"},
         { label: "This Month Orders Completed", value: "36"},
         { label: "Orders Pending", value: "3"}
+=======
+>>>>>>> 2f161f8b71b426eac5d4daac12d98e60d3bd01d0
       ],
     }
   },
   created() {
     //TODO: get orders in props
+    // Set This Year Income
+    // this.yearlyIncome()
   },
   computed: {
-    statusNum(status) {},
+    statusNum(status) { },
   },
+  methods: {
+    // yearlyIncome() {
+    //   console.log('this.orders', this.orders)
+    //   const yearlyIncome = this.orders.reduce(
+    //     (previousValue[totalPrice], currentValue[totalPrice]) => {
+    //       previousValue[totalPrice] + currentValue[totalPrice], 0
+    //       console.log('previousValue, currentValue',previousValue[totalPrice], currentValue[totalPrice])
+    //     }
+    //   )
+    // this.earnings[0].value = yearlyIncome.toLocaleString()
+  }
 }
+
 </script>

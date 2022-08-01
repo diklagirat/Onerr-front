@@ -30,7 +30,7 @@ export default {
     data() {
         return {
             isSelected: false,
-            orderStatus: ['Rejected', 'Pending', 'On Progress', 'Complete'],
+            orderStatus: ['Rejected', 'Pending', 'On Progress', 'Completed'],
             status: this.order.status,
             dateOfDeliver: null
         }
