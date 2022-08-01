@@ -6,7 +6,7 @@
         <li v-for="(earning, idx) in earnings" :key="idx">
           <div class="order-status flex column space-between">
             <h3>{{ earning.label }}</h3>
-            <p>{{ earning.value }}</p>
+            <p>${{ earning.value }}</p>
           </div>
         </li>
       </ul>

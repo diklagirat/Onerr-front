@@ -39,6 +39,7 @@ export default {
     },
     created() {
         this.dateOfDeliver = new Date(this.order.deliveredAt).toDateString()
+        
     },
     methods: {
         toggleSelect() {
