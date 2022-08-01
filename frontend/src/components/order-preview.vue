@@ -1,5 +1,5 @@
 <template>
-    <div v-if="order" class="order-preview  flex space-between ">
+    <div v-if="order" class="order-preview  flex space-between align-center">
         <!-- <div v-if="order" class="order-preview table-row "> -->
         <UserPreview class="userPre" :user="order.buyer" :isDashboard="true" />
         <h2 class="gig-title">{{ order.gigs[0].name }}</h2>
@@ -13,6 +13,7 @@
                 <el-option v-for="(status, idx) in orderStatus" :key="idx" :label="status" :value="status" />
             </el-select>
         </div>
+        <!-- remove on buyer -->
         <span class="more-btn" @click="toggleSelect"><i class="fas fa-ellipsis-v"></i></span>
 
     </div>

@@ -79,7 +79,19 @@ export const gigStore = {
         },
         getObserver(state) {
             return state.observer
-        }
+        },
+        // getGigById({ gigs }, { toyId }) {
+        //     return toyService
+        //       .getById(toyId)
+        //       .then((toy) => {
+        //         //can add commit if needed
+        //         return toy;
+        //       })
+        //       .catch((err) => {
+        //         console.log('Error: cannot get toy', err);
+        //         throw err;
+        //       });
+        //   },
     },
     mutations: {
         setTags(state, { tags }) {

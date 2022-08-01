@@ -3,10 +3,10 @@
     <h1>Earnings</h1>
     <div class="earnings-table">
       <ul class="labels-list clean-list flex wrap align-center">
-        <li v-for="(label, idx) in labels" :key="idx">
-          <div class="order-status">
-            <h3>{{ label }}</h3>
-            <p>${{ 384 * (idx + 10) }}</p>
+        <li v-for="(earning, idx) in earnings" :key="idx">
+          <div class="order-status flex column space-between">
+            <h3>{{ earning.label }}</h3>
+            <p>{{ earning.value }}</p>
           </div>
         </li>
       </ul>
@@ -27,9 +27,10 @@ export default {
     return {
       earnings: [
         { label: "This Year Income", value: "58,535" },
-        { label:"This Month Income", value: "9,489" },
-        { label:"This Month Orders Completed", label},
-        "Orders Pending",
+        { label: "This Month Income", value: "9,489" },
+        { label: "This Year Orders Completed", value: "274"},
+        { label: "This Month Orders Completed", value: "36"},
+        { label: "Orders Pending", value: "3"}
       ],
     }
   },

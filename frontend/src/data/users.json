@@ -18,7 +18,7 @@
   {
     "_id": "s9999",
     "fullname": "Dikla -seller",
-    "imgUrl": "https://fiverr-res.cloudinary.com/t_profile_original,q_auto,f_auto/attachments/profile/photo/68a7768929036bd9f082d387054da729-1653833944281/102fee2d-26a3-4bb1-a6c1-e6719b021e69.jpeg",
+    "imgUrl": "https://fiverr-res.cloudinary.com/image/upload/f_auto,q_auto,t_profile_small/v1/attachments/profile/photo/d06d3197ca9b9f010e75540d2a0bf264-1626300570975/fa60b74e-0d30-49d6-9485-0285ba2315bd.jpg",
     "isSeller": true,
     "username": "diklas@gmail.com",
     "password": "1234",
@@ -33,13 +33,13 @@
   },
   {
     "_id": "u101",
-    "fullname": "m_asad_sardar",
-    "imgUrl": "https://fiverr-res.cloudinary.com/image/upload/f_auto,q_auto,t_profile_small/v1/attachments/profile/photo/d06d3197ca9b9f010e75540d2a0bf264-1626300570975/fa60b74e-0d30-49d6-9485-0285ba2315bd.jpg",
+    "fullname": "yaeliroz",
+    "imgUrl": "https://xsgames.co/randomusers/assets/avatars/female/21.jpg",
     "isSeller": true,
     "username": "m_asad_sardar",
     "password": "secret",
     "level": "basic/premium",
-    "rate": 4,
+    "rate": 5.0,
     "state": "USA",
     "created": "Feb 2021",
     "responseTime": "1 hour",
@@ -49,17 +49,17 @@
       {
         "id": "r101",
         "txt": "Where do I begin, from before I even placed the order he was responding to my messages and questions about his service. I got the Premium package and was 100% satisfied with everything. He started on my logo first thing and was done within a day, sounds like you would get a low quality logo but rest assured he does a fantastic job. Can't wait to grow my business using this logo!",
-        "rate": 4,
+        "rate": 5.0,
         "by": {
           "_id": "u102",
-          "fullname": "User 2",
+          "fullname": "engineerahasan",
           "imgUrl": "https://fiverr-res.cloudinary.com/t_profile_thumb,q_auto,f_auto/attachments/profile/photo/a5d3f5c2b88c0a450f3de42a097061c8-1648516352099/24120e00-e39e-4108-9522-56fc276c268f.jpg"
         }
       },
       {
         "id": "r102",
         "txt": "Windson was an absolute pleasure to work with! He was extremely communicative to acknowledge when he received your message and was transparent on turnaround time or if he would be off for the weekend. He was also very fast in responding to your message(s), usually within 24 hours! Looking back at my recent order, I have seen the entire journey of what ultimately was the perfect logo. Windson helped me to take a half-developed vision and refined it (multiple times) along the way to finalize an amazing logo for our small business. Windson was professional, nice and thoughtful to check in prior to adjustments on request or with additional cost. Would highly recommend and work with him again!",
-        "rate": 5,
+        "rate": 5.0,
         "by": {
           "_id": "u130",
           "fullname": "Elin",
@@ -69,7 +69,7 @@
       {
         "id": "r103",
         "txt": "Very kind and works fast",
-        "rate": 4,
+        "rate": 5.0,
         "by": {
           "_id": "u120",
           "fullname": "David",
@@ -78,12 +78,32 @@
       },
       {
         "id": "r104",
-        "txt": "Easy to communicate online but did not get all revisions correct and did not ask me for clarifications to reduce the amount of revisions. At the end, we found one major flaw, but I had used up my two revisions and didn’t get the flaw corrected.",
-        "rate": 3,
+        "txt": "Excellent work once again. This is my 3rd project with Hasan. He created a floor plan for a small new multifamily project in Florida. His work was very professional, on time, and as agreed. Very easy communication. He delivered scaled plans in CAD as needed. I'll continue working with this freelancer and recommend his services.",
+        "rate": 5.0,
         "by": {
           "_id": "u102",
           "fullname": "Runen",
           "imgUrl": "https://fiverr-res.cloudinary.com/t_profile_thumb,q_auto,f_auto/attachments/profile/photo/4fd00faa84dd58c2e3dd262b939aa679-1627056071465/bf7c244c-ff5d-4ecf-a63d-91232bf51bbd.JPG"
+        }
+      },
+      {
+        "id": "r105",
+        "txt": "Very good work. Hasan completed the site plan, elevations and floor plans for this project on time and as agreed. He made changes as required and in a timely manner. He was easy to communicate with",
+        "rate": 5.0,
+        "by": {
+          "_id": "u102",
+          "fullname": "davis_nguyen9",
+          "imgUrl": "https://fiverr-res.cloudinary.com/t_profile_original,q_auto,f_auto/attachments/profile/photo/774a3a9c66a6c18a63e923a3ae4794ec-1626444905858/1941ff67-bba9-4e64-8f0c-4c76e1e20c9d.jpg"
+        }
+      },
+      {
+        "id": "r106",
+        "txt": "Very professional and timely work preparing a professional site plan for city approval of a new multi family building. Easy communication. It’s a pleasure working with Hassan.",
+        "rate": 5.0,
+        "by": {
+          "_id": "u102",
+          "fullname": "autocadexpert02",
+          "imgUrl": "https://fiverr-res.cloudinary.com/t_profile_original,q_auto,f_auto/attachments/profile/photo/68a7768929036bd9f082d387054da729-1653833944281/102fee2d-26a3-4bb1-a6c1-e6719b021e69.jpeg"
         }
       }
     ]
@@ -129,8 +149,8 @@
         "rate": 4,
         "by": {
           "_id": "u120",
-          "fullname": "David",
-          "imgUrl": "https://fiverr-res.cloudinary.com/t_profile_original,q_auto,f_auto/attachments/profile/photo/83cc7c97f9873bdb052590a94d32f84c-1576419363871/ed47443e-0f9b-42ab-beaf-ec0a0acccfe8.jpeg"
+          "fullname": "davis_nguyen9",
+          "imgUrl": "https://fiverr-res.cloudinary.com/t_profile_original,q_auto,f_auto/attachments/profile/photo/774a3a9c66a6c18a63e923a3ae4794ec-1626444905858/1941ff67-bba9-4e64-8f0c-4c76e1e20c9d.jpg"
         }
       },
       {

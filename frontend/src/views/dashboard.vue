@@ -1,8 +1,9 @@
 <template>
   <section class="dashboard">
     <div class="dashboard-container main-layout">
+      <!-- renov on buyer -->
       <earnings :orders="orders" />
-      <h1>Manage Orders</h1>
+      <h2 class="order-titel">Manage Orders</h2>
       <div class="title flex grow">
         <h2>Panding</h2>
         <h2>On progress</h2>
@@ -25,6 +26,7 @@
                 <h2 class="date">DUE ON</h2>
                 <h2 class="price">TOTAL</h2>
                 <h2 class="status">STATUS</h2>
+                <!-- remove on buyer  -->
                 <h2>SET</h2>
               </div>
             </li>
