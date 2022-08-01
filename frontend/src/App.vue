@@ -28,7 +28,7 @@ export default {
   created() {
     this.isLoggedIn = this.$store.getters.getIsLoading
     this.$store.dispatch({ type: "loadGigs" })
-    // this.$store.dispatch({ type: "loadUsers" })
+    this.$store.dispatch({ type: "loadUsers" })
     this.$store.dispatch({ type: "loadTags" })
     this.$store.dispatch({ type: "loadOrders" })
   },

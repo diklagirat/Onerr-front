@@ -4,6 +4,7 @@
     a {
         text-decoration: none;
     }
+
     .stars-rate {
         margin-left: 0;
     }
@@ -35,11 +36,13 @@
 
     .gig-preview-header {
         height: 12.125rem;
+
         .vueperslides__parallax-wrapper {
             object-fit: cover;
             height: 194px;
         }
-        .vueperslides__arrow{
+
+        .vueperslides__arrow {
             background-color: white;
             opacity: 10;
             border: $border-bottom-line;
@@ -49,34 +52,38 @@
             padding-right: 1em;
             display: none;
 
-            
+
             &.vueperslides__arrow--prev {
                 border-top-right-radius: 50%;
                 border-bottom-right-radius: 50%;
                 border-left: 0;
                 left: 0;
             }
+
             &.vueperslides__arrow--next {
                 border-top-left-radius: 50%;
                 border-bottom-left-radius: 50%;
                 border-right: 0;
                 right: 0;
             }
-            
+
             svg {
                 height: 1.2em;
                 width: 1.2em;
                 padding: .2em;
             }
         }
+
         &:hover {
             .vueperslides__arrow--next {
                 display: block;
             }
+
             .vueperslides__arrow--prev {
                 display: block;
             }
-            .gig-preview-content{
+
+            .gig-preview-content {
                 .gig-preview-title {
                     color: $btn-primary;
                 }
@@ -86,13 +93,15 @@
 
     .vueperslides__bullet {
         margin-left: 0;
+
         .default {
             height: .4em;
             width: .4em;
             background-color: white;
         }
     }
-    .vueperslides__bullet--active .default{
+
+    .vueperslides__bullet--active .default {
         border-width: 4.5px;
     }
 
@@ -120,10 +129,11 @@
     .footer {
         border-top: $border-bottom-line;
         padding: 10px 12px;
-        height: 59px;
+        height: 45px;
         text-align: end;
         color: $text-preview;
         fill: $text-preview;
+        font-size: 18px;
 
         .price-line-brake {
 
@@ -138,8 +148,13 @@
             span {
                 color: $text-third;
                 padding-bottom: 4px;
+                padding-left: 6px;
             }
 
+        }
+
+        .heart {
+            margin-left: 8px;
         }
 
 

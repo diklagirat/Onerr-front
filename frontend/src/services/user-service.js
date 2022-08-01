@@ -11,11 +11,19 @@ async function signup(cred) {
 async function logout() {
     return await httpService.post(ENDPOINT + '/logout')
 }
+async function getUsers() {
+    return await httpService.get('user')
+}
+async function getUserById(userId) {
+    return await httpService.get(`user/${userId}`)
+}
 
 export const userService = {
     login,
     signup,
     logout,
+    getUsers,
+    getUserById
 }
 
 // import { storageService } from './async-storage.service.js'

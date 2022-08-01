@@ -1,6 +1,6 @@
 <template>
     <section class="gig-list main-layout">
-        <gig-list-header />
+        <gig-list-header :gigs="gigs" />
         <ul class="gig-list-container clean-list ">
             <li v-for="gig in gigs" :key="gig._id">
                 <gig-preview :gig="gig" />

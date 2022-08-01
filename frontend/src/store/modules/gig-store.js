@@ -14,6 +14,9 @@ export const gigStore = {
         observer: null
     },
     getters: {
+        gigs({gigs}){
+                return gigs
+        },
         gigsToDisplay({ gigs, filterBy }) {
             if (!gigs) return
 
@@ -93,7 +96,7 @@ export const gigStore = {
         },
         setObserver(state, { val }) {
             state.observer = val
-        }
+        },
     },
     actions: {
         async loadGigs({ commit, state }) {
@@ -112,6 +115,13 @@ export const gigStore = {
                 throw err
             }
         },
+            async getGigById(commit, { gigId }) {
+            try {
+                return await gigService.getById(gigId)
+             }catch (err) {
+                console.log(err)
+            }
+    },
         scrollToTop(){
             window.scrollTo(0, 0)
         }
