@@ -51,7 +51,6 @@ export default {
   },
   created() {
     const currUser = this.$store.getters.getUser
-    console.log('usellerId logged in', currUser)
     this.$store.commit({ type: 'setCurrUser', currUser })
     // Scroll to top of the page
     this.$store.dispatch("scrollToTop")
