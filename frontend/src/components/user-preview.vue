@@ -3,7 +3,7 @@
     <div
       v-if="user"
       class="gig-preview-user flex align-center"
-      v-bind:class="{
+      :class="{
         preview: isPreview,
         header: isHeader,
         ownerDetails: isOwnerDetails,
@@ -12,10 +12,10 @@
       }"
     >
       <img :src="user.imgUrl" class="user-image" />
-      <div class="user-info flex" v-bind:class="{ column: isPreview }">
+      <div class="user-info flex" :class="{ column: isPreview }">
         <a class="name">{{ user.fullname }}</a>
         <stars-rating class="rate" :rate="avrgRite" :length="5" />
-        <span class="rateSum">({{user.rateSum}})</span>
+        <span class="rateSum">({{ user.rateSum }})</span>
         <span class="level" :class="[isTopRated ? 'topRated' : '']">{{
           user.level
         }}</span>
@@ -24,6 +24,8 @@
     </div>
   </section>
 </template>
+
+
 
 <script>
 import starsRating from "./details-page/stars-rating.vue"
