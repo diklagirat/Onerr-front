@@ -4,12 +4,13 @@
       <!-- renov on buyer -->
       <earnings :orders="orders" />
       <h2 class="order-titel">Manage Orders</h2>
-      <div class="title flex grow">
+      <!-- TODO: Implement sort -->
+      <!-- <div class="title flex grow">
         <h2>All</h2>
         <h2>Pending</h2>
         <h2>On progress</h2>
         <h2>Complete</h2>
-      </div>
+      </div> -->
       <section class="orders-list">
         <!-- <div class="title flex grow">
                     <h2>Padding</h2>
