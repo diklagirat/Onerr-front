@@ -1,8 +1,9 @@
 <template>
     <div v-if="order" class="order-preview  flex space-between ">
         <!-- <div v-if="order" class="order-preview table-row "> -->
-        <UserPreview class="userPre" :user="order.buyer" :isDashboard="true"/>
+        <UserPreview class="userPre" :user="order.buyer" :isDashboard="true" />
         <h2 class="gig-title">{{ order.gigs[0].name }}</h2>
+        <h2 class="">{{ order.seller.name }}</h2>
         <h2 class="date">{{ order.toDate }}</h2>
         <h2 class="price">${{ order.totalPrice }}</h2>
         <button class="btn-basic" :class="statusColor">{{ order.status }}</button>
