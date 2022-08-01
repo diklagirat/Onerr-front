@@ -19,7 +19,6 @@
       </ul>
       <article>{{ owner.description }}</article>
     </div>
-    <!-- <pre>{{ owner }}</pre> -->
   </section>
 </template>
 

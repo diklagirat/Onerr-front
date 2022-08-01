@@ -13,6 +13,8 @@
         <div class="gig-preview-owner">
           <user-preview :user="gig.owner" :isPreview="true" />
         </div>
+
+        
         <router-link :to="'/details/' + gig._id">
           <h3 class="gig-preview-title">{{ gig.title }}</h3>
         </router-link>

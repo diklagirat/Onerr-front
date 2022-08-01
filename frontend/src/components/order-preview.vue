@@ -3,8 +3,8 @@
         <!-- <div v-if="order" class="order-preview table-row "> -->
         <UserPreview class="userPre" :user="order.buyer" :isDashboard="true" />
         <h2 class="gig-title">{{ order.gigs[0].name }}</h2>
-        <h2 class="">{{ order.seller.fullname }}</h2>
-        <h2 class="date">{{ order.toDate }}</h2>
+        <!-- <h2 class="">{{ order.seller.fullname }}</h2> -->
+        <!-- <h2 class="date">{{ order.toDate }}</h2> -->
         <!-- <h2 class="date">{{ order.toDate }}</h2> -->
         <h2 class="date">{{ dateOfDeliver }}</h2>
         <h2 class="price">${{ order.totalPrice }}</h2>
@@ -15,7 +15,7 @@
                 <el-option v-for="(status, idx) in orderStatus" :key="idx" :label="status" :value="status" />
             </el-select>
         </div>
-        <!-- remove on buyer -->
+        <!-- TODO: remove on buyer -->
         <span class="more-btn" @click="toggleSelect"><i class="fas fa-ellipsis-v"></i></span>
 
     </div>
@@ -32,7 +32,7 @@ export default {
     data() {
         return {
             isSelected: false,
-            orderStatus: ['Rejected', 'Pending', 'On Progress', 'Completed'],
+            orderStatus: ['rejected', 'pending', 'on progress', 'completed'],
             status: this.order.status,
             dateOfDeliver: null
         }
