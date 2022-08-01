@@ -28,12 +28,9 @@ export default {
       earnings: [
         { label: "This Year Income", value: "58,535" },
         { label: "This Month Income", value: "9,489" },
-<<<<<<< HEAD
         { label: "This Year Orders Completed", value: "274"},
         { label: "This Month Orders Completed", value: "36"},
         { label: "Orders Pending", value: "3"}
-=======
->>>>>>> 2f161f8b71b426eac5d4daac12d98e60d3bd01d0
       ],
     }
   },
