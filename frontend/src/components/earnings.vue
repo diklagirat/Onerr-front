@@ -6,7 +6,7 @@
         <li v-for="(earning, idx) in earnings" :key="idx">
           <div class="order-status flex column space-between">
             <h3>{{ earning.label }}</h3>
-            <p>${{ earning.value }}</p>
+            <p>{{ earning.value }}</p>
           </div>
         </li>
       </ul>
@@ -26,8 +26,8 @@ export default {
   data() {
     return {
       earnings: [
-        { label: "This Year Income", value: "58,535" },
-        { label: "This Month Income", value: "9,489" },
+        { label: "This Year Income", value: "$58,535" },
+        { label: "This Month Income", value: "$9,489" },
         { label: "This Year Orders Completed", value: "274"},
         { label: "This Month Orders Completed", value: "36"},
         { label: "Orders Pending", value: "3"}
