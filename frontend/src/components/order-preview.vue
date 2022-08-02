@@ -16,7 +16,8 @@
             </el-select>
         </div>
         <!-- TODO: remove on buyer -->
-        <span class="more-btn" @click="toggleSelect"><i class="fas fa-ellipsis-v"></i></span>
+        <span v-if="loggedinUser.isSeller" class="more-btn" @click="toggleSelect"><i
+                class="fas fa-ellipsis-v"></i></span>
 
     </div>
 </template>
@@ -27,19 +28,21 @@ export default {
 
     name: 'order-preview',
     props: {
-        order: Object
+        order: Object,
     },
     data() {
         return {
             isSelected: false,
             orderStatus: ['rejected', 'pending', 'on progress', 'completed'],
             status: this.order.status,
-            dateOfDeliver: null
+            dateOfDeliver: null,
+            loggedinUser: null
+
         }
     },
     created() {
         this.dateOfDeliver = new Date(this.order.deliveredAt).toDateString()
-        
+        this.loggedinUser = this.$store.getters.getUser
     },
     methods: {
         toggleSelect() {

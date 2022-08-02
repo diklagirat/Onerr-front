@@ -1,5 +1,5 @@
 <template>
-  <section class="earnings">
+  <section class="earnings" v-if="loggedinUser.isSeller">
     <h1>Earnings</h1>
     <div class="earnings-table">
       <ul class="labels-list clean-list flex wrap align-center">
@@ -32,9 +32,11 @@ export default {
         { label: "This Month Orders Completed", value: "36"},
         { label: "Orders Pending", value: "3"}
       ],
+      loggedinUser: null,
     }
   },
   created() {
+    this.loggedinUser = this.$store.getters.getUser
     //TODO: get orders in props
     // Set This Year Income
     // this.yearlyIncome()

@@ -28,7 +28,7 @@
                 <h2 class="price">TOTAL</h2>
                 <h2 class="status">STATUS</h2>
                 <!-- TODO: remove on buyer  -->
-                <h2>SET</h2>
+                <h2 v-if="user">SET</h2>
               </div>
             </li>
             <li v-for="order in orders" :key="order._id">
@@ -48,17 +48,25 @@ import orderPreview from "../components/order-preview.vue"
 export default {
   name: "dashboard",
   data() {
-    return {}
+    return {
+      orders: [],
+      user: null
+    }
   },
   created() {
     const currUser = this.$store.getters.getUser
+    this.user = currUser.isSeller
     this.$store.commit({ type: 'setCurrUser', currUser })
+    this.$store.dispatch({ type: "loadOrders" })///////
     // Scroll to top of the page
     this.$store.dispatch("scrollToTop")
   },
   computed: {
     orders() {
       // return this.$store.getters.ordersToDisplay
+      this.$store.dispatch({ type: "loadOrders" })//////
+
+      this.orders = this.$store.getters.ordersByUser
       return this.$store.getters.ordersByUser
     },
   },
