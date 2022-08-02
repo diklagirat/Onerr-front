@@ -7,13 +7,13 @@ export const orderStore = {
         currUser: null,
     },
     getters: {
-        ordersByUser({orders,currUser }){
-            console.log('currUser',currUser)
-            if(currUser.isSeller === true){
-                console.log('currUser.isSeller',currUser)
+        ordersByUser({ orders, currUser }) {
+            console.log('currUser', currUser)
+            if (currUser.isSeller === true) {
+                console.log('currUser.isSeller', currUser)
                 return orders.filter(o => o.seller._id === currUser._id)
             }
-             return orders.filter(o => o.buyer._id === currUser._id)
+            return orders.filter(o => o.buyer._id === currUser._id)
 
         },
         ordersToDisplay({ orders }) {
@@ -21,17 +21,20 @@ export const orderStore = {
         }
     },
     mutations: {
-        setCurrUser(state, {currUser}){
-            state.currUser=currUser
-            console.log('state.currUser',state.currUser)
+        setCurrUser(state, { currUser }) {
+            state.currUser = currUser
+            console.log('state.currUser', state.currUser)
         },
         setOrders(state, { orders }) {
             state.orders = orders
-            console.log('setOrder',state.orders)
+            console.log('setOrder', state.orders)
         },
         updateOrder(state, { order }) {
+            console.log(' updateOrder before', state.orders)
             const idx = state.orders.findIndex((o) => o._id === order._id)
             state.orders.splice(idx, 1, order)
+            console.log(' updateOrder before', state.orders)
+
         },
     },
     actions: {
@@ -43,11 +46,12 @@ export const orderStore = {
                 throw err
             }
         },
-        async saveOrder({ commit }, { orderToEdit }) {
+        async saveOrder({ commit, state }, { orderToEdit }) {
             try {
                 console.log('orderToEdit saveOrder:', orderToEdit)
                 const savedOrder = await orderService.save(orderToEdit)
                 commit({ type: 'updateOrder', order: orderToEdit })
+                // commit({ type: 'setOrders', orders: state.orders })
             } catch (err) {
                 throw err
             }
