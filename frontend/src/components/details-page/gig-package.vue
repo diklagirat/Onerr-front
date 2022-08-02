@@ -61,6 +61,11 @@ export default {
 
     addOrder() {
       const buyer = { ...this.$store.getters.getUser }
+      if (!buyer._id) {
+        console.log('You should login to the sistem')
+        return
+      }
+
       const seller = this.gig.owner
       console.log('buyer', buyer)
       console.log('seller', seller)
@@ -90,6 +95,8 @@ export default {
       }
       this.$store.dispatch({ type: 'saveOrder', orderToEdit: orderToAdd })
       showSuccessMsg('Order submited')
+
+      this.$router.push('/dashboard')
     }
   },
 }
